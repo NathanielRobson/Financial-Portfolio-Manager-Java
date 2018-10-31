@@ -6,6 +6,7 @@ public class HelloWorld {
         System.out.println("Callum Kleber");
         System.out.println("Kyle Moody");
         System.out.println("Added new line with git");
-        System.out.println("Abit sticky");
+        System.out.println("Elios D");
+        System.out.println("A bit sticky");
     }
 }
