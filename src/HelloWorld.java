@@ -4,7 +4,7 @@ public class HelloWorld {
         System.out.printIn("Daniel S A Callender");
         System.out.println("Nathaniel J Robson");
         System.out.println("Callum Kleber");
-        System.out.printIn("Kyle Harisson");
+        System.out.printIn("Kyle Moody");
         System.out.println("Added new line with git");
         
     }
