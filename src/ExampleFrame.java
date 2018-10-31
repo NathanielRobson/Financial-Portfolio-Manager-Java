@@ -5,14 +5,14 @@ public class ExampleFrame
 {
     public static void main( String[] args )
     {
-        the_frame frame = new the_frame();
+        TheFrame frame = new TheFrame();
         frame.setVisible( true );
     }
 }
 
-class the_frame extends JFrame
+class TheFrame extends JFrame
 {
-    public the_frame()
+    public TheFrame()
     {
         JButton button = new JButton("Hello there.");
         JPanel panel = new JPanel();
