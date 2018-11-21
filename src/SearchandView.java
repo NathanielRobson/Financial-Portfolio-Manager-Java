@@ -30,26 +30,25 @@ public class SearchandView {
         JFrame frame = new JFrame();
         frame.setAlwaysOnTop(true);
         boolean found = false;
-        String Date = ""; String SharePrice = ""; String Volume = ""; String Change = "";
-        String ChangePercent = ""; String vwap = ""; String changeOverTime = "";
-        String NumofShares = ""; String ShareTotal = ""; String CashinBank = "";
-        String Total = "";
+        String Date = ""; String Company = ""; String SharePrice = ""; String Volume = "";
+        String Change = ""; String ChangePercent = ""; String vwap = ""; String changeOverTime = "";
+        String NumofShares = ""; String ShareTotal = ""; String CashinBank = ""; String Total = "";
         try {
             a = new Scanner(new File(filepath));
             a.useDelimiter("[,\n]");
 
             while(a.hasNext() && !found){
-                Date = a.next(); SharePrice = a.next(); Volume = a.next();
-                Change = a.next(); ChangePercent = a.next(); vwap = a.next();
-                changeOverTime = a.next(); NumofShares = a.next(); ShareTotal = a.next();
-                CashinBank = a.next(); Total = a.next();
+                Date = a.next(); Company = a.next(); SharePrice = a.next();
+                Volume = a.next(); Change = a.next(); ChangePercent = a.next();
+                vwap = a.next(); changeOverTime = a.next(); NumofShares = a.next();
+                ShareTotal = a.next(); CashinBank = a.next(); Total = a.next();
 
                 if(Date.equals(Search)){
                     found = true;
                 }
             }
             if (found) {
-                JOptionPane.showMessageDialog(frame, "Date: " + Date + "\n" + "Share Price: $" + SharePrice + "\n" + "Volume: " + Volume +
+                JOptionPane.showMessageDialog(frame, "Date: " + Date + "\n" + "Company: " + Company + "\n" + "Share Price: $" + SharePrice + "\n" + "Volume: " + Volume +
                         "\n" + "Change: " + Change + "\n" + "ChangePercent: %" + ChangePercent + "\n" + "Vwap: " + vwap + "\n" + "Change Over Time: " + changeOverTime +
                         "\n" + "Number of Shares: " + NumofShares + "\n" + "Shares Total: $" + ShareTotal + "\n" + "Cash in Bank: $" + CashinBank + "\n" + "Total : $" + Total);
                 System.exit(0);
