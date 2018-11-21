@@ -49,9 +49,9 @@ public class SearchandView {
                 }
             }
             if (found) {
-                JOptionPane.showMessageDialog(frame, "Date: " + Date + " Share Price: $" + SharePrice + " Volume: " + Volume +
-                                " Change: " + Change + " ChangePercent: %" + ChangePercent + " Vwap: " + vwap + " Change Over Time: " + changeOverTime +
-                                " Number of Shares: " + NumofShares + " Shares Total: $" + ShareTotal + " Cash in Bank: $" + CashinBank + " Total : $" + Total);
+                JOptionPane.showMessageDialog(frame, "Date: " + Date + "\n" + "Share Price: $" + SharePrice + "\n" + "Volume: " + Volume +
+                        "\n" + "Change: " + Change + "\n" + "ChangePercent: %" + ChangePercent + "\n" + "Vwap: " + vwap + "\n" + "Change Over Time: " + changeOverTime +
+                        "\n" + "Number of Shares: " + NumofShares + "\n" + "Shares Total: $" + ShareTotal + "\n" + "Cash in Bank: $" + CashinBank + "\n" + "Total : $" + Total);
                 System.exit(0);
             }
             else {
