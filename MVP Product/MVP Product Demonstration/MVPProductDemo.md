@@ -1,9 +1,27 @@
 # MVP Demonstration
 
-*This section should contain a brief description and demo of product you have built.*
+*This is a demonstration of our MVP Product which is a Financial Portfolio Manager.*
 
-* *Include screenshots (actual screenshots, not mock ups) of all of the facets of the product working.*
-* *Link consecutive screenshots together with a brief narrative explaining how the product works, e.g. a sentence "Click on OK and it takes you to the next window", "On starting the app, the following window is shown".  This document should not take you a long time to create - it's just pasting photos and adding explanatory sentences between them, so that your MVP is adequately described.*
-* *Make sure an image of each window of your software is included - so that a person who has not seen the actual demo of the product has a good idea of what your product currently does.*
-* *If your product is a physical device (a hardware product) then you may replace all of the above screenshots by actual photos/vidoes where you feel it is appropriate.*
-* *Make sure this section includes any functionality/features you are particularly proud of.*
+*This program comes with a .csv file that contains information about Netflix stocks. This file is needed to run the program correctly.*
+
+When you run the program the window seen below is shown:
+
+![File Browser](MVP Product/MVP Product Demonstration/Screenshots/File_Browser.png) ![File Browser 2](MVP Product/MVP Product Demonstration/Screenshots/File_Browser_2.png)
+
+This is a file browser that allows the user to find the location of the .csv file mentioned above.
+
+After selecting the .csv file and clicking the 'Open' button the following window will be shown:
+
+![date search](MVP Product/MVP Product Demonstration/Screenshots/Date_Search.png)
+
+This window allows the user to enter a date using the format specified in the window text.
+
+![date search](MVP Product/MVP Product Demonstration/Screenshots/Date_Search_2.png)
+
+After entering a date and clicking the 'OK' button the program will use the date entered to search for a record in the .csv file.
+
+The results of this search will then be displayed in the window seen below:
+
+![date search](MVP Product/MVP Product Demonstration/Screenshots/Results.png)
+
+After clicking the 'OK' button the program will close.
