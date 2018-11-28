@@ -1,7 +1,7 @@
 # Team Effort Log
 *In this section, add a heading for each team member, and under it add the sub headings "Sprint 1, Sprint 2, ..., Sprint N", as illustrated below.  Each team member can be responsible for writing their own section.*
 
-## Team member name 1
+## Daniel Callender
 
 *Edit the name above to match the name of the team member.  That team member is then responsible for this section.*
 
