@@ -17,7 +17,42 @@
 *Do the same for each fully completed sprint.*
 
 
-## Team member name 2
+## Callum Kleber
+### Sprint 1 (University Week 3):
+https://cseejira.essex.ac.uk/browse/CE291T3-26 This task was set and completed in Sprint 1. It took 1 hour. For this task I had to familarise myself with git. This included learning how to push and pull files.
+
+### Sprint 2 (University Week 4):
+https://cseejira.essex.ac.uk/browse/CE291T3-27 This task was set and completed in Sprint 2. It took 1 hour. For this task I had to create some of the user requirements of our product.
+
+A link to the epic containing our user requirements can be seen below:
+
+https://cseejira.essex.ac.uk/browse/CE291T3-8
+
+### Sprint 3 (University Week 5):
+https://cseejira.essex.ac.uk/browse/CE291T3-28 This task was set and completed in Sprint 3. It took 1 hour. For this task I had to download some csv files containing information about a companies share prices.
+
+### Sprint 4 (University Week 6):
+https://cseejira.essex.ac.uk/browse/CE291T3-29 This task was set and completed in Sprint 4. It took 2 hours. For this task I had to create the inital program for our product.
+
+A link to my gitlab commit can be seen below:
+
+https://cseegit.essex.ac.uk/ce291/team3/teamproject/commit/d904061757017e27dd2618b76378b6e4d545642d
+
+### Sprint 5 (University Week 7):
+https://cseejira.essex.ac.uk/browse/CE291T3-21 This task was set and completed in Sprint 5. It took 2 hours. For this task I had to add a file browser to the inital program.
+
+A link to my gitlab commit can be seen below:
+
+https://cseegit.essex.ac.uk/ce291/team3/teamproject/commit/f35f3bc3af36e56271d4ecdfb525d36cf54cdcac
+
+### Sprint 6 (University Week 8):
+https://cseejira.essex.ac.uk/browse/CE291T3-30 This task was set and completed in Sprint 6. It took 1 hour. For this task I had to make the program easier to read for the user.
+
+Links to my gitlab commits can be seen below:
+
+https://cseegit.essex.ac.uk/ce291/team3/teamproject/commit/1725cbd8fd8df94e894ded947da1f0b805eca14b
+
+https://cseegit.essex.ac.uk/ce291/team3/teamproject/commit/2f47cfb8b4e7e69e5a37866dfc590c99644c4695
 
 *Repeat for each team member, i.e. with more subheadings "Sprint1, Sprint2, ... Sprint N"*
 
