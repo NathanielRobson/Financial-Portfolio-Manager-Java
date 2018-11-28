@@ -24,4 +24,8 @@ The results of this search will then be displayed in the window seen below:
 
 ![date search](MVP Product/MVP Product Demonstration/Screenshots/Results.png)
 
-After clicking the 'OK' button the program will close.
+If the program is unable to find the date entered it will display the window seen below:
+
+![date search](MVP Product/MVP Product Demonstration/Screenshots/RecordnotFound.png)
+
+After clicking the 'OK' button on either window the program will close.
