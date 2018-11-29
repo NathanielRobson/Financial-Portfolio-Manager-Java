@@ -1,6 +1,66 @@
 # Team Effort Log
 *In this section, add a heading for each team member, and under it add the sub headings "Sprint 1, Sprint 2, ..., Sprint N", as illustrated below.  Each team member can be responsible for writing their own section.*
 
+
+## Nathaniel J Robson
+### Sprint 1 (University week 3):
+https://cseejira.essex.ac.uk/browse/CE291T3-1 - Our first tasks was to find our team and familiarise ourselves with eachother, discuss the project at hand and remember eachother's names. This was difficult at first as we did not have a full team, we were 1 team member down and also another team member was switched after this session. So effectively we started with 4 members.
+For our first sprint each individual member of our team had to familiarise themselves with the command-line git. This task was completed in the Lab session. I then took the time to learn to use the Git-Desktop version as an addition to the assigned task. We also created a story to add to the sprint created which was "Initial Thoughts on Design". This was assigned to no one and had to be done as a volenteer act. I decided to take this challenge up.
+
+https://cseejira.essex.ac.uk/browse/CE291T3-2 - Jira Issue relevant to this week
+
+https://cseegit.essex.ac.uk/ce291/team3/teamproject/blob/master/Initial_Thoughts_on_Design.docx
+
+https://cseegit.essex.ac.uk/ce291/team3/teamproject/blob/8fd72dc0f863f6f43421b501f81e5ab5ab9e90f5/collaboration.txt
+
+## Sprint 2 (University week 4):
+For this sprint we had to hold our scrum retrospective and also conversate on topics such as; what did we do well?, what could we have done better?, and what are we going to do nect time?.
+After this we then created a new Sprint for the coming week called which we had to assign a task to create a simple 'HelloWorld' program in Java.
+
+The Jira task can be found here: - https://cseejira.essex.ac.uk/browse/CE291T3-5
+
+Git link 'HelloWorld': - https://cseegit.essex.ac.uk/ce291/team3/teamproject/blob/master/src/HelloWorld.java
+
+We had to add a subtask for each team member (this was impossible at the time because we were again 2 team members down 1 of which we hadnt even met yet). We added a task to make sure that we started some proper development on our project in Java and had a JFrame set up. I also assigned myself to complete the user requirements translation which can be found here : - 
+
+-https://cseegit.essex.ac.uk/ce291/team3/teamproject/blob/master/User_Requirements_word_doc.docx
+
+Finally we asked each team member to upload their true photo to gitlab and jira however some team members failed to do so and also we did not have a full team. I did complete this.
+
+
+### Sprint 3(University week 5):
+This week we assigned a srum master role to Callum which he has successfully taken on. We have also rotated this role weekly between each member after this point. We had a full team finally this week and we met our new team members, Kay and Kyle. This session was about bringing the new members up to speed for where our program was at this point and what we were planning on doing next.
+This week we created some new tasks which we assigned equally between our team to ensure progress on our program.
+
+https://cseejira.essex.ac.uk/browse/CE291T3-9 : -
+this week I set out to ensure that we could view a simple yet effective part of our program. view the total value of investments.
+
+### Sprint 4 (University week 6)
+https://cseejira.essex.ac.uk/browse/CE291T3-15 - I was set out to debug the program, this went well, i changed some of the code that was inneficient and allowed for a more effective ObjectOrientated Programming approach.
+This week in the allocated lab sessions we did not manage to complete all tasks set out for each member so we extended all issues to the next week allowing for us to finish the issues that we created the previous week. 
+My assigned task was to create a log in function for our program, this however will not make it into the MVP demonstrtion as the code is was not complete however by the time we have to submit the program on FASER it shall be completed.
+
+### Sprint 5 (University week 7)
+This week it was my turn to hold the scrum meeting, we went over what went well the week before, what we could have improved on and what will we be finalising and polishing off to show for our MVP.
+
+This week we created and I delegated the tasks between the team to start and complete the MVP, including 'MVP Product Demonstration', 'MVP Project Management Log','Requirements and Risk Log','MVP Team Effort Log'.
+
+
+
+https://cseegit.essex.ac.uk/ce291/team3/teamproject/tree/master/MVP%20Product
+
+https://cseejira.essex.ac.uk/browse/CE291T3-36  - This week we also worked on debugging the program. I worked on this and concluded that the program worked well however the code was quite inneficient and I made small changes to ensure that the program would hold all exceptions thrown at it.
+
+### Sprint 6 (University week 8)
+
+https://cseejira.essex.ac.uk/browse/CE291T3-32 - finish login function
+Scrum meeting held and we delegated tasks to ensure that the MVP and the technical documents were 100 percent complete by the following week. 
+This week we finished up the MVP. However we did not manage to complete the technical documents this lab session so we had a team meeting and decided who would do what document and which part of which document and we set the time and date that we all agreed on completion.
+https://cseejira.essex.ac.uk/browse/CE291T3-37 
+
+The next week is our product demonstration. The MVP product will be demo'd and shown to the supervisor. Our program MVP by this week was completed and ready for demonstration. Tasks were set to complete the technical documents at the highest priority for week 9.
+
+
 ## Daniel Callender
 ### Sprint 1 (University week 3):
 https://cseejira.essex.ac.uk/browse/CE291T3-1
