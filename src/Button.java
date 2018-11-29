@@ -24,7 +24,6 @@ public class Button {
         button2.addActionListener(new ButtonHandler(this, 3));
         button3.addActionListener(new ButtonHandler(this, 4));
         button4.addActionListener(new ButtonHandler(this, 5));
-        button5.addActionListener(new ButtonHandler(this, 6));
         p1.add(button);
         p1.add(button1);
         p1.add(button2);
@@ -50,5 +49,6 @@ public class Button {
         }
     }
     public static void main (String[] args) {
+
     }
 }
