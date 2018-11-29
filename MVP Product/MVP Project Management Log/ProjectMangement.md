@@ -19,7 +19,7 @@ https://cseegit.essex.ac.uk/ce291/team3/teamproject/blob/master/Team%20Report/We
 
 
 ## Burndown-Charts Discussion
-As you can see from the charts we had some issues with  the creation of the charts due to when assinging and completing tasks we had forgoten to mark them as completed tasks. These tasks where unfortunately left in the backlog has in progress while being already completed. 
+As you can see from the charts we had some issues with  the creation of the charts due to when assinging and completing tasks we had forgotten to mark them as completed tasks. These tasks where unfortunately left in the backlog has in progress while being already completed. 
 
 ## Product Backlog
 ![Backlog_1](/uploads/0ee5e00bccbd3d628e1612bf2d9b2fcb/Backlog_1.PNG)
