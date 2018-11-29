@@ -128,24 +128,24 @@ https://cseegit.essex.ac.uk/ce291/team3/teamproject/commit/1725cbd8fd8df94e894de
 
 https://cseegit.essex.ac.uk/ce291/team3/teamproject/commit/2f47cfb8b4e7e69e5a37866dfc590c99644c4695
 
-##Koranteng Lartey
-###Sprint 1 (University week 3)
+## Koranteng Lartey
+### Sprint 1 (University week 3):
 I had some issues with enrolment due to wanting to switch subject.
 
-###Sprint 2 (University week 4)
+### Sprint 2 (University week 4):
 Waited for confirmation to be able to switch courses. And being able to choose new modules.
 
-###Sprint 3 (University week 5)
+### Sprint 3 (University week 5):
 Was assigned team that I would be working on the project with. In the meeting I got familiar with some of my team members and was given a round down of our product. In addition, was given a basic idea of some of the function we would be having. Furthermore, was also given the task of completing the MVP by week 8-9.
 https://cseejira.essex.ac.uk/browse/CE291T3-17 
 
-###Sprint 4(University Week 6)
+### Sprint 4(University Week 6):
 This week I worked on uploading my profile photos on both Jira and Gitlab. And configure IntelliiJ with git.  Also help my team members in to nicely organise the Gitlab repository contents. https://cseejira.essex.ac.uk/projects/CE291T3/issues/CE291T3-35?filter=allissues
 
-###Sprint 5 (University Week 7)
+### Sprint 5 (University Week 7):
 This week was given the task to complete a part of the documentation for the MVP in particular the MVP Project Management Log’. https://cseejira.essex.ac.uk/projects/CE291T3/issues/CE291T3-38?filter=allissues
 
-###Sprint 6 (University Week 8)
+### Sprint 6 (University Week 8):
 This week task was to make sure that team members were all agreed with what I wrote for the MVP project management and if there were amendments to made on the technical documentation. Also to try and fix some of the problems found in the Burndown charts.
 
 
