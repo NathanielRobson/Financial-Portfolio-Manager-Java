@@ -3,8 +3,9 @@
 
 ## Daniel Callender
 ### Sprint 1 (University week 3):
-This task was to familiarise myself with command-line git. This task was completed and it took one hour within labs and also  another hour at home
+This task was to familiarise myself with command-line git. This task was completed and it took one hour within labs and also  another hour at home.
 https://cseejira.essex.ac.uk/browse/CE291T3-1
+
 https://cseegit.essex.ac.uk/ce291/team3/teamproject/commit/ec28a5a6f4ccbfc7276025a14e6e71f34c1d3817
 
 ### Sprint 2 (University week 4): 
