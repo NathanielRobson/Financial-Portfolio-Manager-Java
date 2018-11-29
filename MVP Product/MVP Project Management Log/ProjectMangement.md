@@ -14,7 +14,7 @@ Not many issues surfaced while communicating with one another, due the fact that
 ![Week_9_chart](/uploads/2582aeac26a9b599996eeb281d4e58ad/Week_9_chart.PNG)
 ![Week_7_Chart](/uploads/5dbc6a13af13d3f97d5d321c690ea645/Week_7_Chart.PNG)
 
-https://cseegit.essex.ac.uk/ce291/team3/teamproject/blob/master/Team%20Report/Week_7_Chart.PNG
+
 
 
 
