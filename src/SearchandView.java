@@ -26,13 +26,24 @@ public class SearchandView {
         }
     }
 
+
     public static void readFile(String Search, String filepath) {
         JFrame frame = new JFrame();
         frame.setAlwaysOnTop(true);
         boolean found = false;
-        String Date = ""; String Company = ""; String SharePrice = ""; String Volume = "";
-        String Change = ""; String ChangePercent = ""; String vwap = ""; String changeOverTime = "";
-        String NumofShares = ""; String ShareTotal = ""; String CashinBank = ""; String Total = "";
+        String Date = "",
+                Company = "",
+                SharePrice = "",
+                Volume = "",
+                Change = "",
+                ChangePercent = "",
+                vwap = "",
+                changeOverTime = "",
+                NumofShares = "",
+                ShareTotal = "",
+                CashinBank = "",
+                Total = "";
+
         try {
             a = new Scanner(new File(filepath));
             a.useDelimiter("[,\n]");
