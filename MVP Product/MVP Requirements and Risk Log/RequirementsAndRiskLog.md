@@ -1,6 +1,11 @@
 # Requirements and Risk Log
 
 *In this markdown document, list all of the requirements that you have identified for your product so far.*
+1.	The application must track and display investments of the client
+2.	2.	The client would like software to be able to view the total value of their personal investments 
+(i.e. cash in the bank plus value of all shares) at any given date within the last 3 years
+3.  4.	The client would like to see the total value held at any given time, preferably in a graphical 
+(and also optionally a tabular) format.
 
 # Requirements
 
