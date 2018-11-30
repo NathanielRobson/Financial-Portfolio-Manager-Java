@@ -2,6 +2,7 @@
 In this markdown document, list all of the requirements that you have identified for your product so far.
 
 Requirements
+
     • The application must track and display investments of the client
 
     • The client would like software to be able to view the total value of their personal investments
