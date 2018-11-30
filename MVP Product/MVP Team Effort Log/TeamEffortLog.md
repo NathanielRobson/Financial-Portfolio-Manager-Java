@@ -182,6 +182,25 @@ This week was given the task to complete a part of the documentation for the MVP
 ### Sprint 6 (University Week 8):
 This week task was to make sure that team members were all agreed with what I wrote for the MVP project management and if there were amendments to made on the technical documentation. Also to try and fix some of the problems found in the Burndown charts.
 
+## Kyle Moody
+### Sprint 1 (University week 3):
+For the first week we were set a task to familiarise ourselves with git and using the git command line. https://cseejira.essex.ac.uk/browse/CE291T3-2 I was absent this week but read through the content on moodle.
 
+### Sprint 2 (University week 4):
+I was assigned a new team, and met my new teammates and they got me up to speed with the project. This week we had to come up with the requirements for the client. https://cseejira.essex.ac.uk/browse/CE291T3-27 
+We also created a simple HelloWorld java program, to make sure everyone could use intelliJ to push and pull files with git. https://cseegit.essex.ac.uk/ce291/team3/teamproject/blob/master/src/HelloWorld.java The program can be found there.
+The User requirements can be found here : https://cseejira.essex.ac.uk/browse/CE291T3-8 I also created a basic JFrame and uploaded it to git.
+
+### Sprint 3 (University week 5):
+This week was about refining the requirements that we came up with last week, and to start to think about a sketch for our MVP.
+
+### Sprint 4(University Week 6):
+This week was about creating the MVP sketch  https://cseejira.essex.ac.uk/browse/CE291T3-18  This was completed in the lab. I was absent but I caught up at home.
+
+### Sprint 5 (University Week 7):
+This week we discussed the upcoming demonstration for the MVP - https://cseegit.essex.ac.uk/ce291/team3/teamproject/tree/master/MVP%20Product/MVP%20Product%20Demonstration
+
+### Sprint 6 (University Week 8):
+This week was the MVP product demonstration, Unfortunately I was absent but caught up through gitlab and jira and worked from home on - https://cseejira.essex.ac.uk/browse/CE291T3-10
 *Repeat for each team member, i.e. with more subheadings "Sprint1, Sprint2, ... Sprint N"*
 
