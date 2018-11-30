@@ -24,6 +24,3 @@ As you can see from the charts we had some issues with  the creation of the char
 ## Product Backlog
 ![Backlog_1](/uploads/0ee5e00bccbd3d628e1612bf2d9b2fcb/Backlog_1.PNG)
 
-
-## Other Areas
-*If your team has anything else they want to demonstrate, e.g. advanced project management tools, reporting graphs with suitable explanation and interpretation, advanced use of Jira (e.g. issue links, epics, versions), then include a summary here.*
