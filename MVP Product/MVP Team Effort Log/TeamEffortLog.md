@@ -1,5 +1,4 @@
 # Team Effort Log
-*In this section, add a heading for each team member, and under it add the sub headings "Sprint 1, Sprint 2, ..., Sprint N", as illustrated below.  Each team member can be responsible for writing their own section.*
 
 
 ## Nathaniel J Robson
@@ -13,7 +12,7 @@ https://cseegit.essex.ac.uk/ce291/team3/teamproject/blob/master/Initial_Thoughts
 
 https://cseegit.essex.ac.uk/ce291/team3/teamproject/blob/8fd72dc0f863f6f43421b501f81e5ab5ab9e90f5/collaboration.txt
 
-## Sprint 2 (University week 4):
+### Sprint 2 (University week 4):
 For this sprint we had to hold our scrum retrospective and also conversate on topics such as; what did we do well?, what could we have done better?, and what are we going to do nect time?.
 After this we then created a new Sprint for the coming week called which we had to assign a task to create a simple 'HelloWorld' program in Java.
 
@@ -98,7 +97,7 @@ https://cseejira.essex.ac.uk/browse/CE291T3-2 - Issue on Jira getting familiar w
 
 https://cseegit.essex.ac.uk/ce291/team3/teamproject/blob/8fd72dc0f863f6f43421b501f81e5ab5ab9e90f5/collaboration.txt – This was a text document we each had to access via github and add our names to, to show we could push and pull files from github. Due to some problems in the lab, I was unable to perform this task at the session but completed the task after the lab which took about an hour.
 
-## Sprint 2 (University week 4):
+### Sprint 2 (University week 4):
 https://cseejira.essex.ac.uk/browse/CE291T3-5 - This sprint we created a “HelloWorld.java” program to get everyone to sync their IntelliJ IDE to Git so we can code and run programs while also pushing and pulling code from github.
 
 https://cseegit.essex.ac.uk/ce291/team3/teamproject/blob/master/src/HelloWorld.java – This is a link to the Jira task
@@ -162,6 +161,7 @@ https://cseegit.essex.ac.uk/ce291/team3/teamproject/commit/1725cbd8fd8df94e894de
 
 https://cseegit.essex.ac.uk/ce291/team3/teamproject/commit/2f47cfb8b4e7e69e5a37866dfc590c99644c4695
 
+
 ## Koranteng Lartey
 ### Sprint 1 (University week 3):
 I had some issues with enrolment due to wanting to switch subject.
@@ -181,6 +181,7 @@ This week was given the task to complete a part of the documentation for the MVP
 
 ### Sprint 6 (University Week 8):
 This week task was to make sure that team members were all agreed with what I wrote for the MVP project management and if there were amendments to made on the technical documentation. Also to try and fix some of the problems found in the Burndown charts.
+
 
 ## Kyle Moody
 ### Sprint 1 (University week 3):
@@ -202,5 +203,4 @@ This week we discussed the upcoming demonstration for the MVP - https://cseegit.
 
 ### Sprint 6 (University Week 8):
 This week was the MVP product demonstration, Unfortunately I was absent but caught up through gitlab and jira and worked from home on - https://cseejira.essex.ac.uk/browse/CE291T3-10
-*Repeat for each team member, i.e. with more subheadings "Sprint1, Sprint2, ... Sprint N"*
 
