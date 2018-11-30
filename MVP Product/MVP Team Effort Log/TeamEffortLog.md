@@ -90,6 +90,40 @@ https://cseegit.essex.ac.uk/ce291/team3/teamproject/commit/e29aac7b5fe84f204f103
 This was our MVP demonstration. However, i had set the task for myself to complete the log in page and further the main page for the product. This task may take an estimated 3-4 hours.
 https://cseejira.essex.ac.uk/browse/CE291T3-32
 
+## Elios Dauti
+### Sprint 1 (University week 3):
+https://cseejira.essex.ac.uk/browse/CE291T3-1 - This was our first team session, we were getting to know each other within our team. Also familiarising ourselves with Github and Jira. The session was an hour long. 
+
+https://cseejira.essex.ac.uk/browse/CE291T3-2 - Issue on Jira getting familiar with its features, I commented on it and read over the attachment.
+
+https://cseegit.essex.ac.uk/ce291/team3/teamproject/blob/8fd72dc0f863f6f43421b501f81e5ab5ab9e90f5/collaboration.txt – This was a text document we each had to access via github and add our names to, to show we could push and pull files from github. Due to some problems in the lab, I was unable to perform this task at the session but completed the task after the lab which took about an hour.
+
+## Sprint 2 (University week 4):
+https://cseejira.essex.ac.uk/browse/CE291T3-5 - This sprint we created a “HelloWorld.java” program to get everyone to sync their IntelliJ IDE to Git so we can code and run programs while also pushing and pulling code from github.
+
+https://cseegit.essex.ac.uk/ce291/team3/teamproject/blob/master/src/HelloWorld.java – This is a link to the Jira task
+
+### Sprint 3(University week 5):
+This sprint, we had 2 new members to our team, so we introduced ourselves and the project and what we’re working on so they understand it.
+We also created some tasks which we assigned equally between our team towards the project.
+
+I was also assigned to different stories for the project which are here: https://cseejira.essex.ac.uk/browse/CE291T3-11 
+https://cseejira.essex.ac.uk/browse/CE291T3-12
+I started my research on these requirements.
+
+### Sprint 4 (University week 6)
+The team was struggling completing the tasks assigned this week due to a few absences including myself due to major illness but I checked github and jira for updates.
+
+### Sprint 5 (University week 7)
+This week the team focused on the MVP and how we are going to demonstrate our product on week 9.
+
+https://cseegit.essex.ac.uk/ce291/team3/teamproject/tree/master/MVP%20Product
+
+Unfrotunately I was still absent this week also due to illness but I was keeping track of stuff through jira and github like before.
+
+### Sprint 6 (University week 8)
+This week we were finalising our MVP and getting everyone on the same page and tracking progress for the coming week to demonstrate our product. I also apologised to my team for my absences.
+
 
 ## Callum Kleber
 ### Sprint 1 (University Week 3):
@@ -128,5 +162,45 @@ https://cseegit.essex.ac.uk/ce291/team3/teamproject/commit/1725cbd8fd8df94e894de
 
 https://cseegit.essex.ac.uk/ce291/team3/teamproject/commit/2f47cfb8b4e7e69e5a37866dfc590c99644c4695
 
+## Koranteng Lartey
+### Sprint 1 (University week 3):
+I had some issues with enrolment due to wanting to switch subject.
+
+### Sprint 2 (University week 4):
+Waited for confirmation to be able to switch courses. And being able to choose new modules.
+
+### Sprint 3 (University week 5):
+Was assigned team that I would be working on the project with. In the meeting I got familiar with some of my team members and was given a round down of our product. In addition, was given a basic idea of some of the function we would be having. Furthermore, was also given the task of completing the MVP by week 8-9.
+https://cseejira.essex.ac.uk/browse/CE291T3-17 
+
+### Sprint 4(University Week 6):
+This week I worked on uploading my profile photos on both Jira and Gitlab. And configure IntelliiJ with git.  Also help my team members in to nicely organise the Gitlab repository contents. https://cseejira.essex.ac.uk/projects/CE291T3/issues/CE291T3-35
+
+### Sprint 5 (University Week 7):
+This week was given the task to complete a part of the documentation for the MVP in particular the MVP Project Management Log’. https://cseejira.essex.ac.uk/projects/CE291T3/issues/CE291T3-38
+
+### Sprint 6 (University Week 8):
+This week task was to make sure that team members were all agreed with what I wrote for the MVP project management and if there were amendments to made on the technical documentation. Also to try and fix some of the problems found in the Burndown charts.
+
+## Kyle Moody
+### Sprint 1 (University week 3):
+For the first week we were set a task to familiarise ourselves with git and using the git command line. https://cseejira.essex.ac.uk/browse/CE291T3-2 I was absent this week but read through the content on moodle.
+
+### Sprint 2 (University week 4):
+I was assigned a new team, and met my new teammates and they got me up to speed with the project. This week we had to come up with the requirements for the client. https://cseejira.essex.ac.uk/browse/CE291T3-27 
+We also created a simple HelloWorld java program, to make sure everyone could use intelliJ to push and pull files with git. https://cseegit.essex.ac.uk/ce291/team3/teamproject/blob/master/src/HelloWorld.java The program can be found there.
+The User requirements can be found here : https://cseejira.essex.ac.uk/browse/CE291T3-8 I also created a basic JFrame and uploaded it to git.
+
+### Sprint 3 (University week 5):
+This week was about refining the requirements that we came up with last week, and to start to think about a sketch for our MVP.
+
+### Sprint 4(University Week 6):
+This week was about creating the MVP sketch  https://cseejira.essex.ac.uk/browse/CE291T3-18  This was completed in the lab. I was absent but I caught up at home.
+
+### Sprint 5 (University Week 7):
+This week we discussed the upcoming demonstration for the MVP - https://cseegit.essex.ac.uk/ce291/team3/teamproject/tree/master/MVP%20Product/MVP%20Product%20Demonstration
+
+### Sprint 6 (University Week 8):
+This week was the MVP product demonstration, Unfortunately I was absent but caught up through gitlab and jira and worked from home on - https://cseejira.essex.ac.uk/browse/CE291T3-10
 *Repeat for each team member, i.e. with more subheadings "Sprint1, Sprint2, ... Sprint N"*
 
