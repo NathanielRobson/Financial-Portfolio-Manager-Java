@@ -7,6 +7,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class DisplayTable {
+
     public static void main(String[] args) {
         JFileChooser chooser = new JFileChooser();
         File A = new File("C:/");
@@ -49,8 +50,8 @@ public class DisplayTable {
             TableFrame.setSize(1600,800);
             TableFrame.setVisible(true);
             TableFrame.setTitle("Stock Table");
-            TableFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
             }
+
         catch (IOException e)
         {
             e.printStackTrace();
