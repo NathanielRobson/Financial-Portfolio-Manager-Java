@@ -4,7 +4,9 @@ import java.io.File;
 import java.util.Scanner;
 
 public class SearchandView {
+
     private static Scanner a;
+
     public static void main(String[] args) {
 
         JFileChooser chooser = new JFileChooser();
@@ -26,8 +28,8 @@ public class SearchandView {
         }
     }
 
-
     public static void readFile(String Search, String filepath) {
+
         JFrame frame = new JFrame();
         frame.setAlwaysOnTop(true);
         boolean found = false;
@@ -49,6 +51,7 @@ public class SearchandView {
             a.useDelimiter("[,\n]");
 
             while(a.hasNext() && !found){
+
                 Date = a.next(); Company = a.next(); SharePrice = a.next();
                 Volume = a.next(); Change = a.next(); ChangePercent = a.next();
                 vwap = a.next(); changeOverTime = a.next(); NumofShares = a.next();
@@ -59,6 +62,7 @@ public class SearchandView {
                 }
             }
             if (found) {
+
                 JOptionPane.showMessageDialog(frame, "Date: " + Date + "\n" + "Company: " + Company + "\n" + "Share Price: $" + SharePrice + "\n" + "Volume: " + Volume +
                         "\n" + "Change: " + Change + "\n" + "ChangePercent: %" + ChangePercent + "\n" + "Vwap: " + vwap + "\n" + "Change Over Time: " + changeOverTime +
                         "\n" + "Number of Shares: " + NumofShares + "\n" + "Shares Total: $" + ShareTotal + "\n" + "Cash in Bank: $" + CashinBank + "\n" + "Total : $" + Total);

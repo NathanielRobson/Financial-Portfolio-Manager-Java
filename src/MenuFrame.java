@@ -8,7 +8,6 @@ class MenuFrame extends JFrame {
 
     public static void main (String[] args) {
         new MenuFrame();
-
     }
 
     JButton button;
@@ -19,9 +18,6 @@ class MenuFrame extends JFrame {
     JButton logOutBtn;
     JButton exitBtn;
     JLabel message;
-
-
-
 
     MenuFrame() {
 
