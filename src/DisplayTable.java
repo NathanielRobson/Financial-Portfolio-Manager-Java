@@ -21,8 +21,7 @@ public class DisplayTable {
             String a = FilePath.getAbsolutePath();
 
             ViewTable(a);
-        }
-        else {
+        } else {
             JOptionPane.showMessageDialog(null, "You have Clicked Cancel");
 
         }
@@ -32,28 +31,25 @@ public class DisplayTable {
         JFrame TableFrame = new JFrame();
         JTable Table = new JTable(new DefaultTableModel());
 
-        try (BufferedReader br = new BufferedReader(new FileReader(Filepath))){
+        try (BufferedReader br = new BufferedReader(new FileReader(Filepath))) {
             String ColumnLine = br.readLine().trim();
             String[] ColumnNames = ColumnLine.split(",");
-            DefaultTableModel Model = (DefaultTableModel)Table.getModel();
+            DefaultTableModel Model = (DefaultTableModel) Table.getModel();
             Model.setColumnIdentifiers(ColumnNames);
 
             Object[] rows = br.lines().toArray();
 
-            for (int i =0; i<rows.length; i++){
+            for (int i = 0; i < rows.length; i++) {
                 String Line = rows[i].toString().trim();
-                String[]RowData = Line.split(",");
+                String[] RowData = Line.split(",");
                 Model.addRow(RowData);
             }
             JScrollPane pane = new JScrollPane(Table);
             TableFrame.add(pane);
-            TableFrame.setSize(1600,800);
+            TableFrame.setSize(1600, 800);
             TableFrame.setVisible(true);
             TableFrame.setTitle("Stock Table");
-            }
-
-        catch (IOException e)
-        {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }

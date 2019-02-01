@@ -22,7 +22,9 @@ public class loginService {
 
             reader = new BufferedReader(new FileReader("members.csv"));
             String line = null;
+
             while ((line = reader.readLine()) != null) {
+
                 String[] users = line.split(",");
                 userID.add(users[0]);
                 usernames.add(users[1]);
@@ -33,9 +35,11 @@ public class loginService {
             String userIDJoin = String.join(",", userID);
             String usernameJoin = String.join(",", usernames);
             String passwordJoin = String.join(",", passwords);
+
             userIDs = Arrays.asList(userIDJoin.split("\\s*,\\s*"));
             userNames = Arrays.asList(usernameJoin.split("\\s*,\\s*"));
             passWords = Arrays.asList(passwordJoin.split("\\s*,\\s*"));
+
             new LinkedList<String>(userIDs);
             new LinkedList<String>(userNames);
             new LinkedList<String>(passWords);

@@ -6,12 +6,13 @@ import java.lang.String;
 
 class MenuFrame extends JFrame {
 
-    public static void main (String[] args) {
+    public static void main(String[] args) {
         new MenuFrame();
     }
 
-    JButton button;
+    JButton searchDate;
     JButton displayTable;
+    JButton viewGraph;
     JButton button2;
     JButton button3;
     JButton button4;
@@ -27,10 +28,10 @@ class MenuFrame extends JFrame {
         setResizable(false);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
-        setSize(700,400);
+        setSize(700, 500);
 
         Font myBtnFont = new Font("Century Gothic", Font.BOLD, 18);
-        Color myBtnColor = new Color(59,69,182);
+        Color myBtnColor = new Color(59, 69, 182);
         Color w = Color.white;
 
         displayTable = new JButton("Display Table of Shares - (NR CK)(Working)");
@@ -38,10 +39,15 @@ class MenuFrame extends JFrame {
         displayTable.setForeground(w);
         displayTable.setBackground(myBtnColor);
 
-        button = new JButton("View Market Trends - (Graph Daniel)(TODO)");
-        button.setFont(myBtnFont);
-        button.setForeground(w);
-        button.setBackground(myBtnColor);
+        searchDate = new JButton("Search a Date to View Share Information - (NR CK)(Working)");
+        searchDate.setFont(myBtnFont);
+        searchDate.setForeground(w);
+        searchDate.setBackground(myBtnColor);
+
+        viewGraph = new JButton("View Graph (Graph - Daniel TODO)");
+        viewGraph.setFont(myBtnFont);
+        viewGraph.setForeground(w);
+        viewGraph.setBackground(myBtnColor);
 
         button2 = new JButton("Scenarios (IEX API - Callum)(TODO)");
         button2.setFont(myBtnFont);
@@ -65,7 +71,7 @@ class MenuFrame extends JFrame {
 
         exitBtn = new JButton("Exit (NR)(Working)");
         exitBtn.setFont(myBtnFont);
-        exitBtn.setForeground(new Color(200,0,200));
+        exitBtn.setForeground(new Color(200, 0, 200));
         exitBtn.setBackground(myBtnColor);
 
         message = new JLabel();
@@ -87,13 +93,13 @@ class MenuFrame extends JFrame {
         c.gridwidth = GridBagConstraints.REMAINDER;
         c.fill = GridBagConstraints.BOTH;
 
-        p1.add(message,c);
-        p1.add(displayTable,c);
-        p1.add(button,c);
-        p1.add(button2,c);
-        p1.add(button3,c);
-        p1.add(button4,c);
-        p1.add(logOutBtn,c);
+        p1.add(message, c);
+        p1.add(displayTable, c);
+        p1.add(searchDate, c);
+        p1.add(button2, c);
+        p1.add(button3, c);
+        p1.add(button4, c);
+        p1.add(logOutBtn, c);
 
         add(p2);
         add(p1);
@@ -104,29 +110,33 @@ class MenuFrame extends JFrame {
         setVisible(true);
 
         logOutBtn.addActionListener(new ButtonHandler(this, 1));
-        displayTable.addActionListener(new ButtonHandler(this,2));
+        displayTable.addActionListener(new ButtonHandler(this, 2));
+        searchDate.addActionListener(new ButtonHandler(this, 3));
 
     }
 
     class ButtonHandler implements ActionListener { //Implements the action listener
         MenuFrame theApp;
         int action;
+
         ButtonHandler(MenuFrame app, int action) {
             this.theApp = app;
             this.action = action;
         }
+
         @Override
         public void actionPerformed(ActionEvent e) {
-            if(action == 2){
+            if (action == 2) {
                 DisplayTable.ViewTable("Test.csv");
             }
-            if(action == 1){
-
+            if (action == 1) {
                 new LoginFrame();
                 MenuFrame.this.dispose();
-
+            }
+            if (action == 3) {
+                String Search = JOptionPane.showInputDialog("Please enter the date you wish to display (DD/MM/YYYY): ");
+                SearchandView.readFile(Search, "Test.csv");
             }
         }
     }
-
 }

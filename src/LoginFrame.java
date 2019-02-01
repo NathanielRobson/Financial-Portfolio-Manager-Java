@@ -131,9 +131,9 @@ class LoginFrame extends JFrame {
                 loginservice = new loginService();
                 boolean loggedIn = false;
 
-                if(!userName.equals("")&&!passWord.equals("")){
+                if (!userName.equals("") && !passWord.equals("")) {
                     for (int i = 1; i < loginservice.userNames.size(); i++) {
-                        if (!userName.equals("")&&!passWord.equals("")&&(loginservice.userNames.get(i).matches(userName)
+                        if (!userName.equals("") && !passWord.equals("") && (loginservice.userNames.get(i).matches(userName)
                                 && loginservice.passWords.get(i).matches(passWord))) {
 
                             JOptionPane.showMessageDialog(null, "Thankyou For Logging In " + userName);
@@ -143,11 +143,11 @@ class LoginFrame extends JFrame {
                             LoginFrame.this.dispose();
                             break;
 
-                        } else{
+                        } else {
                             break;
                         }
                     }
-            } else if(!loggedIn && (userName.equals("") || passWord.equals(""))){
+                } else if (!loggedIn && (userName.equals("") || passWord.equals(""))) {
                     errorLabel.setText("Error Username or Password Field is Empty or Incorrect");
                 }
             }
