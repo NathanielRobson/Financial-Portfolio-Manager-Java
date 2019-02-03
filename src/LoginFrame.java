@@ -5,6 +5,10 @@ import java.awt.event.ActionListener;
 
 class LoginFrame extends JFrame {
 
+    public static void main(String[] args) {
+        new LoginFrame();
+    }
+
     JLabel userLabel;
     JTextField userField;
     JLabel passLabel;
@@ -16,9 +20,7 @@ class LoginFrame extends JFrame {
     JLabel errorLabel;
 
     LoginFrame() {
-
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-
         setSize(500, 400);
 
         Font myFieldFont = new Font("Century Gothic", Font.BOLD, 14);
@@ -99,7 +101,6 @@ class LoginFrame extends JFrame {
 
         resetBtn.addActionListener(new ButtonHandler(this, 1));
         loginBtn.addActionListener(new ButtonHandler(this, 2));
-
     }
 
     public class ButtonHandler implements ActionListener { //Implements the action listener
@@ -110,23 +111,18 @@ class LoginFrame extends JFrame {
         ButtonHandler(LoginFrame app, int action) {
             this.theApp = app;
             this.action = action;
-
         }
 
         @Override
         public void actionPerformed(ActionEvent e) {
-
             if (action == 1) {
                 userField.setText("");
                 passField.setText("");
                 errorLabel.setText("");
             }
             if (action == 2) {
-
-
                 String userName = userField.getText();
                 String passWord = passField.getText();
-
 
                 loginservice = new loginService();
                 boolean loggedIn = false;
@@ -135,7 +131,6 @@ class LoginFrame extends JFrame {
                     for (int i = 1; i < loginservice.userNames.size(); i++) {
                         if (!userName.equals("") && !passWord.equals("") && (loginservice.userNames.get(i).matches(userName)
                                 && loginservice.passWords.get(i).matches(passWord))) {
-
                             JOptionPane.showMessageDialog(null, "Thankyou For Logging In " + userName);
                             loggedIn = true;
                             new MenuFrame();

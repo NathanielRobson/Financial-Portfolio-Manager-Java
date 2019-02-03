@@ -1,8 +1,7 @@
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import java.io.BufferedReader;
 import java.io.File;
-import javax.swing.JFileChooser;
-import javax.swing.table.DefaultTableModel;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -44,11 +43,13 @@ public class DisplayTable {
                 String[] RowData = Line.split(",");
                 Model.addRow(RowData);
             }
+
             JScrollPane pane = new JScrollPane(Table);
             TableFrame.add(pane);
             TableFrame.setSize(1600, 800);
             TableFrame.setVisible(true);
-            TableFrame.setTitle("Stock Table");
+            TableFrame.setTitle("Financial Portfolio Manager Stock Table");
+
         } catch (IOException e) {
             e.printStackTrace();
         }

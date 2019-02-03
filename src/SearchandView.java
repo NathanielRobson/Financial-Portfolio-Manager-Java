@@ -1,5 +1,4 @@
 import javax.swing.*;
-import javax.swing.JFileChooser;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -8,34 +7,14 @@ public class SearchandView extends JFrame {
 
     private static Scanner a;
 
-    public static void main(String[] args) {
-
-        JFileChooser chooser = new JFileChooser();
-        File F = new File("C:/");
-        File FilePath;
-        int Checker;
-        chooser.setCurrentDirectory(F);
-        Checker = chooser.showOpenDialog(null);
-
-        if (Checker == JFileChooser.APPROVE_OPTION) {
-            FilePath = chooser.getSelectedFile();
-            String a = FilePath.getAbsolutePath();
-            String Search = JOptionPane.showInputDialog("Please enter the date you wish to display (DD/MM/YYYY): ");
-
-            readFile(Search, a);
-        } else {
-            JOptionPane.showMessageDialog(null, "You have Clicked Cancel");
-        }
-    }
-
     public static void readFile(String Search, String filepath) {
 
         ArrayList<String> theList = new ArrayList<>();
         String[] data;
-
         JFrame frame = new JFrame();
         frame.setAlwaysOnTop(true);
         boolean found = false;
+
         String Date = "",
                 Company = "",
                 SharePrice = "",
@@ -73,7 +52,6 @@ public class SearchandView extends JFrame {
                 }
             }
             if (found) {
-
                 data = new String[]{"Now Showing Information Regarding the Selected Date: " + Date,
                         "Date: " + Date, "Company: " + Company, "Share Price: $" + SharePrice,
                         "Volume: " + Volume, "Change: " + Change, "Percentage Change: %" + ChangePercent,
@@ -93,6 +71,5 @@ public class SearchandView extends JFrame {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Error");
         }
-
     }
 }
