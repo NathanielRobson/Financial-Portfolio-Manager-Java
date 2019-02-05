@@ -1,3 +1,5 @@
+package ExtraClasses;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -15,10 +17,8 @@ public class GBPtoUSDLiveStockService {
     String GBPPrice;
 
     GBPtoUSDLiveStockService() throws IOException {
-
         ArrayList<Double> GBPlist = new ArrayList<>();
 
-        String GBPString = "1 Pound sterling 'GBP' to 'USD': ";
         URL GBPurl = new URL("https://www.google.co.uk/search?q=GBP+to+USD");
         URLConnection GBPConn = GBPurl.openConnection();
         GBPConn.addRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0");

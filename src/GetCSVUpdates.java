@@ -15,6 +15,24 @@ import java.util.List;
 
 public class GetCSVUpdates {
 
+
+    public static void main(String[] args) {
+
+        //Test using Main Method
+        GetCSVUpdates g = new GetCSVUpdates();
+        String symbol = "nflx";
+        String crumb = g.getCrumb(symbol);
+        int startdate = 0;
+
+        if (crumb != null && !crumb.isEmpty()) {
+            //if personal cookie is retrieved then download data from url
+            g.downloadData(symbol, startdate, System.currentTimeMillis(), crumb);
+
+        } else {
+            System.out.println("not able to download data data for " + symbol);
+        }
+    }
+
     HttpClient client;
     HttpClientContext context;
 
@@ -25,7 +43,7 @@ public class GetCSVUpdates {
         context.setCookieStore(cookieStore);
     }
 
-    public String getPage(String symbol) {
+    public String getPage(String symbol) { //Returns the page for which company you wish to download shares from
         String page = null;
         String url = String.format("https://finance.yahoo.com/quote/%s/?p=%s", symbol, symbol);
         HttpGet request = new HttpGet(url);
@@ -75,12 +93,11 @@ public class GetCSVUpdates {
         return crumb;
     }
 
-    public String getCrumb(String symbol) {
+    public String getCrumb(String symbol) { //Finds special cookie to allow for downloading data from software
         return findCrumb(splitPageData(getPage(symbol)));
     }
 
-
-    public void downloadData(String symbol, long startDate, long endDate, String crumb) {
+    public void downloadData(String symbol, long startDate, long endDate, String crumb) { //Downloads the data from yahoo by taking the company symbol, the startdate, enddate and the special cookie crumb
         String filename = String.format("%s.csv", symbol.toUpperCase());
         String url = String.format("https://query1.finance.yahoo.com/v7/finance/download/%s?period1=%s&period2=%s&interval=1d&events=history&crumb=%s", symbol, startDate, endDate, crumb);
         HttpGet request = new HttpGet(url);
@@ -105,23 +122,6 @@ public class GetCSVUpdates {
 
         } catch (Exception el) {
             System.out.println("Error while downloading data");
-        }
-    }
-
-    public static void main(String[] args) {
-
-        //Test using Main Method
-        GetCSVUpdates g = new GetCSVUpdates();
-        String symbol = "nflx";
-        String crumb = g.getCrumb(symbol);
-        int startdate = 0;
-
-        if (crumb != null && !crumb.isEmpty()) {
-            //if personal cookie is retrieved then download data from url
-            g.downloadData(symbol, startdate, System.currentTimeMillis(), crumb);
-
-        } else {
-            System.out.println("not able to download data data for " + symbol);
         }
     }
 }

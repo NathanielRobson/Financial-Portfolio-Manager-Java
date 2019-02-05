@@ -12,6 +12,7 @@ import java.util.Locale;
 
 class StockGraph {
 
+    //Main method for testing
     public static void main(String[] args) {
         StockGraph Graph = new StockGraph();
         Graph.drawGraph("NFLX.csv", 30);
@@ -20,7 +21,7 @@ class StockGraph {
 
     CSVtoArray toArray = new CSVtoArray();
 
-    public List dateArrayFromFile(String file, int days) {
+    public List dateArrayFromFile(String file, int days) { //From the end of the date array it selects the chosen number of days to display on the graph
         toArray.CSVtoArray(file);
 
         ArrayList<String> datetail = new ArrayList<>();
@@ -33,7 +34,7 @@ class StockGraph {
         return datetail;
     }
 
-    public List<Double> valueArrayFromFile(String file, int days) {
+    public List valueArrayFromFile(String file, int days) { //From the end of the close value array it selects the chosen number of days to display on the graph
         toArray.CSVtoArray(file);
         ArrayList<Double> valuetail2 = new ArrayList<>();
 
@@ -46,7 +47,7 @@ class StockGraph {
         return valuetail2;
     }
 
-    public CategoryChart drawGraph(String filename, int days) {
+    public CategoryChart drawGraph(String filename, int days) { //draw graph and initialise frame and layout of graph
         JFrame frame = new JFrame();
         CategoryChart chart = new CategoryChartBuilder().width(1000).height(800).xAxisTitle("Date").yAxisTitle("Stock price").build();
 
@@ -75,6 +76,7 @@ class StockGraph {
 
         chart.addSeries(filename, dateArrayFromFile(filename, days), valueArrayFromFile(filename, days));
 
+        //initialise frame and panel
         frame.setVisible(true);
         frame.setSize(1700, 700);
         frame.setTitle("new Chart");
@@ -82,6 +84,7 @@ class StockGraph {
         JPanel panel = new XChartPanel<>(chart);
         frame.add(panel);
 
+        //return custom chart
         return chart;
     }
 }

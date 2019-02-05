@@ -2,12 +2,23 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
 
 class LoginFrame extends JFrame {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) { //Testing using Main
+
         new LoginFrame();
     }
+
+    Statement statement;
+    ResultSet result;
+
+    String currentUser;
 
     JLabel userLabel;
     JTextField userField;
@@ -19,7 +30,8 @@ class LoginFrame extends JFrame {
     JLabel helpLabel;
     JLabel errorLabel;
 
-    LoginFrame() {
+    LoginFrame() { //Frame init and design and layout functionality
+
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(500, 400);
 
@@ -97,10 +109,15 @@ class LoginFrame extends JFrame {
         setTitle("Financial Portfolio Manager Login");
         setResizable(false);
         setLocationRelativeTo(null);
+
         setVisible(true);
 
+        //Individual action listeners for each button
         resetBtn.addActionListener(new ButtonHandler(this, 1));
         loginBtn.addActionListener(new ButtonHandler(this, 2));
+
+        //Calls db connect method to allow for database functionality
+        connectToDB();
     }
 
     public class ButtonHandler implements ActionListener { //Implements the action listener
@@ -115,12 +132,29 @@ class LoginFrame extends JFrame {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            if (action == 1) {
-                userField.setText("");
+            if (action == 1) { //Reset button
+               userField.setText("");
                 passField.setText("");
                 errorLabel.setText("");
+               /*try { //DB Future Implementation
+                   String user = userField.getText();
+                   String pass = passField.getText();
+
+                   String sql = "SELECT userName, passWord FROM LoginCred WHERE user ='" +
+                           user +"'AND" + "'pass =' '" + pass + "'";
+                   result = statement.executeQuery(sql);
+                   int count = 0;
+                   while (result.next()){ //DB Load Test
+                       count++;
+                       System.out.println(count);
+                   }
+
+               } catch(Exception el){
+
+               }*/
+
             }
-            if (action == 2) {
+            if (action == 2) { //Login button Validation
                 String userName = userField.getText();
                 String passWord = passField.getText();
 
@@ -128,13 +162,15 @@ class LoginFrame extends JFrame {
                 boolean loggedIn = false;
 
                 if (!userName.equals("") && !passWord.equals("")) {
-                    for (int i = 1; i < loginservice.userNames.size(); i++) {
+                    for (int i = 1; i < loginservice.userNames.size(); i++) { //Runs loop through list of members to find input value match
                         if (!userName.equals("") && !passWord.equals("") && (loginservice.userNames.get(i).matches(userName)
-                                && loginservice.passWords.get(i).matches(passWord))) {
+                                && loginservice.passWords.get(i).matches(passWord))) { //Checks members.csv file for the user account
+
                             JOptionPane.showMessageDialog(null, "Thankyou For Logging In " + userName);
+                            currentUser = loginservice.userNames.get(i);
+                            System.out.println(currentUser);
                             loggedIn = true;
                             new MenuFrame();
-                            System.out.println(loginservice.userNames.get(i));
                             LoginFrame.this.dispose();
                             break;
 
@@ -147,5 +183,26 @@ class LoginFrame extends JFrame {
                 }
             }
         }
+    }
+
+    public void connectToDB(){ //DB Connect Future Implementation
+        Connection conn = null;
+
+        try
+        { //JDBC database driver and connectivity to db
+            Class.forName("com.mysql.jdbc.Driver");
+            System.out.println("Driver loaded");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost/test","root", "");
+            System.out.print("Database is connected !");
+            conn.close();
+        }
+        catch(Exception e)
+        {
+            System.out.print("error connecting to DB"+e);
+        }
+    }
+    void theCurrentUser(String user) { //get current user for current users session
+        ArrayList<String> theCurrentUserList = new ArrayList<>();
+        theCurrentUserList.add(user);
     }
 }

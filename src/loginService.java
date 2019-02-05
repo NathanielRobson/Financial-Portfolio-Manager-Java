@@ -14,7 +14,7 @@ public class loginService {
     List<String> passwords = new ArrayList<>();
     List<String> passWords = new ArrayList<>();
 
-    loginService() {
+    loginService() { //Reads the members.csv file to provide array list and splits the data into new arrays
         BufferedReader reader = null;
 
         try {

@@ -7,6 +7,7 @@ import java.io.IOException;
 
 public class DisplayTable {
 
+    //Testing with Main
     public static void main(String[] args) {
         JFileChooser chooser = new JFileChooser();
         File A = new File("C:/");
@@ -26,7 +27,7 @@ public class DisplayTable {
         }
     }
 
-    public static void ViewTable(String Filepath) {
+    public static void ViewTable(String Filepath) { //Creates a table for each column value found in the csv
         JFrame TableFrame = new JFrame();
         JTable Table = new JTable(new DefaultTableModel());
 

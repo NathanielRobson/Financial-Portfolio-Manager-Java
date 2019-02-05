@@ -3,24 +3,24 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-class StockSearchFrame extends JFrame {
+class PurchaseStocksFrame extends JFrame {
 
-    public static void main(String[] args) { //Main method for testing
-        new StockSearchFrame();
+    //Main Method for Testing
+    public static void main(String[] args) {
+        new PurchaseStocksFrame();
 
     }
 
     JLabel symbolLabel;
     JTextField symbolField;
     JButton resetBtn;
-    JButton updateBtn;
+    JButton purchaseBtn;
     JButton backBtn;
     JLabel helpLabel;
     JLabel errorLabel;
 
-    StockSearchFrame() {//Frame initialisation and layout functionality
+    PurchaseStocksFrame() {//Frame initialisation, layout and functionality
 
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(900, 500);
 
         Font myFieldFont = new Font("Century Gothic", Font.BOLD, 14);
@@ -39,10 +39,10 @@ class StockSearchFrame extends JFrame {
         symbolField.setFont(myFieldFont);
 
         resetBtn = new JButton("Reset");
-        updateBtn = new JButton("Search Stock Symbol");
+        purchaseBtn = new JButton("Purchase Stocks");
         backBtn = new JButton("Return to Main Menu");
 
-        helpLabel = new JLabel("<html>Please Search a Company Stock Symbol Using the Search Bar<br/><br/><br/>" +
+        helpLabel = new JLabel("<html>Enter Symbol to Purchase Stocks<br/><br/><br/>" +
                 "Some Common Symbols Are:<br/><br/>" +
                 "Apple Inc: AAPL<br/>" +
                 "Amazon:    AMZN<br/>" +
@@ -56,7 +56,7 @@ class StockSearchFrame extends JFrame {
         helpLabel.setForeground(myBlueColor);
         helpLabel.setFont(myTextFont);
 
-        errorLabel = new JLabel("<html>Welcome..... Waiting for Input.....</html>", SwingConstants.TRAILING);
+        errorLabel = new JLabel("<html>Select Purchase...<br/>Only When You are Sure you Would Like to <br/>Purchase Stocks</html>", SwingConstants.TRAILING);
         errorLabel.setForeground(myBlueColor);
         errorLabel.setFont(myFieldFont);
 
@@ -68,9 +68,9 @@ class StockSearchFrame extends JFrame {
         backBtn.setForeground(Color.white);
         backBtn.setFont(myButtonFont);
 
-        updateBtn.setBackground(myBlueColor);
-        updateBtn.setForeground(Color.white);
-        updateBtn.setFont(myButtonFont);
+        purchaseBtn.setBackground(myBlueColor);
+        purchaseBtn.setForeground(Color.white);
+        purchaseBtn.setFont(myButtonFont);
 
         JPanel panelOne = new JPanel();
         JPanel panelTwo = new JPanel();
@@ -81,7 +81,7 @@ class StockSearchFrame extends JFrame {
 
         panelOne.add(symbolLabel);
         panelOne.add(symbolField);
-        panelThree.add(updateBtn);
+        panelThree.add(purchaseBtn);
         panelThree.add(resetBtn);
         panelFive.add(helpLabel);
         panelFive.add(errorLabel);
@@ -95,22 +95,22 @@ class StockSearchFrame extends JFrame {
         add(panelSix);
 
         setLayout(new FlowLayout());
-        setTitle("Financial Portfolio Manager Stock Search Tool");
+        setTitle("Financial Portfolio Manager Stock Purchase Tool");
         setResizable(false);
         setLocationRelativeTo(null);
         setVisible(true);
 
-        //Each button with individual action listener
+        //Individual action listeners for each button
         resetBtn.addActionListener(new ButtonHandler(this, 1));
-        updateBtn.addActionListener(new ButtonHandler(this, 2));
+        purchaseBtn.addActionListener(new ButtonHandler(this, 2));
         backBtn.addActionListener(new ButtonHandler(this, 3));
     }
 
     public class ButtonHandler implements ActionListener { //Implements the action listener
-        StockSearchFrame theApp;
+        PurchaseStocksFrame theApp;
         int action;
 
-        ButtonHandler(StockSearchFrame app, int action) {
+        ButtonHandler(PurchaseStocksFrame app, int action) {
             this.theApp = app;
             this.action = action;
         }
@@ -118,35 +118,34 @@ class StockSearchFrame extends JFrame {
         @Override
         public void actionPerformed(ActionEvent e) {
 
-            if (action == 1) {//Reset button
+            if (action == 1) { //Reset button
                 symbolField.setText("");
                 errorLabel.setText("");
             }
-            if (action == 2) {//Download data button calls download method
-                download();
+            if (action == 2) {//Purchase shares button
+                purchase();
             }
-            if (action == 3) {//Return to main menu button, close current frame
+            if (action == 3) {//Return to main menu
                 new MenuFrame();
-                StockSearchFrame.this.dispose();
+                PurchaseStocksFrame.this.dispose();
             }
         }
     }
-
-    public void download(){ //download method calls GetCSVUpdates class and downloads newest csv and shares information to csv in root folder
+    public void purchase(){//Purchase method
         GetCSVUpdates quoteClass;
         quoteClass = new GetCSVUpdates();
         String symbol = symbolField.getText();
         String crumb = quoteClass.getCrumb(symbol);
-        int startdate = 0;
 
         if (crumb != null && !crumb.isEmpty()) {
-            errorLabel.setText(String.format("Downloaded Data Using the Symbol '%s'", symbol.toUpperCase()));
+            errorLabel.setText(String.format("<html>Purchased Stocks using the symbol '%s'<html/>", symbol.toUpperCase()));
             errorLabel.setForeground(Color.red);
-            quoteClass.downloadData(symbol, startdate, System.currentTimeMillis(), crumb);
+            quoteClass.downloadData(symbol, 0, System.currentTimeMillis(), crumb);
+
+
 
         } else {
-            errorLabel.setText("Unable to Download Data Using the Symbol: " + symbol.toUpperCase());
+            errorLabel.setText("Unable to purchase data using the Symbol: " + symbol.toUpperCase());
         }
     }
-
 }

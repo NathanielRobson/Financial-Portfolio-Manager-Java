@@ -6,7 +6,7 @@ import java.io.File;
 
 class GraphBuilderFrame extends JFrame {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) { //Test using Main
 
         new GraphBuilderFrame();
     }
@@ -21,7 +21,7 @@ class GraphBuilderFrame extends JFrame {
     JLabel helpLabel;
     JLabel errorLabel;
 
-    GraphBuilderFrame() {
+    GraphBuilderFrame() { //Frame init and design and layout
 
         setSize(500, 400);
 
@@ -105,6 +105,7 @@ class GraphBuilderFrame extends JFrame {
         setLocationRelativeTo(null);
         setVisible(true);
 
+        //Action listeners for the individual buttons
         resetBtn.addActionListener(new ButtonHandler(this, 1));
         submitBtn.addActionListener(new ButtonHandler(this, 2));
     }
@@ -122,19 +123,19 @@ class GraphBuilderFrame extends JFrame {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            if (action == 1) {
+            if (action == 1) { //reset button
                 symbolField.setText("");
                 daysField.setText("");
                 errorLabel.setText("");
             }
-            if (action == 2) {
+            if (action == 2) { //get updates by downloading the most recent file online
                 stock = new StockGraph();
                 getupdate = new GetCSVUpdates();
                 String newstring;
                 String comp = symbolField.getText().toUpperCase();
                 int days = Integer.parseInt(daysField.getText());
 
-                if (comp.contains(".CSV") && new File(comp).exists()) {
+                if (comp.contains(".CSV") && new File(comp).exists()) { //Loop checks to see if the string .csv was added to input or not, if not it will do it for you
                     stock.drawGraph(comp, days);
 
                 } else if (!comp.contains(".CSV")) {
@@ -160,12 +161,12 @@ class GraphBuilderFrame extends JFrame {
                                 stock.drawGraph(newstring, days);
 
                             } else {
-                                System.out.println(("Unable to download data using the Synonym: " + crumbinput.toUpperCase()));
+                                System.out.println(("Unable to download data using the Symbol: " + crumbinput.toUpperCase()));
                             }
                         }
                     }
                 } else {
-                    System.out.println(("Unable to download data using the Synonym: " + comp.toUpperCase() + "  Please Ensure that .csv is added and the company symbol exists on the web"));
+                    System.out.println(("Unable to download data using the Symbol: " + comp.toUpperCase() + "  Please Ensure that .csv is added and the company symbol exists"));
                 }
             }
         }

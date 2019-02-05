@@ -14,11 +14,11 @@ https://cseegit.essex.ac.uk/ce291/team3/teamproject/blob/8fd72dc0f863f6f43421b50
 
 ### Sprint 2 (University week 4):
 For this sprint we had to hold our scrum retrospective and also conversate on topics such as; what did we do well?, what could we have done better?, and what are we going to do nect time?.
-After this we then created a new Sprint for the coming week called which we had to assign a task to create a simple 'HelloWorld' program in Java.
+After this we then created a new Sprint for the coming week called which we had to assign a task to create a simple 'ExtraClasses.HelloWorld' program in Java.
 
 The Jira task can be found here: - https://cseejira.essex.ac.uk/browse/CE291T3-5
 
-Git link 'HelloWorld': - https://cseegit.essex.ac.uk/ce291/team3/teamproject/blob/master/src/HelloWorld.java
+Git link 'ExtraClasses.HelloWorld': - https://cseegit.essex.ac.uk/ce291/team3/teamproject/blob/master/src/ExtraClasses/ExtraClasses.HelloWorld.java
 
 We had to add a subtask for each team member (this was impossible at the time because we were again 2 team members down 1 of which we hadnt even met yet). We added a task to make sure that we started some proper development on our project in Java and had a JFrame set up. I also assigned myself to complete the user requirements translation which can be found here : - 
 
@@ -98,9 +98,9 @@ https://cseejira.essex.ac.uk/browse/CE291T3-2 - Issue on Jira getting familiar w
 https://cseegit.essex.ac.uk/ce291/team3/teamproject/blob/8fd72dc0f863f6f43421b501f81e5ab5ab9e90f5/collaboration.txt – This was a text document we each had to access via github and add our names to, to show we could push and pull files from github. Due to some problems in the lab, I was unable to perform this task at the session but completed the task after the lab which took about an hour.
 
 ### Sprint 2 (University week 4):
-https://cseejira.essex.ac.uk/browse/CE291T3-5 - This sprint we created a “HelloWorld.java” program to get everyone to sync their IntelliJ IDE to Git so we can code and run programs while also pushing and pulling code from github.
+https://cseejira.essex.ac.uk/browse/CE291T3-5 - This sprint we created a “ExtraClasses.HelloWorld.java” program to get everyone to sync their IntelliJ IDE to Git so we can code and run programs while also pushing and pulling code from github.
 
-https://cseegit.essex.ac.uk/ce291/team3/teamproject/blob/master/src/HelloWorld.java – This is a link to the Jira task
+https://cseegit.essex.ac.uk/ce291/team3/teamproject/blob/master/src/ExtraClasses/ExtraClasses.HelloWorld.java – This is a link to the Jira task
 
 ### Sprint 3(University week 5):
 This sprint, we had 2 new members to our team, so we introduced ourselves and the project and what we’re working on so they understand it.
@@ -189,7 +189,7 @@ For the first week we were set a task to familiarise ourselves with git and usin
 
 ### Sprint 2 (University week 4):
 I was assigned a new team, and met my new teammates and they got me up to speed with the project. This week we had to come up with the requirements for the client. https://cseejira.essex.ac.uk/browse/CE291T3-27 
-We also created a simple HelloWorld java program, to make sure everyone could use intelliJ to push and pull files with git. https://cseegit.essex.ac.uk/ce291/team3/teamproject/blob/master/src/HelloWorld.java The program can be found there.
+We also created a simple ExtraClasses.HelloWorld java program, to make sure everyone could use intelliJ to push and pull files with git. https://cseegit.essex.ac.uk/ce291/team3/teamproject/blob/master/src/ExtraClasses.HelloWorld.java The program can be found there.
 The User requirements can be found here : https://cseejira.essex.ac.uk/browse/CE291T3-8 I also created a basic JFrame and uploaded it to git.
 
 ### Sprint 3 (University week 5):
