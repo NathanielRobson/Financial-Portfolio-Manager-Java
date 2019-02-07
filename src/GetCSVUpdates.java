@@ -1,4 +1,3 @@
-import org.apache.commons.lang3.StringEscapeUtils;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.CookieStore;
@@ -13,25 +12,9 @@ import java.io.*;
 import java.util.Arrays;
 import java.util.List;
 
+import static org.apache.commons.lang3.StringEscapeUtils.unescapeJava;
+
 public class GetCSVUpdates {
-
-
-    public static void main(String[] args) {
-
-        //Test using Main Method
-        GetCSVUpdates g = new GetCSVUpdates();
-        String symbol = "nflx";
-        String crumb = g.getCrumb(symbol);
-        int startdate = 0;
-
-        if (crumb != null && !crumb.isEmpty()) {
-            //if personal cookie is retrieved then download data from url
-            g.downloadData(symbol, startdate, System.currentTimeMillis(), crumb);
-
-        } else {
-            System.out.println("not able to download data data for " + symbol);
-        }
-    }
 
     HttpClient client;
     HttpClientContext context;
@@ -67,8 +50,14 @@ public class GetCSVUpdates {
         return page;
     }
 
+    /*public OHLCDataItem[] getData (String symbol){
+        List<OHLCDataItem> dataItems = new ArrayList<>();
+
+    }*/
+
     public List<String> splitPageData(String page) {
         return Arrays.asList(page.split("}"));
+
     }
 
     public String findCrumb(List<String> lines) {
@@ -87,7 +76,7 @@ public class GetCSVUpdates {
         if (rtn != null && !rtn.isEmpty()) {
             String[] vals = rtn.split(":");                 // get third item
             crumb = vals[2].replace("\"", ""); // strip quotes
-            crumb = StringEscapeUtils.unescapeJava(crumb);
+            crumb = unescapeJava(crumb);
 
         }
         return crumb;
@@ -95,6 +84,7 @@ public class GetCSVUpdates {
 
     public String getCrumb(String symbol) { //Finds special cookie to allow for downloading data from software
         return findCrumb(splitPageData(getPage(symbol)));
+
     }
 
     public void downloadData(String symbol, long startDate, long endDate, String crumb) { //Downloads the data from yahoo by taking the company symbol, the startdate, enddate and the special cookie crumb

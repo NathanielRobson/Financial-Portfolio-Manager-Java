@@ -1,47 +1,41 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.io.*;
 import java.util.LinkedList;
-import java.util.List;
 
 public class loginService {
+    public static void main(String[] args) {
+        new loginService();
+    }
 
-    List<String> userID = new ArrayList<>();
-    List<String> userIDs = new ArrayList<>();
-    List<String> usernames = new ArrayList<>();
-    List<String> userNames = new ArrayList<>();
-    List<String> passwords = new ArrayList<>();
-    List<String> passWords = new ArrayList<>();
+    public LinkedList<String> userNames = new LinkedList<>();
+    public LinkedList<String> passWords = new LinkedList<>();
+    File file = new File(".//UserAccounts/members.csv");
 
     loginService() { //Reads the members.csv file to provide array list and splits the data into new arrays
         BufferedReader reader = null;
-
+        BufferedWriter writer = null;
         try {
-            reader = new BufferedReader(new FileReader("members.csv"));
-            String line = null;
 
-            while ((line = reader.readLine()) != null) {
-                String[] users = line.split(",");
-                userID.add(users[0]);
-                usernames.add(users[1]);
-                passwords.add(users[2]);
+            if (file.exists()) {
 
+                reader = new BufferedReader(new FileReader(".//UserAccounts/members.csv"));
+                String line = null;
+                while ((line = reader.readLine()) != null) {
+                    String[] users = line.split(",");
+                    userNames.add(users[0]);
+                    passWords.add(users[1]);
+                }
+                System.out.println("User File Read Successfully");
+            } else {
+                String users = "NR,teamNR,\nED,teamED,\nDC,teamDC,\nKM,teamKM,\nCK,teamCK,\nKL,teamKL";
+
+                writer = new BufferedWriter(new FileWriter(file));
+
+                writer.write(users);
+                writer.close();
+                System.out.println("No File Existed, File Has Been Created in //UserAccounts/members.csv");
             }
-            String userIDJoin = String.join(",", userID);
-            String usernameJoin = String.join(",", usernames);
-            String passwordJoin = String.join(",", passwords);
-
-            userIDs = Arrays.asList(userIDJoin.split("\\s*,\\s*"));
-            userNames = Arrays.asList(usernameJoin.split("\\s*,\\s*"));
-            passWords = Arrays.asList(passwordJoin.split("\\s*,\\s*"));
-
-            new LinkedList<>(userIDs);
-            new LinkedList<>(userNames);
-            new LinkedList<>(passWords);
-
         } catch (Exception el) {
-            System.out.println("Error, no members.csv file exists");
+            System.out.println("Error While Trying to Parse Login Details");
         }
     }
 }

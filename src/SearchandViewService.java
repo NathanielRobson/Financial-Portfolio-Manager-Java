@@ -30,7 +30,6 @@ public class SearchandViewService extends JFrame {
             a.useDelimiter("[,\n]");
 
             while (a.hasNext() && !found) {
-
                 //while csv has next value assign to next variable
                 Date = a.next();
                 Open = a.next();
@@ -39,8 +38,6 @@ public class SearchandViewService extends JFrame {
                 Close = a.next();
                 AdjClose = a.next();
                 Volume = a.next();
-
-                System.out.println(Date);
 
                 if (Date.contains(Search)) {
                     found = true;

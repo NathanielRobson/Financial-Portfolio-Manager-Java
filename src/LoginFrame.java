@@ -2,23 +2,14 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import java.util.ArrayList;
 
 class LoginFrame extends JFrame {
+    public String theCurrentUser;
 
     public static void main(String[] args) { //Testing using Main
 
         new LoginFrame();
     }
-
-    Statement statement;
-    ResultSet result;
-
-    String currentUser;
 
     JLabel userLabel;
     JTextField userField;
@@ -33,7 +24,7 @@ class LoginFrame extends JFrame {
     LoginFrame() { //Frame init and design and layout functionality
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize(500, 400);
+        setSize(500, 500);
 
         Font myFieldFont = new Font("Century Gothic", Font.BOLD, 14);
         Font myTextFont = new Font("Century Gothic", Font.BOLD, 16);
@@ -43,7 +34,7 @@ class LoginFrame extends JFrame {
         Color myBlueColor = new Color(59, 69, 182);
         Color resetColor = new Color(200, 0, 200);
 
-        userLabel = new JLabel("User ID: ");
+        userLabel = new JLabel("User Name: ");
         userLabel.setFont(myLabelFont);
         userLabel.setForeground(myBlueColor);
 
@@ -60,11 +51,11 @@ class LoginFrame extends JFrame {
         resetBtn = new JButton("Reset");
         loginBtn = new JButton("Login");
 
-        welcomeLabel = new JLabel("Welcome to our Financial Portfolio Manager!");
+        welcomeLabel = new JLabel("Welcome to Team 3's Financial Portfolio Manager");
         welcomeLabel.setForeground(myBlueColor);
         welcomeLabel.setFont(myTextFont);
 
-        helpLabel = new JLabel("Please login using your credentials.");
+        helpLabel = new JLabel("Please login using your unique credentials");
         helpLabel.setForeground(myBlueColor);
         helpLabel.setFont(myLabelFont);
 
@@ -116,8 +107,6 @@ class LoginFrame extends JFrame {
         resetBtn.addActionListener(new ButtonHandler(this, 1));
         loginBtn.addActionListener(new ButtonHandler(this, 2));
 
-        //Calls db connect method to allow for database functionality
-        connectToDB();
     }
 
     public class ButtonHandler implements ActionListener { //Implements the action listener
@@ -133,76 +122,48 @@ class LoginFrame extends JFrame {
         @Override
         public void actionPerformed(ActionEvent e) {
             if (action == 1) { //Reset button
-               userField.setText("");
+                userField.setText("");
                 passField.setText("");
                 errorLabel.setText("");
-               /*try { //DB Future Implementation
-                   String user = userField.getText();
-                   String pass = passField.getText();
-
-                   String sql = "SELECT userName, passWord FROM LoginCred WHERE user ='" +
-                           user +"'AND" + "'pass =' '" + pass + "'";
-                   result = statement.executeQuery(sql);
-                   int count = 0;
-                   while (result.next()){ //DB Load Test
-                       count++;
-                       System.out.println(count);
-                   }
-
-               } catch(Exception el){
-
-               }*/
-
             }
             if (action == 2) { //Login button Validation
-                String userName = userField.getText();
-                String passWord = passField.getText();
+                String userName = "";
+                String passWord = "";
+                userName = userField.getText().trim();
+                passWord = passField.getText().trim();
 
                 loginservice = new loginService();
-                boolean loggedIn = false;
 
-                if (!userName.equals("") && !passWord.equals("")) {
-                    for (int i = 1; i < loginservice.userNames.size(); i++) { //Runs loop through list of members to find input value match
-                        if (!userName.equals("") && !passWord.equals("") && (loginservice.userNames.get(i).matches(userName)
-                                && loginservice.passWords.get(i).matches(passWord))) { //Checks members.csv file for the user account
+                boolean loggedin = false;
 
-                            JOptionPane.showMessageDialog(null, "Thankyou For Logging In " + userName);
-                            currentUser = loginservice.userNames.get(i);
-                            System.out.println(currentUser);
-                            loggedIn = true;
-                            new MenuFrame();
-                            LoginFrame.this.dispose();
-                            break;
-
-                        } else {
-                            break;
+                if (!(userName.equals("") || passWord.equals(""))) {
+                    while (!loggedin) {
+                        //Runs loop through list of members to find input value match
+                        for (int i = 0; i < loginservice.userNames.size(); i++) {
+                            if (loginservice.userNames.get(i).equals(userName) && (loginservice.passWords.get(i).equals(passWord))) {//Checks members.csv file for the user account
+                                theApp.setCurrentUser(userName);
+                                new MenuFrame(userName);
+                                loggedin = true;
+                                LoginFrame.this.dispose();
+                                JOptionPane.showMessageDialog(null, "Logged In Successfully!\n Welcome " + userName);
+                            } else {
+                                errorLabel.setText("Wrong login Information");
+                            }
                         }
                     }
-                } else if (!loggedIn && (userName.equals("") || passWord.equals(""))) {
+                } else {
                     errorLabel.setText("Error Username or Password Field is Empty or Incorrect");
                 }
             }
         }
     }
 
-    public void connectToDB(){ //DB Connect Future Implementation
-        Connection conn = null;
+    public String getTheCurrentUser() {
+        return theCurrentUser;
+    }
 
-        try
-        { //JDBC database driver and connectivity to db
-            Class.forName("com.mysql.jdbc.Driver");
-            System.out.println("Driver loaded");
-            conn = DriverManager.getConnection("jdbc:mysql://localhost/test","root", "");
-            System.out.print("Database is connected !");
-            conn.close();
-        }
-        catch(Exception e)
-        {
-            System.out.print("error connecting to DB"+e);
-        }
+    public void setCurrentUser(String theNewCurrentUser) {
+        this.theCurrentUser = theNewCurrentUser;
     }
-    void theCurrentUser(String user) { //get current user for current users session
-        ArrayList<String> theCurrentUserList = new ArrayList<>();
-        theCurrentUserList.add(user);
-    }
+
 }

@@ -15,31 +15,33 @@ class StockGraph {
     //Main method for testing
     public static void main(String[] args) {
         StockGraph Graph = new StockGraph();
-        Graph.drawGraph("NFLX.csv", 30);
+        Graph.drawGraph("F.csv", 20, 1);
 
     }
 
     CSVtoArray toArray = new CSVtoArray();
 
-    public List dateArrayFromFile(String file, int days) { //From the end of the date array it selects the chosen number of days to display on the graph
+    public List dateArrayFromFile(String file, int from, int to) { //From the end of the date array it selects the chosen number of days to display on the graph
         toArray.CSVtoArray(file);
-
         ArrayList<String> datetail = new ArrayList<>();
         int size = toArray.datearray.size();
-        for (int i = size - 1; i >= size - days; i--) {
+
+        for (int i = size - to - 1; i <= size - from; i++) {
+
             if (true) {
+
                 datetail.add(toArray.datearray.get(i));
             }
         }
         return datetail;
     }
 
-    public List valueArrayFromFile(String file, int days) { //From the end of the close value array it selects the chosen number of days to display on the graph
+    public List valueArrayFromFile(String file, int from, int to) { //From the end of the close value array it selects the chosen number of days to display on the graph
         toArray.CSVtoArray(file);
         ArrayList<Double> valuetail2 = new ArrayList<>();
-
         int size = toArray.closevaluearray.size();
-        for (int i = size - 1; i >= size - days; i--) {
+
+        for (int i = size - to - 1; i <= size - from; i++) {
             if (true) {
                 valuetail2.add(toArray.closevaluearray.get(i));
             }
@@ -47,7 +49,7 @@ class StockGraph {
         return valuetail2;
     }
 
-    public CategoryChart drawGraph(String filename, int days) { //draw graph and initialise frame and layout of graph
+    public CategoryChart drawGraph(String filename, int from, int to) { //draw graph and initialise frame and layout of graph
         JFrame frame = new JFrame();
         CategoryChart chart = new CategoryChartBuilder().width(1000).height(800).xAxisTitle("Date").yAxisTitle("Stock price").build();
 
@@ -74,7 +76,7 @@ class StockGraph {
         chart.getStyler().setAxisTickLabelsFont(new Font(Font.SERIF, Font.PLAIN, 11));
         chart.getStyler().setLocale(Locale.ENGLISH);
 
-        chart.addSeries(filename, dateArrayFromFile(filename, days), valueArrayFromFile(filename, days));
+        chart.addSeries(filename, dateArrayFromFile(filename, to, from), valueArrayFromFile(filename, to, from));
 
         //initialise frame and panel
         frame.setVisible(true);

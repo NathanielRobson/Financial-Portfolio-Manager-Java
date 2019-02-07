@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 class StockSearchFrame extends JFrame {
+    public String theCurrentUser;
 
     public static void main(String[] args) { //Main method for testing
         new StockSearchFrame();
@@ -13,64 +14,50 @@ class StockSearchFrame extends JFrame {
     JLabel symbolLabel;
     JTextField symbolField;
     JButton resetBtn;
-    JButton updateBtn;
-    JButton backBtn;
+    JButton submitBtn;
     JLabel helpLabel;
     JLabel errorLabel;
 
     StockSearchFrame() {//Frame initialisation and layout functionality
-
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize(900, 500);
+        setSize(450, 350);
 
         Font myFieldFont = new Font("Century Gothic", Font.BOLD, 14);
-        Font myTextFont = new Font("Century Gothic", Font.BOLD, 16);
-        Font myLabelFont = new Font("Century Gothic", Font.BOLD, 18);
-
-        Font myButtonFont = new Font("Tahoma", Font.BOLD, 20);
+        Font myFieldFont2 = new Font("Century Gothic", Font.BOLD, 12);
+        Font myNextFont = new Font("HelveticaNeue-Light", Font.ITALIC, 17);
         Color myBlueColor = new Color(59, 69, 182);
-        Color resetColor = new Color(200, 0, 200);
+        Color resetColor = new Color(200, 147, 183);
 
-        symbolLabel = new JLabel("Company Symbol: ");
-        symbolLabel.setFont(myLabelFont);
+        symbolLabel = new JLabel("<html>Company Symbol: <html>");
+        symbolLabel.setFont(myFieldFont);
         symbolLabel.setForeground(myBlueColor);
 
         symbolField = new JTextField(20);
-        symbolField.setFont(myFieldFont);
+        symbolField.setFont(myFieldFont2);
 
-        resetBtn = new JButton("Reset");
-        updateBtn = new JButton("Search Stock Symbol");
-        backBtn = new JButton("Return to Main Menu");
 
-        helpLabel = new JLabel("<html>Please Search a Company Stock Symbol Using the Search Bar<br/><br/><br/>" +
-                "Some Common Symbols Are:<br/><br/>" +
-                "Apple Inc: AAPL<br/>" +
-                "Amazon:    AMZN<br/>" +
-                "Netflix:   NFLX<br/>" +
-                "Facebook:  FB<br/>" +
-                "Twitter:   TWTR<br/>" +
-                "Intel:     INTC<br/>" +
-                "Microsoft: MSFT<br/>" +
-                "Google:    GOOGL</html>", SwingConstants.CENTER);
+        helpLabel = new JLabel("<html><font color = purple>Download Newest Data</font><br/>Please Enter a Company Symbol<br/> To Download The Most Recent Data Some Examples: <br/>" +
+                "<font color = red>Netflix</font> = \"NFLX.CSV\" or \"NFLX\"<br/>" +
+                "<font color = green>Microsoft</font> = \"NFLX.CSV\" or \"NFLX\"<br/>" +
+                "<font color = #00FFFF>Twitter</font> = \"TWTR.CSV\" or \"TWTR\"<br/>" +
+                "<font color = gray>Apple</font> = \"AAPL.CSV\" or \"AAPL\"<br/>" +
+                "Facebook = \"FB.CSV\" or \"FB\"</html>");
 
         helpLabel.setForeground(myBlueColor);
-        helpLabel.setFont(myTextFont);
+        helpLabel.setFont(myNextFont);
 
-        errorLabel = new JLabel("<html>Welcome..... Waiting for Input.....</html>", SwingConstants.TRAILING);
-        errorLabel.setForeground(myBlueColor);
+        errorLabel = new JLabel("");
+        errorLabel.setForeground(Color.red);
         errorLabel.setFont(myFieldFont);
 
+        resetBtn = new JButton("Reset");
         resetBtn.setBackground(myBlueColor);
         resetBtn.setForeground(resetColor);
-        resetBtn.setFont(myButtonFont);
+        resetBtn.setFont(myNextFont);
 
-        backBtn.setBackground(myBlueColor);
-        backBtn.setForeground(Color.white);
-        backBtn.setFont(myButtonFont);
-
-        updateBtn.setBackground(myBlueColor);
-        updateBtn.setForeground(Color.white);
-        updateBtn.setFont(myButtonFont);
+        submitBtn = new JButton("Download Data");
+        submitBtn.setBackground(myBlueColor);
+        submitBtn.setForeground(Color.white);
+        submitBtn.setFont(myNextFont);
 
         JPanel panelOne = new JPanel();
         JPanel panelTwo = new JPanel();
@@ -81,11 +68,10 @@ class StockSearchFrame extends JFrame {
 
         panelOne.add(symbolLabel);
         panelOne.add(symbolField);
-        panelThree.add(updateBtn);
-        panelThree.add(resetBtn);
-        panelFive.add(helpLabel);
-        panelFive.add(errorLabel);
-        panelSix.add(backBtn);
+        panelTwo.add(submitBtn);
+        panelTwo.add(resetBtn);
+        panelThree.add(helpLabel);
+        panelFour.add(errorLabel);
 
         add(panelOne);
         add(panelTwo);
@@ -95,15 +81,14 @@ class StockSearchFrame extends JFrame {
         add(panelSix);
 
         setLayout(new FlowLayout());
-        setTitle("Financial Portfolio Manager Stock Search Tool");
+        setTitle("Financial Portfolio Manager CSV Updater");
         setResizable(false);
         setLocationRelativeTo(null);
         setVisible(true);
 
         //Each button with individual action listener
         resetBtn.addActionListener(new ButtonHandler(this, 1));
-        updateBtn.addActionListener(new ButtonHandler(this, 2));
-        backBtn.addActionListener(new ButtonHandler(this, 3));
+        submitBtn.addActionListener(new ButtonHandler(this, 2));
     }
 
     public class ButtonHandler implements ActionListener { //Implements the action listener
@@ -126,13 +111,13 @@ class StockSearchFrame extends JFrame {
                 download();
             }
             if (action == 3) {//Return to main menu button, close current frame
-                new MenuFrame();
+                new MenuFrame(theCurrentUser);
                 StockSearchFrame.this.dispose();
             }
         }
     }
 
-    public void download(){ //download method calls GetCSVUpdates class and downloads newest csv and shares information to csv in root folder
+    public void download() { //download method calls GetCSVUpdates class and downloads newest csv and shares information to csv in root folder
         GetCSVUpdates quoteClass;
         quoteClass = new GetCSVUpdates();
         String symbol = symbolField.getText();
@@ -147,6 +132,14 @@ class StockSearchFrame extends JFrame {
         } else {
             errorLabel.setText("Unable to Download Data Using the Symbol: " + symbol.toUpperCase());
         }
+    }
+
+    public void setTheCurrentUser(String theNewCurrentUser) {
+        this.theCurrentUser = theNewCurrentUser;
+    }
+
+    public String getTheCurrentUser() {
+        return theCurrentUser;
     }
 
 }

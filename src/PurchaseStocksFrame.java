@@ -2,76 +2,102 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 
 class PurchaseStocksFrame extends JFrame {
 
     //Main Method for Testing
-    public static void main(String[] args) {
-        new PurchaseStocksFrame();
+    String theCurrentUser;
 
-    }
-
+    JLabel userLabel;
+    JLabel userMoney;
     JLabel symbolLabel;
+    JLabel totalLabel;
+    JLabel priceLabel;
     JTextField symbolField;
-    JButton resetBtn;
+    JTextField totalField;
+    JTextArea priceArea;
+    JButton getPriceBtn;
     JButton purchaseBtn;
-    JButton backBtn;
     JLabel helpLabel;
     JLabel errorLabel;
 
-    PurchaseStocksFrame() {//Frame initialisation, layout and functionality
+    PurchaseStocksFrame(String theCurrentUser) {//Frame initialisation, layout and functionality
+        this.theCurrentUser = theCurrentUser;
+        try {
+            readPersonalPortfolio();
 
-        setSize(900, 500);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        setSize(500, 500);
 
         Font myFieldFont = new Font("Century Gothic", Font.BOLD, 14);
         Font myTextFont = new Font("Century Gothic", Font.BOLD, 16);
-        Font myLabelFont = new Font("Century Gothic", Font.BOLD, 18);
+        Font myNextFont = new Font("HelveticaNeue-Light", Font.ITALIC, 18);
 
         Font myButtonFont = new Font("Tahoma", Font.BOLD, 20);
         Color myBlueColor = new Color(59, 69, 182);
-        Color resetColor = new Color(200, 0, 200);
+        Color priceColor = new Color(38, 200, 191);
+
+        userLabel = new JLabel("Current User: " + theCurrentUser);
+        userLabel.setFont(myNextFont);
+        userLabel.setForeground(Color.BLACK);
+
+        userMoney = new JLabel("Current Money: ");
+        userMoney.setFont(myNextFont);
+        userMoney.setForeground(Color.BLACK);
 
         symbolLabel = new JLabel("Company Symbol: ");
-        symbolLabel.setFont(myLabelFont);
+        symbolLabel.setFont(myNextFont);
         symbolLabel.setForeground(myBlueColor);
 
         symbolField = new JTextField(20);
         symbolField.setFont(myFieldFont);
 
-        resetBtn = new JButton("Reset");
-        purchaseBtn = new JButton("Purchase Stocks");
-        backBtn = new JButton("Return to Main Menu");
+        priceLabel = new JLabel("Current Share Price");
+        priceLabel.setFont(myNextFont);
+        priceLabel.setForeground(priceColor);
 
-        helpLabel = new JLabel("<html>Enter Symbol to Purchase Stocks<br/><br/><br/>" +
-                "Some Common Symbols Are:<br/><br/>" +
-                "Apple Inc: AAPL<br/>" +
-                "Amazon:    AMZN<br/>" +
-                "Netflix:   NFLX<br/>" +
-                "Facebook:  FB<br/>" +
-                "Twitter:   TWTR<br/>" +
-                "Intel:     INTC<br/>" +
-                "Microsoft: MSFT<br/>" +
-                "Google:    GOOGL</html>", SwingConstants.CENTER);
+        priceArea = new JTextArea();
+        priceArea.setColumns(3);
+        priceArea.setEditable(false);
 
+        totalLabel = new JLabel("Total To Buy: ");
+        totalLabel.setFont(myNextFont);
+        totalLabel.setForeground(myBlueColor);
+
+        totalField = new JTextField(3);
+        totalField.setFont(myFieldFont);
+
+        helpLabel = new JLabel("<html><font color = purple>Purchase Stocks!</font><br/><br/>Please Enter a Company Symbol<br/> And Then Get The Current Share Price, Then Buy!<br/><br/>" +
+                "Some Examples: <br/>" +
+                "<font color = red>Netflix</font> = \"NFLX.CSV\" or \"NFLX\"<br/>" +
+                "<font color = green>Microsoft</font> = \"NFLX.CSV\" or \"NFLX\"<br/>" +
+                "<font color = #00FFFF>Twitter</font> = \"TWTR.CSV\" or \"TWTR\"<br/>" +
+                "<font color = gray>Apple</font> = \"AAPL.CSV\" or \"AAPL\"<br/>" +
+                "Facebook = \"FB.CSV\" or \"FB\"</html>");
         helpLabel.setForeground(myBlueColor);
         helpLabel.setFont(myTextFont);
 
-        errorLabel = new JLabel("<html>Select Purchase...<br/>Only When You are Sure you Would Like to <br/>Purchase Stocks</html>", SwingConstants.TRAILING);
-        errorLabel.setForeground(myBlueColor);
+        errorLabel = new JLabel("");
+        errorLabel.setForeground(Color.red);
         errorLabel.setFont(myFieldFont);
 
-        resetBtn.setBackground(myBlueColor);
-        resetBtn.setForeground(resetColor);
-        resetBtn.setFont(myButtonFont);
+        getPriceBtn = new JButton("Get Current Price");
+        getPriceBtn.setBackground(myBlueColor);
+        getPriceBtn.setForeground(priceColor);
+        getPriceBtn.setFont(myButtonFont);
 
-        backBtn.setBackground(myBlueColor);
-        backBtn.setForeground(Color.white);
-        backBtn.setFont(myButtonFont);
-
+        purchaseBtn = new JButton("Purchase Stocks");
         purchaseBtn.setBackground(myBlueColor);
         purchaseBtn.setForeground(Color.white);
         purchaseBtn.setFont(myButtonFont);
 
+        JPanel userPanel = new JPanel();
         JPanel panelOne = new JPanel();
         JPanel panelTwo = new JPanel();
         JPanel panelThree = new JPanel();
@@ -79,20 +105,27 @@ class PurchaseStocksFrame extends JFrame {
         JPanel panelFive = new JPanel();
         JPanel panelSix = new JPanel();
 
+        userPanel.add(userLabel);
+        userPanel.add(userMoney);
         panelOne.add(symbolLabel);
         panelOne.add(symbolField);
-        panelThree.add(purchaseBtn);
-        panelThree.add(resetBtn);
+        panelTwo.add(priceLabel);
+        panelTwo.add(priceArea);
+        panelThree.add(totalLabel);
+        panelThree.add(totalField);
+        panelFour.add(getPriceBtn);
+        panelFour.add(purchaseBtn);
         panelFive.add(helpLabel);
-        panelFive.add(errorLabel);
-        panelSix.add(backBtn);
+        panelSix.add(errorLabel);
 
+        add(userPanel);
         add(panelOne);
         add(panelTwo);
         add(panelThree);
         add(panelFour);
         add(panelFive);
         add(panelSix);
+
 
         setLayout(new FlowLayout());
         setTitle("Financial Portfolio Manager Stock Purchase Tool");
@@ -101,9 +134,8 @@ class PurchaseStocksFrame extends JFrame {
         setVisible(true);
 
         //Individual action listeners for each button
-        resetBtn.addActionListener(new ButtonHandler(this, 1));
+        getPriceBtn.addActionListener(new ButtonHandler(this, 1));
         purchaseBtn.addActionListener(new ButtonHandler(this, 2));
-        backBtn.addActionListener(new ButtonHandler(this, 3));
     }
 
     public class ButtonHandler implements ActionListener { //Implements the action listener
@@ -123,29 +155,48 @@ class PurchaseStocksFrame extends JFrame {
                 errorLabel.setText("");
             }
             if (action == 2) {//Purchase shares button
-                purchase();
+                getUpdate();
+
             }
             if (action == 3) {//Return to main menu
-                new MenuFrame();
+                new MenuFrame(theCurrentUser);
                 PurchaseStocksFrame.this.dispose();
             }
         }
     }
-    public void purchase(){//Purchase method
+
+    public void getUpdate() {//Purchase method
         GetCSVUpdates quoteClass;
         quoteClass = new GetCSVUpdates();
-        String symbol = symbolField.getText();
-        String crumb = quoteClass.getCrumb(symbol);
+        try {
+            String symbol = symbolField.getText();
+            String crumb = quoteClass.getCrumb(symbol);
 
-        if (crumb != null && !crumb.isEmpty()) {
-            errorLabel.setText(String.format("<html>Purchased Stocks using the symbol '%s'<html/>", symbol.toUpperCase()));
-            errorLabel.setForeground(Color.red);
-            quoteClass.downloadData(symbol, 0, System.currentTimeMillis(), crumb);
+            if (crumb != null && !crumb.isEmpty()) {
+                errorLabel.setText(String.format("<html>Updated Price using the symbol '%s'<html/>", symbol.toUpperCase()));
+                errorLabel.setForeground(Color.red);
+                quoteClass.downloadData(symbol, 0, System.currentTimeMillis(), crumb);
 
 
-
-        } else {
-            errorLabel.setText("Unable to purchase data using the Symbol: " + symbol.toUpperCase());
+            } else {
+                errorLabel.setText("Unable to update price using the Symbol: " + symbol.toUpperCase());
+            }
+        } catch (Exception el) {
+            errorLabel.setText("Unable to update, error occurred");
         }
+    }
+
+    public void readPersonalPortfolio() throws IOException {
+        File file = new File(".//PersonalPortfolios/" + getTheCurrentUser() + ".csv");
+        BufferedReader br = new BufferedReader(new FileReader(file));
+
+        String st;
+        while ((st = br.readLine()) != null)
+            System.out.println(st);
+    }
+
+    public String getTheCurrentUser() {
+        return theCurrentUser;
+
     }
 }

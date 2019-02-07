@@ -21,7 +21,7 @@ public class CSVtoArray {
     List<String> lowarray = new ArrayList<>(Arrays.asList());
     List<Double> closevaluearray = new ArrayList<>(Arrays.asList());
     List<String> adjclosearray = new ArrayList<>(Arrays.asList());
-    List<String> volumearray = new ArrayList<>(Arrays.asList());
+    List<Long> volumearray = new ArrayList<>(Arrays.asList());
 
     void CSVtoArray(String file) {
         CSVReader reader;
@@ -36,34 +36,17 @@ public class CSVtoArray {
                     line = reader.readNext();
                     begin = true;
                 }
-                if(line[0].contains("null")){ //This checks whether csv contains "null", if yes then it replaces it.
+                if (line[0].contains("null") || line[1].contains("null") || line[2].contains("null")
+                        || line[3].contains("null") || line[4].contains("null") || line[5].contains("null")
+                        || line[6].contains("null")) { //This checks whether csv contains "null", if yes then it replaces it.
                     line[0] = "0";
-                    System.out.println("Date null value replaced");
-
-                } if (line[1].contains("null")){ //This occurs when the source where the csv has been downloaded from has a missing value
                     line[1] = "1";
-                    System.out.println("Open null value replaced");
-
-                } if (line[2].contains("null")){ //This loop effectively replaces the value to continue the program effectively
                     line[2] = "2";
-                    System.out.println("High null value replaced");
-
-                } if (line[3].contains("null")){
                     line[3] = "3";
-                    System.out.println("Low null value replaced");
-
-                } if (line[4].contains("null")){
                     line[4] = "4";
-                    System.out.println("Close null value replaced");
-
-                } if (line[5].contains("null")){
                     line[5] = "5";
-                    System.out.println("Adj Close null value replaced");
-
-                } if (line[6].contains("null")){
                     line[6] = "6";
-                    System.out.println("Volume null value replaced");
-
+                    System.out.println("CSV contains a null value, Exception handled");
                 }
                 //Adds each value to an individual array for future queries
                 datearray.add(line[0]);
@@ -72,7 +55,7 @@ public class CSVtoArray {
                 lowarray.add(line[3]);
                 closevaluearray.add(Double.valueOf(line[4]));
                 adjclosearray.add(line[5]);
-                volumearray.add(line[6]);
+                volumearray.add(Long.parseLong(line[6]));
 
                 line = reader.readNext();
             }
@@ -80,4 +63,34 @@ public class CSVtoArray {
             System.out.println("Error, Unable to parse file to arrays.");
         }
     }
+
+    public ArrayList<String> getDate() {
+        return (new ArrayList<>(datearray));
+    }
+
+    public ArrayList<String> getOpen() {
+        return new ArrayList<>(openarray);
+    }
+
+    public List<String> getHigh() {
+        return (new ArrayList<>(higharray));
+    }
+
+    public List<String> getLow() {
+        return (new ArrayList<>(lowarray));
+    }
+
+    public ArrayList<Double> getClose() {
+        return (new ArrayList<>(closevaluearray));
+    }
+
+    public List<String> getAdjClose() {
+        return (new ArrayList<>(adjclosearray));
+    }
+
+    public List<Long> getVolume() {
+        return (new ArrayList<>(volumearray));
+    }
+
+
 }
