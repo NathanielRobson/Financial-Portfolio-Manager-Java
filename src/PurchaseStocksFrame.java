@@ -1,8 +1,9 @@
+import com.opencsv.CSVReader;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
@@ -10,25 +11,18 @@ import java.io.IOException;
 class PurchaseStocksFrame extends JFrame {
 
     //Main Method for Testing
-    String theCurrentUser;
-
-    JLabel userLabel;
-    JLabel userMoney;
-    JLabel symbolLabel;
-    JLabel totalLabel;
-    JLabel priceLabel;
-    JTextField symbolField;
-    JTextField totalField;
-    JTextArea priceArea;
-    JButton getPriceBtn;
-    JButton purchaseBtn;
-    JLabel helpLabel;
-    JLabel errorLabel;
+    String theCurrentUser,userName,userMoney,totalSpent,theProfit;
+    Double price;
+    JLabel userLabel,userMoneyLabel,symbolLabel,totalLabel,priceLabel,helpLabel,errorLabel;
+    JTextField symbolField,totalField;
+    JTextArea priceArea,currentMoney;
+    JButton getPriceBtn,purchaseBtn;
 
     PurchaseStocksFrame(String theCurrentUser) {//Frame initialisation, layout and functionality
         this.theCurrentUser = theCurrentUser;
         try {
             readPersonalPortfolio();
+            setCurrentMoney(userMoney);
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -47,9 +41,9 @@ class PurchaseStocksFrame extends JFrame {
         userLabel.setFont(myNextFont);
         userLabel.setForeground(Color.BLACK);
 
-        userMoney = new JLabel("Current Money: ");
-        userMoney.setFont(myNextFont);
-        userMoney.setForeground(Color.BLACK);
+        userMoneyLabel = new JLabel("Current Money: $");
+        userMoneyLabel.setFont(myNextFont);
+        userMoneyLabel.setForeground(Color.BLACK);
 
         symbolLabel = new JLabel("Company Symbol: ");
         symbolLabel.setFont(myNextFont);
@@ -58,13 +52,20 @@ class PurchaseStocksFrame extends JFrame {
         symbolField = new JTextField(20);
         symbolField.setFont(myFieldFont);
 
-        priceLabel = new JLabel("Current Share Price");
+        priceLabel = new JLabel("Current Share Price: $");
         priceLabel.setFont(myNextFont);
         priceLabel.setForeground(priceColor);
 
         priceArea = new JTextArea();
+        priceArea.append(String.valueOf(price));
         priceArea.setColumns(3);
         priceArea.setEditable(false);
+
+        currentMoney = new JTextArea();
+        currentMoney.append(String.valueOf(userMoney));
+        currentMoney.setColumns(5);
+        currentMoney.setFont(myNextFont);
+        currentMoney.setEditable(false);
 
         totalLabel = new JLabel("Total To Buy: ");
         totalLabel.setFont(myNextFont);
@@ -106,7 +107,8 @@ class PurchaseStocksFrame extends JFrame {
         JPanel panelSix = new JPanel();
 
         userPanel.add(userLabel);
-        userPanel.add(userMoney);
+        userPanel.add(userMoneyLabel);
+        userPanel.add(currentMoney);
         panelOne.add(symbolLabel);
         panelOne.add(symbolField);
         panelTwo.add(priceLabel);
@@ -125,7 +127,6 @@ class PurchaseStocksFrame extends JFrame {
         add(panelFour);
         add(panelFive);
         add(panelSix);
-
 
         setLayout(new FlowLayout());
         setTitle("Financial Portfolio Manager Stock Purchase Tool");
@@ -150,24 +151,20 @@ class PurchaseStocksFrame extends JFrame {
         @Override
         public void actionPerformed(ActionEvent e) {
 
-            if (action == 1) { //Reset button
-                symbolField.setText("");
-                errorLabel.setText("");
-            }
-            if (action == 2) {//Purchase shares button
+            if (action == 1) {//Update share price button
                 getUpdate();
 
             }
-            if (action == 3) {//Return to main menu
-                new MenuFrame(theCurrentUser);
-                PurchaseStocksFrame.this.dispose();
+            if (action == 2) {//Purchase shares
+                purchaseShare(symbolField.getText(), Integer.parseInt(totalField.getText()), Double.valueOf(currentMoney.getText()));
             }
         }
     }
 
     public void getUpdate() {//Purchase method
-        GetCSVUpdates quoteClass;
-        quoteClass = new GetCSVUpdates();
+        CSVUpdateService quoteClass;
+        quoteClass = new CSVUpdateService();
+
         try {
             String symbol = symbolField.getText();
             String crumb = quoteClass.getCrumb(symbol);
@@ -176,7 +173,7 @@ class PurchaseStocksFrame extends JFrame {
                 errorLabel.setText(String.format("<html>Updated Price using the symbol '%s'<html/>", symbol.toUpperCase()));
                 errorLabel.setForeground(Color.red);
                 quoteClass.downloadData(symbol, 0, System.currentTimeMillis(), crumb);
-
+                UpdatePrice(symbol);
 
             } else {
                 errorLabel.setText("Unable to update price using the Symbol: " + symbol.toUpperCase());
@@ -188,15 +185,76 @@ class PurchaseStocksFrame extends JFrame {
 
     public void readPersonalPortfolio() throws IOException {
         File file = new File(".//PersonalPortfolios/" + getTheCurrentUser() + ".csv");
-        BufferedReader br = new BufferedReader(new FileReader(file));
+        CSVReader reader = new CSVReader(new FileReader(file));
+        String[] line = reader.readNext();
 
-        String st;
-        while ((st = br.readLine()) != null)
-            System.out.println(st);
+        while (line != null) {
+            userName = line[0];
+            userMoney = line[1];
+            totalSpent = line[2];
+            theProfit = line[3];
+            line = reader.readNext();
+        }
+        setCurrentMoney(userMoney);
+        setTotalSpent(totalSpent);
+        setProfit(theProfit);
+    }
+
+    public void purchaseShare(String symbol, int numOfShares, double userMoney) {
+        System.out.println(userMoney);
+        double cost = Double.parseDouble(priceArea.getText());
+        System.out.println(cost);
+        System.out.println(numOfShares);
+        double totalcost = cost * numOfShares;
+
+        int choice = JOptionPane.showConfirmDialog(this,
+                "Confirm, You Are Purchasing " + numOfShares + " " + symbol + "\n For: $" + String.format("%.2f", totalcost));
+        if (choice == JOptionPane.YES_OPTION) {
+            try {
+                if (totalcost <= userMoney) {
+                    userMoney = userMoney - totalcost;
+                    System.out.println(userMoney);
+                    setCurrentMoney(String.valueOf(Double.valueOf(String.format("%.2f", userMoney))));
+                    System.out.println();
+                    errorLabel.setText("<html>Thankyou For Your Transaction!<br>Purchased: "
+                            + numOfShares + " " + symbol + " Share(s)</html");
+                    this.currentMoney.setText(String.valueOf(String.format("%.2f", userMoney)));
+                    System.out.println(userMoney);
+                } else {
+                    errorLabel.setText("Sorry Unable to Purchase You Have Insufficient Funds");
+                }
+            } catch (Exception el) {
+                errorLabel.setText("You have cancelled purchase");
+            }
+
+        } else {
+            errorLabel.setText("You have Clicked Cancel");
+        }
+    }
+
+    public void UpdatePrice(String symbol) {
+        CSVtoArrayService csvtoarray = new CSVtoArrayService();
+        csvtoarray.CSVtoArray(symbol + ".csv");
+
+        int recent = csvtoarray.closevaluearray.size() - 1;
+        price = csvtoarray.closevaluearray.get(recent);
+        this.priceArea.setText(String.valueOf(String.format("%.2f", price)));
     }
 
     public String getTheCurrentUser() {
         return theCurrentUser;
 
+    }
+
+    public void setCurrentMoney(String newUserMoney) {
+        this.userMoney = newUserMoney;
+    }
+
+    public void setTotalSpent(String totalSpent) {
+        this.totalSpent = totalSpent;
+    }
+
+    public void setProfit(String theProfit) {
+        this.theProfit = theProfit;
     }
 }

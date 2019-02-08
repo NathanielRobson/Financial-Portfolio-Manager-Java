@@ -6,11 +6,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class CSVtoArray {
-
+public class CSVtoArrayService {
     //Testing with Main
     public static void main(String[] args) {
-        CSVtoArray c = new CSVtoArray();
+        CSVtoArrayService c = new CSVtoArrayService();
         c.CSVtoArray("NFLX.csv");
     }
 

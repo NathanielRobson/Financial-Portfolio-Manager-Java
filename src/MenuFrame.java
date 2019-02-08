@@ -5,16 +5,13 @@ import java.awt.event.ActionListener;
 import java.io.File;
 
 class MenuFrame extends JFrame {//Main Menu
-    String theCurrentUser;
 
-    JButton searchDate;
-    JButton displayTable;
-    JButton viewGraph;
-    JButton button2;
-    JButton purchaseBtn;
-    JButton button4;
-    JButton logOutBtn;
-    JButton updateBtn;
+    public static void main(String[] args) {
+        new MenuFrame("");
+
+    }
+    String theCurrentUser;
+    JButton searchDate,displayTable,viewGraph,purchaseBtn,logOutBtn,updateBtn,button2,button4;
     JLabel message;
 
     MenuFrame(String theCurrentUser) {//Frame initialisation and design and layout
@@ -122,7 +119,7 @@ class MenuFrame extends JFrame {//Main Menu
     class ButtonHandler implements ActionListener { //Implements the action listener
         MenuFrame theApp;
         int action;
-        GetCSVUpdates getupdate;
+        CSVUpdateService getupdate;
         GraphBuilderFrame builder;
         MenuFrame menuFrame;
         LoginFrame loginFrame;
@@ -147,8 +144,7 @@ class MenuFrame extends JFrame {//Main Menu
                 searchDateCompany();
             }
             if (action == 4) { //Search Stock Company and Download Data Dedicated frame for functionality
-                new StockSearchFrame();
-                MenuFrame.this.dispose();
+                new CSVUpdateFrame();
             }
             if (action == 5) {//Graph of selected company and selected time period
                 builder = new GraphBuilderFrame();
@@ -185,7 +181,7 @@ class MenuFrame extends JFrame {//Main Menu
                         SearchandViewService.readFile(newname, SearchDate);
 
                     } else if (newname.contains(".CSV") && !new File(newname).exists()) {//If file doesnt exist then downloads newest data for selected company from internet
-                        getupdate = new GetCSVUpdates();
+                        getupdate = new CSVUpdateService();
                         String crumb;
                         String crumbinput;
 
@@ -220,16 +216,16 @@ class MenuFrame extends JFrame {//Main Menu
             try {
                 input = input.toUpperCase();
                 if (input.contains(".CSV") && new File(input).exists()) {
-                    DisplayTable.ViewTable(input);
+                    DisplayTableService.ViewTable(input);
 
                 } else if (!input.contains(".CSV")) {
                     newinput = input + ".CSV";
 
                     if (newinput.contains(".CSV") && new File(newinput).exists()) {
-                        DisplayTable.ViewTable(newinput);
+                        DisplayTableService.ViewTable(newinput);
 
                     } else if (newinput.contains(".CSV") && !new File(newinput).exists()) {
-                        getupdate = new GetCSVUpdates();
+                        getupdate = new CSVUpdateService();
                         String crumb;
                         String crumbinput;
 
@@ -241,7 +237,7 @@ class MenuFrame extends JFrame {//Main Menu
                                 int startdate = 0;
                                 System.out.println((String.format("Downloaded data using the symbol '%s'", newinput.toUpperCase())));
                                 getupdate.downloadData(crumbinput, startdate, System.currentTimeMillis(), crumb);
-                                DisplayTable.ViewTable(newinput);
+                                DisplayTableService.ViewTable(newinput);
 
                             } else {
                                 System.out.println("Unable to download data using the Symbol: " + crumbinput.toUpperCase());

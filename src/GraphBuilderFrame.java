@@ -11,16 +11,10 @@ class GraphBuilderFrame extends JFrame {
         new GraphBuilderFrame();
     }
 
-    JLabel symbolLabel;
-    JTextField symbolField;
-    JLabel daysLabel;
-    JTextField fromField;
-    JTextField toField;
-    JButton resetBtn;
-    JButton submitBtn;
-    JLabel welcomeLabel;
-    JLabel helpLabel;
-    JLabel errorLabel;
+    JLabel symbolLabel,daysLabel;
+    JTextField symbolField,fromField,toField;
+    JButton resetBtn,submitBtn;
+    JLabel welcomeLabel,helpLabel,errorLabel;
 
     GraphBuilderFrame() { //Frame init and design and layout
 
@@ -120,8 +114,8 @@ class GraphBuilderFrame extends JFrame {
     public class ButtonHandler implements ActionListener { //Implements the action listener
         GraphBuilderFrame theApp;
         int action;
-        StockGraph stock;
-        GetCSVUpdates getupdate;
+        StockGraphService stock;
+        CSVUpdateService getupdate;
 
         ButtonHandler(GraphBuilderFrame app, int action) {
             this.theApp = app;
@@ -137,8 +131,8 @@ class GraphBuilderFrame extends JFrame {
                 errorLabel.setText("");
             }
             if (action == 2) { //get updates by downloading the most recent file online
-                stock = new StockGraph();
-                getupdate = new GetCSVUpdates();
+                stock = new StockGraphService();
+                getupdate = new CSVUpdateService();
                 String newstring;
 
                 if (!((fromField.getText().trim().toUpperCase().equals("")
@@ -160,7 +154,7 @@ class GraphBuilderFrame extends JFrame {
                                 stock.drawGraph(newstring, from, to);
 
                             } else if (newstring.contains(".CSV") && !new File(newstring).exists()) {
-                                getupdate = new GetCSVUpdates();
+                                getupdate = new CSVUpdateService();
                                 String crumb;
                                 String crumbinput;
 

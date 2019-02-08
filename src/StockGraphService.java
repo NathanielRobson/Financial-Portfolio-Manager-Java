@@ -10,16 +10,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-class StockGraph {
-
+class StockGraphService {
     //Main method for testing
     public static void main(String[] args) {
-        StockGraph Graph = new StockGraph();
+        StockGraphService Graph = new StockGraphService();
         Graph.drawGraph("F.csv", 20, 1);
-
     }
 
-    CSVtoArray toArray = new CSVtoArray();
+    CSVtoArrayService toArray = new CSVtoArrayService();
 
     public List dateArrayFromFile(String file, int from, int to) { //From the end of the date array it selects the chosen number of days to display on the graph
         toArray.CSVtoArray(file);
@@ -78,7 +76,7 @@ class StockGraph {
 
         chart.addSeries(filename, dateArrayFromFile(filename, to, from), valueArrayFromFile(filename, to, from));
 
-        //initialise frame and panel
+        //Initialise frame and panel
         frame.setVisible(true);
         frame.setSize(1700, 700);
         frame.setTitle("new Chart");

@@ -4,22 +4,15 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 class LoginFrame extends JFrame {
-    public String theCurrentUser;
-
     public static void main(String[] args) { //Testing using Main
 
         new LoginFrame();
     }
 
-    JLabel userLabel;
-    JTextField userField;
-    JLabel passLabel;
-    JTextField passField;
-    JButton resetBtn;
-    JButton loginBtn;
-    JLabel welcomeLabel;
-    JLabel helpLabel;
-    JLabel errorLabel;
+    public String theCurrentUser;
+    JLabel userLabel,passLabel,welcomeLabel,helpLabel,errorLabel;
+    JTextField userField,passField;
+    JButton resetBtn,loginBtn;
 
     LoginFrame() { //Frame init and design and layout functionality
 

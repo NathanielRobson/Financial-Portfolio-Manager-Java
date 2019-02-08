@@ -14,12 +14,12 @@ import java.util.List;
 
 import static org.apache.commons.lang3.StringEscapeUtils.unescapeJava;
 
-public class GetCSVUpdates {
+public class CSVUpdateService {
 
     HttpClient client;
     HttpClientContext context;
 
-    public GetCSVUpdates() {
+    public CSVUpdateService() {
         CookieStore cookieStore = new BasicCookieStore();
         client = HttpClientBuilder.create().build();
         context = HttpClientContext.create();
@@ -49,11 +49,6 @@ public class GetCSVUpdates {
         }
         return page;
     }
-
-    /*public OHLCDataItem[] getData (String symbol){
-        List<OHLCDataItem> dataItems = new ArrayList<>();
-
-    }*/
 
     public List<String> splitPageData(String page) {
         return Arrays.asList(page.split("}"));

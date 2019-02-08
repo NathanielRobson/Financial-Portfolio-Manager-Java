@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class DisplayTable {
+public class DisplayTableService {
 
     public static void ViewTable(String Filepath) { //Creates a table for each column value found in the csv file
         JFrame TableFrame = new JFrame();

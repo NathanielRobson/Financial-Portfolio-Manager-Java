@@ -3,22 +3,19 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-class StockSearchFrame extends JFrame {
-    public String theCurrentUser;
-
+class CSVUpdateFrame extends JFrame {
     public static void main(String[] args) { //Main method for testing
-        new StockSearchFrame();
+        new CSVUpdateFrame();
 
     }
 
+    public String theCurrentUser;
     JLabel symbolLabel;
     JTextField symbolField;
-    JButton resetBtn;
-    JButton submitBtn;
-    JLabel helpLabel;
-    JLabel errorLabel;
+    JButton resetBtn,submitBtn;
+    JLabel helpLabel,errorLabel;
 
-    StockSearchFrame() {//Frame initialisation and layout functionality
+    CSVUpdateFrame() {//Frame initialisation and layout functionality
         setSize(450, 350);
 
         Font myFieldFont = new Font("Century Gothic", Font.BOLD, 14);
@@ -92,10 +89,10 @@ class StockSearchFrame extends JFrame {
     }
 
     public class ButtonHandler implements ActionListener { //Implements the action listener
-        StockSearchFrame theApp;
+        CSVUpdateFrame theApp;
         int action;
 
-        ButtonHandler(StockSearchFrame app, int action) {
+        ButtonHandler(CSVUpdateFrame app, int action) {
             this.theApp = app;
             this.action = action;
         }
@@ -112,14 +109,14 @@ class StockSearchFrame extends JFrame {
             }
             if (action == 3) {//Return to main menu button, close current frame
                 new MenuFrame(theCurrentUser);
-                StockSearchFrame.this.dispose();
+                CSVUpdateFrame.this.dispose();
             }
         }
     }
 
-    public void download() { //download method calls GetCSVUpdates class and downloads newest csv and shares information to csv in root folder
-        GetCSVUpdates quoteClass;
-        quoteClass = new GetCSVUpdates();
+    public void download() { //download method calls CSVUpdateService class and downloads newest csv and shares information to csv in root folder
+        CSVUpdateService quoteClass;
+        quoteClass = new CSVUpdateService();
         String symbol = symbolField.getText();
         String crumb = quoteClass.getCrumb(symbol);
         int startdate = 0;
@@ -140,6 +137,10 @@ class StockSearchFrame extends JFrame {
 
     public String getTheCurrentUser() {
         return theCurrentUser;
+    }
+
+    public void getRecentPrice(){
+
     }
 
 }
