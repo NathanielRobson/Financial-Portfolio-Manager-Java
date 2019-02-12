@@ -3,6 +3,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.io.IOException;
 
 class MenuFrame extends JFrame {//Main Menu
 
@@ -10,8 +11,9 @@ class MenuFrame extends JFrame {//Main Menu
         new MenuFrame("");
 
     }
+
     String theCurrentUser;
-    JButton searchDate,displayTable,viewGraph,purchaseBtn,logOutBtn,updateBtn,button2,button4;
+    JButton searchDate, displayTable, viewGraph, purchaseBtn, logOutBtn, updateBtn, button2, button4;
     JLabel message;
 
     MenuFrame(String theCurrentUser) {//Frame initialisation and design and layout
@@ -61,7 +63,7 @@ class MenuFrame extends JFrame {//Main Menu
         purchaseBtn.setForeground(w);
         purchaseBtn.setBackground(myBtnColor);
 
-        button4 = new JButton("<html><font color = yellow>View</font> Past <font color = yellow>Investments</font></html>");
+        button4 = new JButton("<html><font color = yellow>View</font> <font color = yellow>Investments</font></html>");
         button4.setFont(myBtnFont);
         button4.setForeground(w);
         button4.setBackground(myBtnColor);
@@ -151,7 +153,11 @@ class MenuFrame extends JFrame {//Main Menu
             }
             if (action == 6) {//Purchase Stocks from companies most recent value
 
-                new PurchaseStocksFrame(theApp.theCurrentUser);
+                try {
+                    new PurchaseSharesFrame(theApp.theCurrentUser);
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
 
             }
             if (action == 7) {//View Personal Investments in Companies

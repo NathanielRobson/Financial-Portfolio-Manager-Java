@@ -10,9 +10,9 @@ class LoginFrame extends JFrame {
     }
 
     public String theCurrentUser;
-    JLabel userLabel,passLabel,welcomeLabel,helpLabel,errorLabel;
-    JTextField userField,passField;
-    JButton resetBtn,loginBtn;
+    JLabel userLabel, passLabel, welcomeLabel, helpLabel, errorLabel;
+    JTextField userField, passField;
+    JButton resetBtn, loginBtn;
 
     LoginFrame() { //Frame init and design and layout functionality
 
@@ -120,31 +120,31 @@ class LoginFrame extends JFrame {
                 errorLabel.setText("");
             }
             if (action == 2) { //Login button Validation
-                String userName = "";
-                String passWord = "";
+                String userName;
+                String passWord;
                 userName = userField.getText().trim();
                 passWord = passField.getText().trim();
-
                 loginservice = new loginService();
 
-                boolean loggedin = false;
+                try {
 
-                if (!(userName.equals("") || passWord.equals(""))) {
-                    while (!loggedin) {
+                    if (!(userName.equals("") || passWord.equals(""))) {
                         //Runs loop through list of members to find input value match
                         for (int i = 0; i < loginservice.userNames.size(); i++) {
                             if (loginservice.userNames.get(i).equals(userName) && (loginservice.passWords.get(i).equals(passWord))) {//Checks members.csv file for the user account
                                 theApp.setCurrentUser(userName);
                                 new MenuFrame(userName);
-                                loggedin = true;
+
                                 LoginFrame.this.dispose();
                                 JOptionPane.showMessageDialog(null, "Logged In Successfully!\n Welcome " + userName);
                             } else {
-                                errorLabel.setText("Wrong login Information");
+                                errorLabel.setText("Incorrect login Details, Please Enter Correct Username and Password");
                             }
                         }
+                    } else {
+                        errorLabel.setText("Error Username or Password Field is Empty or Incorrect");
                     }
-                } else {
+                } catch (Exception el) {
                     errorLabel.setText("Error Username or Password Field is Empty or Incorrect");
                 }
             }

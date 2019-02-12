@@ -12,11 +12,11 @@ class CSVUpdateFrame extends JFrame {
     public String theCurrentUser;
     JLabel symbolLabel;
     JTextField symbolField;
-    JButton resetBtn,submitBtn;
-    JLabel helpLabel,errorLabel;
+    JButton resetBtn, submitBtn;
+    JLabel helpLabel, errorLabel;
 
     CSVUpdateFrame() {//Frame initialisation and layout functionality
-        setSize(450, 350);
+        setSize(450, 380);
 
         Font myFieldFont = new Font("Century Gothic", Font.BOLD, 14);
         Font myFieldFont2 = new Font("Century Gothic", Font.BOLD, 12);
@@ -33,11 +33,11 @@ class CSVUpdateFrame extends JFrame {
 
 
         helpLabel = new JLabel("<html><font color = purple>Download Newest Data</font><br/>Please Enter a Company Symbol<br/> To Download The Most Recent Data Some Examples: <br/>" +
-                "<font color = red>Netflix</font> = \"NFLX.CSV\" or \"NFLX\"<br/>" +
-                "<font color = green>Microsoft</font> = \"NFLX.CSV\" or \"NFLX\"<br/>" +
-                "<font color = #00FFFF>Twitter</font> = \"TWTR.CSV\" or \"TWTR\"<br/>" +
-                "<font color = gray>Apple</font> = \"AAPL.CSV\" or \"AAPL\"<br/>" +
-                "Facebook = \"FB.CSV\" or \"FB\"</html>");
+                "<font color = red>Netflix</font> = \"NFLX\"<br/>" +
+                "<font color = green>Microsoft</font> = \"MSFT\"<br/>" +
+                "<font color = #00FFFF>Twitter</font> = \"TWTR\"<br/>" +
+                "<font color = gray>Apple</font> = \"AAPL\"<br/>" +
+                "Facebook = \"FB\"</html>");
 
         helpLabel.setForeground(myBlueColor);
         helpLabel.setFont(myNextFont);
@@ -119,15 +119,20 @@ class CSVUpdateFrame extends JFrame {
         quoteClass = new CSVUpdateService();
         String symbol = symbolField.getText();
         String crumb = quoteClass.getCrumb(symbol);
-        int startdate = 0;
+        String newsymbol;
 
-        if (crumb != null && !crumb.isEmpty()) {
-            errorLabel.setText(String.format("Downloaded Data Using the Symbol '%s'", symbol.toUpperCase()));
-            errorLabel.setForeground(Color.red);
-            quoteClass.downloadData(symbol, startdate, System.currentTimeMillis(), crumb);
-
-        } else {
-            errorLabel.setText("Unable to Download Data Using the Symbol: " + symbol.toUpperCase());
+        try {
+            symbol = symbol.toUpperCase();
+            if (symbol.contains(".CSV")) { //If input does not contain .csv then it is added to allow for correct file extension
+                crumbCheck(symbol, crumb, quoteClass);
+            } else if (!symbol.contains(".CSV")) {
+                newsymbol = symbol + ".CSV";
+                crumbCheck(newsymbol, crumb, quoteClass);
+            } else {
+                errorLabel.setText("Unable to Download Data Please Ensure Company Symbol Exists");
+            }
+        } catch (Exception el) {
+            errorLabel.setText("Unable to Download Data Please Ensure Company Symbol Exists");
         }
     }
 
@@ -139,8 +144,16 @@ class CSVUpdateFrame extends JFrame {
         return theCurrentUser;
     }
 
-    public void getRecentPrice(){
+    public void crumbCheck(String thesymbol, String crumb, CSVUpdateService quoteClass) {
+        if (crumb != null && !crumb.isEmpty()) {
+            errorLabel.setText(String.format("<html>Downloaded Data Using the Symbol '%s'<br/>" +
+                    "Check Root File Directories For Updated '%s' File</html>", thesymbol.toUpperCase(), thesymbol.toUpperCase()));
+            errorLabel.setForeground(Color.red);
+            quoteClass.downloadData(thesymbol, 0, System.currentTimeMillis(), crumb);
 
+        } else {
+            errorLabel.setText("Unable to Download Data Using the Symbol: " + thesymbol.toUpperCase());
+        }
     }
 
 }

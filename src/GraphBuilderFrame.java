@@ -11,10 +11,10 @@ class GraphBuilderFrame extends JFrame {
         new GraphBuilderFrame();
     }
 
-    JLabel symbolLabel,daysLabel;
-    JTextField symbolField,fromField,toField;
-    JButton resetBtn,submitBtn;
-    JLabel welcomeLabel,helpLabel,errorLabel;
+    JLabel symbolLabel, daysLabel;
+    JTextField symbolField, fromField, toField;
+    JButton resetBtn, submitBtn;
+    JLabel welcomeLabel, helpLabel, errorLabel;
 
     GraphBuilderFrame() { //Frame init and design and layout
 

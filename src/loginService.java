@@ -17,7 +17,7 @@ public class loginService {
 
             if (file.exists()) {
 
-                reader = new BufferedReader(new FileReader(".//UserAccounts/members.csv"));
+                reader = new BufferedReader(new FileReader(file));
                 String line = null;
                 while ((line = reader.readLine()) != null) {
                     String[] users = line.split(",");

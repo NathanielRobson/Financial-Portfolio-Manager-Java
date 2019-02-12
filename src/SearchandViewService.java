@@ -11,7 +11,6 @@ public class SearchandViewService extends JFrame {
 
         ArrayList<String> theList = new ArrayList<>();
         String[] data;
-
         JFrame frame = new JFrame();
         frame.setAlwaysOnTop(true);
         boolean found = false;
