@@ -5,16 +5,12 @@ import java.awt.event.ActionListener;
 import java.io.File;
 
 class GraphBuilderFrame extends JFrame {
-
     public static void main(String[] args) { //Test using Main
-
         new GraphBuilderFrame();
     }
 
-    JLabel symbolLabel, daysLabel;
-    JTextField symbolField, fromField, toField;
-    JButton resetBtn, submitBtn;
-    JLabel welcomeLabel, helpLabel, errorLabel;
+    private JTextField symbolField, fromField, toField, rangeField;
+    private JLabel errorLabel;
 
     GraphBuilderFrame() { //Frame init and design and layout
 
@@ -28,32 +24,42 @@ class GraphBuilderFrame extends JFrame {
         Color myBlueColor = new Color(59, 69, 182);
         Color resetColor = new Color(200, 0, 200);
 
-        symbolLabel = new JLabel("<html>Symbol or Filename: <html>");
+        JLabel symbolLabel = new JLabel("<html>Symbol or Filename: <html>");
         symbolLabel.setFont(myFieldFont);
         symbolLabel.setForeground(myBlueColor);
 
         symbolField = new JTextField(20);
         symbolField.setFont(myFieldFont);
 
-        daysLabel = new JLabel("<html>From - To: </html>");
+        JLabel daysLabel = new JLabel("<html>From - To and Graph Range: </html>");
         daysLabel.setFont(myTextFont);
         daysLabel.setForeground(myBlueColor);
 
         fromField = new JTextField(3);
         fromField.setFont(myFieldFont);
 
+        JLabel rangeLabel = new JLabel("Range for Graph");
+        rangeLabel.setForeground(myBlueColor);
+        rangeLabel.setFont(myNextFont);
+
         toField = new JTextField(3);
         toField.setFont(myFieldFont);
 
-        resetBtn = new JButton("Reset");
-        submitBtn = new JButton("Submit");
+        rangeField = new JTextField(3);
+        rangeField.setFont(myFieldFont);
 
-        welcomeLabel = new JLabel("");
+        JButton resetBtn = new JButton("Reset");
+        JButton submitBtn = new JButton("Submit");
+
+        JLabel welcomeLabel = new JLabel("");
         welcomeLabel.setForeground(myBlueColor);
         welcomeLabel.setFont(myNextFont);
 
-        helpLabel = new JLabel("<html><font color = purple>Scenario Graph Builder!</font><br/><br/>Please Enter a Company Symbol<br/> And Number of Days to Display (1 == Today)<br/><br/>" +
-                "<font color = #FF00FF>(1 == Today!)</font><br/>Some Examples: <br/>" +
+        JLabel helpLabel = new JLabel("<html><font color = purple>Scenario Graph Builder!</font><br/><br/>Please Enter a Company Symbol<br/>" +
+                "And Number of Days to Display (1 == Today)(Range Default == 0)<br/><br/>" +
+                "<font color = #FF00FF>(1 == Today!)</font><br/>Graph Range = Minimum Y Value (0 for Default!) <br/>" +
+                "Input Examples: 30 - 10, 0 For 30 days to 10 days ago<br/>" +
+                "Another Example: 100 - 90, 100 For 100 days to 90 days ago<br/>" +
                 "<font color = red>Netflix</font> = \"NFLX.CSV\" or \"NFLX\"<br/>" +
                 "<font color = green>Microsoft</font> = \"NFLX.CSV\" or \"NFLX\"<br/>" +
                 "<font color = #00FFFF>Twitter</font> = \"TWTR.CSV\" or \"TWTR\"<br/>" +
@@ -89,9 +95,11 @@ class GraphBuilderFrame extends JFrame {
         panelTwo.add(toField);
         panelThree.add(resetBtn);
         panelThree.add(submitBtn);
-        panelFive.add(welcomeLabel);
-        panelSix.add(helpLabel);
         panelFour.add(errorLabel);
+        panelFive.add(welcomeLabel);
+        panelTwo.add(rangeField);
+        panelSix.add(helpLabel);
+
 
         add(panelOne);
         add(panelTwo);
@@ -142,16 +150,17 @@ class GraphBuilderFrame extends JFrame {
                         String comp = symbolField.getText().toUpperCase();
                         int from = Integer.parseInt(fromField.getText());
                         int to = Integer.parseInt(toField.getText());
+                        int range = Integer.parseInt(rangeField.getText());
 
                         if (comp.contains(".CSV") && new File(comp).exists()) { //Loop checks to see if the string .csv was added to input or not, if not it will do it for you
-                            stock.drawGraph(comp, from, to);
+                            stock.drawGraph(comp, from, to, range);
 
                         } else if (!comp.contains(".CSV")) {
                             newstring = comp + ".CSV";
                             System.out.println(newstring);
 
                             if (newstring.contains(".CSV") && new File(newstring).exists()) {
-                                stock.drawGraph(newstring, from, to);
+                                stock.drawGraph(newstring, from, to, range);
 
                             } else if (newstring.contains(".CSV") && !new File(newstring).exists()) {
                                 getupdate = new CSVUpdateService();
@@ -159,14 +168,14 @@ class GraphBuilderFrame extends JFrame {
                                 String crumbinput;
 
                                 if (newstring.contains(".CSV")) {
-                                    crumbinput = newstring.substring(0, newstring.length() - 4);
+                                    crumbinput = newstring.substring(range, newstring.length() - 4);
                                     crumb = getupdate.getCrumb(crumbinput);
 
                                     if (crumb != null && !crumb.isEmpty()) {
                                         int startdate = 0;
                                         System.out.println((String.format("Downloaded data using the symbol '%s'", newstring.toUpperCase())));
                                         getupdate.downloadData(crumbinput, startdate, System.currentTimeMillis(), crumb);
-                                        stock.drawGraph(newstring, from, to);
+                                        stock.drawGraph(newstring, from, to, range);
 
                                     } else {
                                         System.out.println(("Unable to download data using the Symbol: " + crumbinput.toUpperCase()));

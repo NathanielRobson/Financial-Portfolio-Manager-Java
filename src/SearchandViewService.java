@@ -1,15 +1,11 @@
 import javax.swing.*;
 import java.io.File;
-import java.util.ArrayList;
 import java.util.Scanner;
 
-public class SearchandViewService extends JFrame {
+class SearchandViewService extends JFrame {
 
-    private static Scanner a;
+    static void readFile(String filepath, String Search) {//Search for file, search for chosen date then provide information regarding that day for selected company
 
-    public static void readFile(String filepath, String Search) {//Search for file, search for chosen date then provide information regarding that day for selected company
-
-        ArrayList<String> theList = new ArrayList<>();
         String[] data;
         JFrame frame = new JFrame();
         frame.setAlwaysOnTop(true);
@@ -25,7 +21,7 @@ public class SearchandViewService extends JFrame {
                 Volume = "";
 
         try {
-            a = new Scanner(new File(filepath));
+            Scanner a = new Scanner(new File(filepath));
             a.useDelimiter("[,\n]");
 
             while (a.hasNext() && !found) {

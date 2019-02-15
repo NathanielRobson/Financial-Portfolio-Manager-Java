@@ -9,10 +9,9 @@ class LoginFrame extends JFrame {
         new LoginFrame();
     }
 
-    public String theCurrentUser;
-    JLabel userLabel, passLabel, welcomeLabel, helpLabel, errorLabel;
-    JTextField userField, passField;
-    JButton resetBtn, loginBtn;
+    private String theCurrentUser;
+    private JLabel errorLabel;
+    private JTextField userField, passField;
 
     LoginFrame() { //Frame init and design and layout functionality
 
@@ -27,28 +26,28 @@ class LoginFrame extends JFrame {
         Color myBlueColor = new Color(59, 69, 182);
         Color resetColor = new Color(200, 0, 200);
 
-        userLabel = new JLabel("User Name: ");
+        JLabel userLabel = new JLabel("User Name: ");
         userLabel.setFont(myLabelFont);
         userLabel.setForeground(myBlueColor);
 
         userField = new JTextField(20);
         userField.setFont(myFieldFont);
 
-        passLabel = new JLabel("Password: ");
+        JLabel passLabel = new JLabel("Password: ");
         passLabel.setFont(myLabelFont);
         passLabel.setForeground(myBlueColor);
 
         passField = new JPasswordField(20);
         passField.setFont(myFieldFont);
 
-        resetBtn = new JButton("Reset");
-        loginBtn = new JButton("Login");
+        JButton resetBtn = new JButton("Reset");
+        JButton loginBtn = new JButton("Login");
 
-        welcomeLabel = new JLabel("Welcome to Team 3's Financial Portfolio Manager");
+        JLabel welcomeLabel = new JLabel("Welcome to Team 3's Financial Portfolio Manager");
         welcomeLabel.setForeground(myBlueColor);
         welcomeLabel.setFont(myTextFont);
 
-        helpLabel = new JLabel("Please login using your unique credentials");
+        JLabel helpLabel = new JLabel("Please login using your unique credentials");
         helpLabel.setForeground(myBlueColor);
         helpLabel.setFont(myLabelFont);
 
@@ -127,7 +126,6 @@ class LoginFrame extends JFrame {
                 loginservice = new loginService();
 
                 try {
-
                     if (!(userName.equals("") || passWord.equals(""))) {
                         //Runs loop through list of members to find input value match
                         for (int i = 0; i < loginservice.userNames.size(); i++) {
@@ -136,7 +134,6 @@ class LoginFrame extends JFrame {
                                 new MenuFrame(userName);
 
                                 LoginFrame.this.dispose();
-                                JOptionPane.showMessageDialog(null, "Logged In Successfully!\n Welcome " + userName);
                             } else {
                                 errorLabel.setText("Incorrect login Details, Please Enter Correct Username and Password");
                             }
@@ -151,11 +148,7 @@ class LoginFrame extends JFrame {
         }
     }
 
-    public String getTheCurrentUser() {
-        return theCurrentUser;
-    }
-
-    public void setCurrentUser(String theNewCurrentUser) {
+    private void setCurrentUser(String theNewCurrentUser) {
         this.theCurrentUser = theNewCurrentUser;
     }
 

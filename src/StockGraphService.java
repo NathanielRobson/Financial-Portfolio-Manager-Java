@@ -14,40 +14,35 @@ class StockGraphService {
     //Main method for testing
     public static void main(String[] args) {
         StockGraphService Graph = new StockGraphService();
-        Graph.drawGraph("F.csv", 20, 1);
+        Graph.drawGraph("F.csv", 20, 1, 0);
     }
 
-    CSVtoArrayService toArray = new CSVtoArrayService();
+    private CSVtoArrayService toArray = new CSVtoArrayService();
 
-    public List dateArrayFromFile(String file, int from, int to) { //From the end of the date array it selects the chosen number of days to display on the graph
+    private List<String> dateArrayFromFile(String file, int from, int to) { //From the end of the date array it selects the chosen number of days to display on the graph
         toArray.CSVtoArray(file);
         ArrayList<String> datetail = new ArrayList<>();
         int size = toArray.datearray.size();
 
         for (int i = size - to - 1; i <= size - from; i++) {
 
-            if (true) {
-
-                datetail.add(toArray.datearray.get(i));
-            }
+            datetail.add(toArray.datearray.get(i));
         }
         return datetail;
     }
 
-    public List valueArrayFromFile(String file, int from, int to) { //From the end of the close value array it selects the chosen number of days to display on the graph
+    private List<Double> valueArrayFromFile(String file, int from, int to) { //From the end of the close value array it selects the chosen number of days to display on the graph
         toArray.CSVtoArray(file);
         ArrayList<Double> valuetail2 = new ArrayList<>();
         int size = toArray.closevaluearray.size();
 
         for (int i = size - to - 1; i <= size - from; i++) {
-            if (true) {
-                valuetail2.add(toArray.closevaluearray.get(i));
-            }
+            valuetail2.add(toArray.closevaluearray.get(i));
         }
         return valuetail2;
     }
 
-    public CategoryChart drawGraph(String filename, int from, int to) { //draw graph and initialise frame and layout of graph
+    void drawGraph(String filename, int from, int to, double range) { //draw graph and initialise frame and layout of graph
         JFrame frame = new JFrame();
         CategoryChart chart = new CategoryChartBuilder().width(1000).height(800).xAxisTitle("Date").yAxisTitle("Stock price").build();
 
@@ -73,7 +68,7 @@ class StockGraphService {
         chart.getStyler().setAxisTitleFont(new Font(Font.SANS_SERIF, Font.ITALIC, 18));
         chart.getStyler().setAxisTickLabelsFont(new Font(Font.SERIF, Font.PLAIN, 11));
         chart.getStyler().setLocale(Locale.ENGLISH);
-
+        chart.getStyler().setYAxisMin(range);
         chart.addSeries(filename, dateArrayFromFile(filename, to, from), valueArrayFromFile(filename, to, from));
 
         //Initialise frame and panel
@@ -85,7 +80,6 @@ class StockGraphService {
         frame.add(panel);
 
         //return custom chart
-        return chart;
     }
 }
 

@@ -13,31 +13,26 @@ import java.util.Scanner;
 
 class PurchaseSharesFrame extends JFrame {
 
-    //Main Method for Testing
-    String theCurrentUser, userName, userMoney, totalSpent, purchaseDate, theProfit, originalDate;
-    Double price;
-    JLabel userLabel, userMoneyLabel, symbolLabel, totalLabel, priceLabel, helpLabel, errorLabel;
-    JTextField symbolField, totalField;
-    JTextArea priceArea, currentMoney;
-    JButton getPriceBtn, purchaseBtn, sellBtn;
-    DateTimeFormatter dateFormat;
-    LocalDate localDate;
+    private String theCurrentUser, userMoney, purchaseDate;
+    private Double price;
+    private JLabel infoLabel;
+    private JLabel errorLabel;
+    private JTextField symbolField, totalField;
+    private JTextArea priceArea, currentMoney;
 
-    PurchaseSharesFrame(String theCurrentUser) throws IOException {//Frame initialisation, layout and functionality
+    PurchaseSharesFrame(String theCurrentUser) {//Frame initialisation, layout and functionality
         this.theCurrentUser = theCurrentUser;
-        dateFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        localDate = LocalDate.now();
+        DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDate localDate = LocalDate.now();
         purchaseDate = dateFormat.format(localDate);
-        System.out.println(purchaseDate);
 
         try {
             readPersonalPortfolio();
             setCurrentMoney(userMoney);
 
         } catch (IOException e) {
-            e.printStackTrace();
+            errorLabel.setText("Unable to read personal portfolio, File may not exist");
         }
-        setSize(600, 600);
 
         Font myFieldFont = new Font("Century Gothic", Font.BOLD, 14);
         Font myTextFont = new Font("Century Gothic", Font.BOLD, 16);
@@ -47,22 +42,22 @@ class PurchaseSharesFrame extends JFrame {
         Color myBlueColor = new Color(59, 69, 182);
         Color priceColor = new Color(38, 200, 191);
 
-        userLabel = new JLabel("Current User: " + theCurrentUser);
+        JLabel userLabel = new JLabel("Current User: " + theCurrentUser);
         userLabel.setFont(myNextFont);
         userLabel.setForeground(Color.BLACK);
 
-        userMoneyLabel = new JLabel("Current Money: $");
+        JLabel userMoneyLabel = new JLabel("Current Money: $");
         userMoneyLabel.setFont(myNextFont);
         userMoneyLabel.setForeground(Color.BLACK);
 
-        symbolLabel = new JLabel("Company Symbol: ");
+        JLabel symbolLabel = new JLabel("Company Symbol: ");
         symbolLabel.setFont(myNextFont);
         symbolLabel.setForeground(myBlueColor);
 
         symbolField = new JTextField(20);
         symbolField.setFont(myFieldFont);
 
-        priceLabel = new JLabel("Current Share Price: $");
+        JLabel priceLabel = new JLabel("Current Share Price: $");
         priceLabel.setFont(myNextFont);
         priceLabel.setForeground(priceColor);
 
@@ -77,14 +72,14 @@ class PurchaseSharesFrame extends JFrame {
         currentMoney.setFont(myNextFont);
         currentMoney.setEditable(false);
 
-        totalLabel = new JLabel("Total To Buy: ");
+        JLabel totalLabel = new JLabel("Total To Buy/Sell: ");
         totalLabel.setFont(myNextFont);
         totalLabel.setForeground(myBlueColor);
 
         totalField = new JTextField(3);
         totalField.setFont(myFieldFont);
 
-        helpLabel = new JLabel("<html><font color = purple>Purchase Stocks!</font><br/><br/>Please Enter a Company Symbol<br/> And Then Get The Current Share Price, Then Buy!<br/><br/>" +
+        JLabel helpLabel = new JLabel("<html><font color = purple>Purchase Stocks!</font><br/><br/>Please Enter a Company Symbol<br/> And Then Get The Current Share Price, Then Buy!<br/><br/>" +
                 "Some Examples: <br/>" +
                 "<font color = red>Netflix</font> = \"NFLX\"<br/>" +
                 "<font color = green>Microsoft</font> = \"MSFT\"<br/>" +
@@ -98,17 +93,21 @@ class PurchaseSharesFrame extends JFrame {
         errorLabel.setForeground(Color.red);
         errorLabel.setFont(myFieldFont);
 
-        getPriceBtn = new JButton("Get Current Price");
+        infoLabel = new JLabel("");
+        infoLabel.setForeground(Color.green);
+        infoLabel.setFont(myNextFont);
+
+        JButton getPriceBtn = new JButton("Get Current Price");
         getPriceBtn.setBackground(myBlueColor);
         getPriceBtn.setForeground(priceColor);
         getPriceBtn.setFont(myButtonFont);
 
-        purchaseBtn = new JButton("Purchase Shares");
+        JButton purchaseBtn = new JButton("Purchase Shares");
         purchaseBtn.setBackground(myBlueColor);
         purchaseBtn.setForeground(Color.white);
         purchaseBtn.setFont(myButtonFont);
 
-        sellBtn = new JButton("Sell Shares");
+        JButton sellBtn = new JButton("Sell Shares");
         sellBtn.setBackground(Color.white);
         sellBtn.setForeground(myBlueColor);
         sellBtn.setFont(myButtonFont);
@@ -120,6 +119,7 @@ class PurchaseSharesFrame extends JFrame {
         JPanel panelFour = new JPanel();
         JPanel panelFive = new JPanel();
         JPanel panelSix = new JPanel();
+        JPanel panelSeven = new JPanel();
 
         userPanel.add(userLabel);
         userPanel.add(userMoneyLabel);
@@ -135,6 +135,7 @@ class PurchaseSharesFrame extends JFrame {
         panelFour.add(sellBtn);
         panelFive.add(helpLabel);
         panelSix.add(errorLabel);
+        panelSeven.add(infoLabel);
 
         add(userPanel);
         add(panelOne);
@@ -143,12 +144,14 @@ class PurchaseSharesFrame extends JFrame {
         add(panelFour);
         add(panelFive);
         add(panelSix);
+        add(panelSeven);
 
         setLayout(new FlowLayout());
         setTitle("Financial Portfolio Manager Stock Purchase Tool");
         setResizable(false);
         setLocationRelativeTo(null);
         setVisible(true);
+        setSize(600, 600);
 
         //Individual action listeners for each button
         getPriceBtn.addActionListener(new ButtonHandler(this, 1));
@@ -172,11 +175,10 @@ class PurchaseSharesFrame extends JFrame {
                 getUpdate();
             }
             if (action == 2) {//Purchase shares
-
                 try {
                     String symbol = symbolField.getText().trim().toUpperCase();
                     int totaltobuy = Integer.parseInt(totalField.getText());
-                    Double bank = Double.valueOf(currentMoney.getText());
+                    double bank = Double.valueOf(currentMoney.getText());
 
                     try {
                         purchaseShare(symbol, totaltobuy, bank);
@@ -196,13 +198,25 @@ class PurchaseSharesFrame extends JFrame {
                 }
             }
 
-            if (action == 3) {
+            if (action == 3) {//Sell Owned Shares
+                try {
+                    String symbol = symbolField.getText().trim().toUpperCase();
+                    int totaltosell = Integer.parseInt(totalField.getText());
+                    double bank = Double.valueOf(currentMoney.getText());
 
+                    try {
+                        sellShare(symbol, bank, String.valueOf(totaltosell));
+                    } catch (Exception el) {
+                        errorLabel.setText("Unable to Sell Shares, Ensure the Correct Input is Used and Price is Updated");
+                    }
+                } catch (Exception el) {
+                    errorLabel.setText("Please Ensure Input is Correct and Symbol Exists. Thankyou");
+                }
             }
         }
     }
 
-    public void getUpdate() {//Purchase method
+    private void getUpdate() {//Update CSV method
         CSVUpdateService quoteClass;
         quoteClass = new CSVUpdateService();
 
@@ -220,18 +234,18 @@ class PurchaseSharesFrame extends JFrame {
                 errorLabel.setText("Unable to update price using the Symbol: " + symbol.toUpperCase());
             }
         } catch (Exception el) {
-            errorLabel.setText("Unable to update, error occurred");
+            errorLabel.setText("Unable to update, error occurred, Check Internet Connection");
         }
     }
 
-    public void readPersonalPortfolio() throws IOException {
+    //Reads the personal portfolio Bank account file to produce array and file containing bank information
+    private void readPersonalPortfolio() throws IOException {
         File file = new File(".//UserPortfolios/" + getTheCurrentUser() + "-BANK.csv");
 
         if (file.exists()) {
             CSVReader reader = new CSVReader(new FileReader(file));
             String[] line = reader.readNext();
             while (line != null) {
-                userName = line[0].trim().replaceAll("\"", "");
                 userMoney = line[1].trim().replaceAll("\"", "");
                 line = reader.readNext();
             }
@@ -244,13 +258,14 @@ class PurchaseSharesFrame extends JFrame {
             try {
                 writeToCsv(file, uservalues);
             } catch (Exception el) {
-                errorLabel.setText("unable to write data to file");
+                errorLabel.setText("Unable to Write Data to File");
             }
             readPersonalPortfolio();
         }
     }
 
-    public void purchaseShare(String symbol, int numOfShares, double userMoney) {
+    //Purchase method
+    private void purchaseShare(String symbol, int numOfShares, double userMoney) {
         double cost = Double.parseDouble(priceArea.getText());
         double totalcost = cost * numOfShares;
         int choice = JOptionPane.showConfirmDialog(this,
@@ -272,40 +287,36 @@ class PurchaseSharesFrame extends JFrame {
                     errorLabel.setText("<html>Thankyou For Your Transaction!<br>Purchased: "
                             + numOfShares + " " + symbol + " Share(s)</html");
                 } else {
-                    errorLabel.setText("Unable to Purchase You Have Insufficient Funds");
+                    errorLabel.setText("Unable to Purchase Shares, You Have Insufficient Funds");
                 }
             } catch (Exception el) {
-                errorLabel.setText("You have cancelled purchase");
+                errorLabel.setText("You Have Cancelled Your Purchase");
             }
         } else {
             errorLabel.setText("You have Clicked Cancel");
         }
     }
 
-    public void UpdatePrice(String symbol) {
+    private void UpdatePrice(String symbol) {
         CSVtoArrayService csvtoarray = new CSVtoArrayService();
         csvtoarray.CSVtoArray(symbol + ".csv");
-
         int recent = csvtoarray.closevaluearray.size() - 1;
         price = csvtoarray.closevaluearray.get(recent);
-        originalDate = csvtoarray.datearray.get(recent);
         this.priceArea.setText(String.valueOf(String.format("%.2f", price)));
     }
 
-    public void saveDataToFile(Double currentMoney, String symbol, int buying) throws IOException {
+    private void saveDataToFile(Double currentMoney, String symbol, int buying) throws IOException {
         File savefile = new File(".//UserShares/" + getTheCurrentUser().toUpperCase() + "-" + symbol + "-" + "shares.csv");
         double thecost = Double.parseDouble(priceArea.getText());
         double thetotalcost = thecost * buying;
-        String theoldpurchasedate = "";
-        String boughtat = "";
 
         if (savefile.exists()) {
             Scanner scanner = new Scanner(savefile).useDelimiter(",");
             String defaultshares = "0";
             while (scanner.hasNext()) {
-                theoldpurchasedate = scanner.next().trim().toUpperCase().replace("\"", "");
+                scanner.next();
                 defaultshares = scanner.next().trim().replace("\"", "");
-                boughtat = scanner.next().trim().replace("\"", "");
+                scanner.next();
             }
             scanner.close();
 
@@ -326,41 +337,103 @@ class PurchaseSharesFrame extends JFrame {
         }
     }
 
-    public void sellShare(String symbol, String areaprice, String moneyinbank) {
-        double sharevalue = Double.parseDouble(priceArea.getText());
+    private void sellShare(String symbol, double userMoney, String selling) throws IOException {
+        File savefile = new File(".//UserShares/" + getTheCurrentUser().toUpperCase() + "-" + symbol + "-" + "shares.csv");
+
+        double newsharevalue = Double.parseDouble(priceArea.getText());
+        double totalsale = newsharevalue * Integer.valueOf(selling);
         int ownedshares;
-        double totalsale;
-        String numbertosell = JOptionPane.showInputDialog("How Many Shares For: " + symbol + " at $" + sharevalue + " Each, Would You Like To Sell?");
+        String boughtat;
 
-        totalsale = Integer.parseInt(numbertosell) * sharevalue;
+        int choice = JOptionPane.showConfirmDialog(this,
+                "Confirm, You Are Selling " + selling + " " + symbol + "Shares \n For: $" + String.format("%.2f", totalsale));
 
+        if (choice == JOptionPane.YES_OPTION) {
+            if (savefile.exists()) {
+                Scanner scanner = new Scanner(savefile).useDelimiter(",");
+                String defaultshares = "0";
+                boughtat = "0";
+
+                while (scanner.hasNext()) {
+                    scanner.next();
+                    defaultshares = scanner.next().trim().replace("\"", "");
+                    boughtat = scanner.next().trim().replace("\"", "");
+                }
+                scanner.close();
+
+                ownedshares = Integer.parseInt(defaultshares.trim().replaceAll("\"", ""));
+
+                if (ownedshares >= Integer.valueOf(selling)) {
+                    int sharesaftersale = ownedshares - Integer.valueOf(selling);
+                    double profitloss = 0;
+                    if (Double.parseDouble(boughtat) > newsharevalue) {
+
+                        profitloss = -(Math.abs(Double.parseDouble(boughtat) - newsharevalue));
+                        infoLabel.setText("Loss in Sale by: " + String.format("%.2f", profitloss) + " Per Share");
+                        System.out.println(profitloss);
+
+                    } else if (Double.parseDouble(boughtat) <= newsharevalue) {
+                        profitloss = (Math.abs(Double.parseDouble(boughtat) - newsharevalue));
+                        infoLabel.setText("Profit or Breaking Even in Sale by: " + profitloss + " Per Share");
+                        System.out.println(profitloss);
+
+                    }
+                    String addedshares = String.valueOf(sharesaftersale);
+
+                    userMoney = userMoney + totalsale;
+                    String cmoney = String.valueOf(String.format("%.2f", userMoney));
+                    setCurrentMoney(cmoney);
+                    this.currentMoney.setText(cmoney);
+
+                    dataCollection(symbol, addedshares, sharesaftersale, profitloss, totalsale);
+
+                    String[] newcsvlines = new String[]{purchaseDate, String.valueOf(sharesaftersale), boughtat};
+
+                    writeToCsv(savefile, newcsvlines);
+
+                    String[] moneyupdate = new String[]{theCurrentUser, cmoney};
+                    File file = new File(".//UserPortfolios/" + getTheCurrentUser() + "-BANK.csv");
+                    writeToCsv(file, moneyupdate);
+
+                    errorLabel.setText("<html>Thankyou for Selling " + selling + " " + symbol + " Shares With Us<br/>" +
+                            "You Sold Them For: $" + String.format("%.2f", totalsale) + "</html>");
+
+                } else if (ownedshares < Integer.valueOf(selling)) {
+                    errorLabel.setText("Not Enough Shares To Sell, You Have " + ownedshares + " " + symbol + " Shares");
+                } else {
+                    errorLabel.setText("Unable to Sell Shares, Ensure the Correct Input is Used and Price is Updated");
+                }
+
+            } else {
+                errorLabel.setText("Sorry No Shares Data Has Been Found");
+            }
+        }
     }
 
+    private void dataCollection(String symbol, String sharestowrite, int sharessold, double profitloss, double total) {
+        File savefile = new File(".//UserShares/" + getTheCurrentUser().toUpperCase() + "-" + symbol + "-" + "SALE.csv");
 
-    public String getTheCurrentUser() {
-        return theCurrentUser;
-
+        String[] csvsale = new String[]{symbol, sharestowrite, String.valueOf(sharessold), String.valueOf(profitloss), String.valueOf(String.format("%.2f", total))};
+        try {
+            writeToCsv(savefile, csvsale);
+        } catch (IOException e) {
+            errorLabel.setText("Unable to create Save File for Sale");
+        }
     }
 
-    public void setCurrentMoney(String newUserMoney) {
-        this.userMoney = newUserMoney;
-    }
-
-    public void setTotalSpent(String totalSpent) {
-        this.totalSpent = totalSpent;
-    }
-
-    public void setProfit(String theProfit) {
-        this.theProfit = theProfit;
-    }
-
-    public void writeToCsv(File file, String[] details) throws IOException {
+    private void writeToCsv(File file, String[] details) throws IOException {
         FileWriter fileWriter = new FileWriter(file);
         CSVWriter csvWriter = new CSVWriter(fileWriter);
-
         csvWriter.writeAll(Collections.singleton(details));
-
         fileWriter.flush();
         csvWriter.close();
+    }
+
+    private String getTheCurrentUser() {
+        return theCurrentUser;
+    }
+
+    private void setCurrentMoney(String newUserMoney) {
+        this.userMoney = newUserMoney;
     }
 }

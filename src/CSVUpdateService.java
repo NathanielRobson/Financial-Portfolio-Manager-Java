@@ -14,19 +14,19 @@ import java.util.List;
 
 import static org.apache.commons.lang3.StringEscapeUtils.unescapeJava;
 
-public class CSVUpdateService {
+class CSVUpdateService {
 
-    HttpClient client;
+    private HttpClient client;
     HttpClientContext context;
 
-    public CSVUpdateService() {
+    CSVUpdateService() {
         CookieStore cookieStore = new BasicCookieStore();
         client = HttpClientBuilder.create().build();
         context = HttpClientContext.create();
         context.setCookieStore(cookieStore);
     }
 
-    public String getPage(String symbol) { //Returns the page for which company you wish to download shares from
+    private String getPage(String symbol) { //Returns the page for which company you wish to download shares from
         String page = null;
         String url = String.format("https://finance.yahoo.com/quote/%s/?p=%s", symbol, symbol);
         HttpGet request = new HttpGet(url);
@@ -35,7 +35,7 @@ public class CSVUpdateService {
         try {
             HttpResponse response = client.execute(request, context);
             BufferedReader rd = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
-            StringBuffer result = new StringBuffer();
+            StringBuilder result = new StringBuilder();
             String line;
 
             while ((line = rd.readLine()) != null) {
@@ -50,12 +50,12 @@ public class CSVUpdateService {
         return page;
     }
 
-    public List<String> splitPageData(String page) {
+    private List<String> splitPageData(String page) {
         return Arrays.asList(page.split("}"));
 
     }
 
-    public String findCrumb(List<String> lines) {
+    private String findCrumb(List<String> lines) {
         //crumb is a personal browser cookie.
         //without this the page will not load within software
         String crumb = "";
@@ -68,7 +68,7 @@ public class CSVUpdateService {
             }
         }
 
-        if (rtn != null && !rtn.isEmpty()) {
+        if (!rtn.isEmpty()) {
             String[] vals = rtn.split(":");                 // get third item
             crumb = vals[2].replace("\"", ""); // strip quotes
             crumb = unescapeJava(crumb);
@@ -77,12 +77,12 @@ public class CSVUpdateService {
         return crumb;
     }
 
-    public String getCrumb(String symbol) { //Finds special cookie to allow for downloading data from software
+    String getCrumb(String symbol) { //Finds special cookie to allow for downloading data from software
         return findCrumb(splitPageData(getPage(symbol)));
 
     }
 
-    public void downloadData(String symbol, long startDate, long endDate, String crumb) { //Downloads the data from yahoo by taking the company symbol, the startdate, enddate and the special cookie crumb
+    void downloadData(String symbol, long startDate, long endDate, String crumb) { //Downloads the data from yahoo by taking the company symbol, the startdate, enddate and the special cookie crumb
         String filename = String.format("%s.csv", symbol.toUpperCase());
         String url = String.format("https://query1.finance.yahoo.com/v7/finance/download/%s?period1=%s&period2=%s&interval=1d&events=history&crumb=%s", symbol, startDate, endDate, crumb);
         HttpGet request = new HttpGet(url);

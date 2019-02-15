@@ -4,9 +4,9 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class DisplayTableService {
+class DisplayTableService {
 
-    public static void ViewTable(String Filepath) { //Creates a table for each column value found in the csv file
+    static void ViewTable(String Filepath) { //Creates a table for each column value found in the csv file
         JFrame TableFrame = new JFrame();
         JTable Table = new JTable(new DefaultTableModel());
 
@@ -18,8 +18,8 @@ public class DisplayTableService {
 
             Object[] rows = br.lines().toArray();
 
-            for (int i = 0; i < rows.length; i++) {
-                String Line = rows[i].toString().trim();
+            for (Object row : rows) {
+                String Line = row.toString().trim();
                 String[] RowData = Line.split(",");
                 Model.addRow(RowData);
             }

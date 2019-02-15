@@ -3,19 +3,16 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-class CSVUpdateFrame extends JFrame {
+public class CSVUpdateFrame extends JFrame {
     public static void main(String[] args) { //Main method for testing
         new CSVUpdateFrame();
 
     }
 
-    public String theCurrentUser;
-    JLabel symbolLabel;
-    JTextField symbolField;
-    JButton resetBtn, submitBtn;
-    JLabel helpLabel, errorLabel;
+    private JTextField symbolField;
+    private JLabel errorLabel;
 
-    CSVUpdateFrame() {//Frame initialisation and layout functionality
+    public CSVUpdateFrame() {//Frame initialisation and layout functionality
         setSize(450, 380);
 
         Font myFieldFont = new Font("Century Gothic", Font.BOLD, 14);
@@ -24,15 +21,14 @@ class CSVUpdateFrame extends JFrame {
         Color myBlueColor = new Color(59, 69, 182);
         Color resetColor = new Color(200, 147, 183);
 
-        symbolLabel = new JLabel("<html>Company Symbol: <html>");
+        JLabel symbolLabel = new JLabel("<html>Company Symbol: <html>");
         symbolLabel.setFont(myFieldFont);
         symbolLabel.setForeground(myBlueColor);
 
         symbolField = new JTextField(20);
         symbolField.setFont(myFieldFont2);
 
-
-        helpLabel = new JLabel("<html><font color = purple>Download Newest Data</font><br/>Please Enter a Company Symbol<br/> To Download The Most Recent Data Some Examples: <br/>" +
+        JLabel helpLabel = new JLabel("<html><font color = purple>Download Newest Data</font><br/>Please Enter a Company Symbol<br/> To Download The Most Recent Data Some Examples: <br/>" +
                 "<font color = red>Netflix</font> = \"NFLX\"<br/>" +
                 "<font color = green>Microsoft</font> = \"MSFT\"<br/>" +
                 "<font color = #00FFFF>Twitter</font> = \"TWTR\"<br/>" +
@@ -46,12 +42,12 @@ class CSVUpdateFrame extends JFrame {
         errorLabel.setForeground(Color.red);
         errorLabel.setFont(myFieldFont);
 
-        resetBtn = new JButton("Reset");
+        JButton resetBtn = new JButton("Reset");
         resetBtn.setBackground(myBlueColor);
         resetBtn.setForeground(resetColor);
         resetBtn.setFont(myNextFont);
 
-        submitBtn = new JButton("Download Data");
+        JButton submitBtn = new JButton("Download Data");
         submitBtn.setBackground(myBlueColor);
         submitBtn.setForeground(Color.white);
         submitBtn.setFont(myNextFont);
@@ -105,55 +101,30 @@ class CSVUpdateFrame extends JFrame {
                 errorLabel.setText("");
             }
             if (action == 2) {//Download data button calls download method
-                download();
-            }
-            if (action == 3) {//Return to main menu button, close current frame
-                new MenuFrame(theCurrentUser);
-                CSVUpdateFrame.this.dispose();
+                getUpdate();
             }
         }
     }
 
-    public void download() { //download method calls CSVUpdateService class and downloads newest csv and shares information to csv in root folder
+    private void getUpdate() {//Downloads Up to Date CSV method
         CSVUpdateService quoteClass;
         quoteClass = new CSVUpdateService();
-        String symbol = symbolField.getText();
-        String crumb = quoteClass.getCrumb(symbol);
-        String newsymbol;
 
         try {
-            symbol = symbol.toUpperCase();
-            if (symbol.contains(".CSV")) { //If input does not contain .csv then it is added to allow for correct file extension
-                crumbCheck(symbol, crumb, quoteClass);
-            } else if (!symbol.contains(".CSV")) {
-                newsymbol = symbol + ".CSV";
-                crumbCheck(newsymbol, crumb, quoteClass);
+            String symbol = symbolField.getText();
+            String crumb = quoteClass.getCrumb(symbol);
+
+            if (crumb != null && !crumb.isEmpty()) {
+                errorLabel.setText(String.format("<html>Downloaded Data Using the Symbol '%s'<br/>" +
+                        "Check Root File Directories For Updated '%s' File</html>", symbol.toUpperCase(), symbol.toUpperCase()));
+                errorLabel.setForeground(Color.red);
+                quoteClass.downloadData(symbol, 0, System.currentTimeMillis(), crumb);
+
             } else {
-                errorLabel.setText("Unable to Download Data Please Ensure Company Symbol Exists");
+                errorLabel.setText("Unable to update price using the Symbol: " + symbol.toUpperCase());
             }
         } catch (Exception el) {
-            errorLabel.setText("Unable to Download Data Please Ensure Company Symbol Exists");
+            errorLabel.setText("Unable to update, error occurred");
         }
     }
-
-    public void setTheCurrentUser(String theNewCurrentUser) {
-        this.theCurrentUser = theNewCurrentUser;
-    }
-
-    public String getTheCurrentUser() {
-        return theCurrentUser;
-    }
-
-    public void crumbCheck(String thesymbol, String crumb, CSVUpdateService quoteClass) {
-        if (crumb != null && !crumb.isEmpty()) {
-            errorLabel.setText(String.format("<html>Downloaded Data Using the Symbol '%s'<br/>" +
-                    "Check Root File Directories For Updated '%s' File</html>", thesymbol.toUpperCase(), thesymbol.toUpperCase()));
-            errorLabel.setForeground(Color.red);
-            quoteClass.downloadData(thesymbol, 0, System.currentTimeMillis(), crumb);
-
-        } else {
-            errorLabel.setText("Unable to Download Data Using the Symbol: " + thesymbol.toUpperCase());
-        }
-    }
-
 }
