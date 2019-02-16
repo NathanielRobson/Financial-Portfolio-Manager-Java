@@ -24,6 +24,14 @@ public class BankAccountFrame extends JFrame { //Bank Account Frame
     private JTextArea currentMoney;
 
     BankAccountFrame(String theCurrentUser) {//Frame initialisation, layout and functionality
+
+        //Look and Feel Effects
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         //Sets the current user
         this.theCurrentUser = theCurrentUser;
 

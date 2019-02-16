@@ -40,7 +40,7 @@ class LineChartService extends ApplicationFrame { //Line Chart Service
         setContentPane(chartPanel);
         frame.setVisible(true);
         frame.setSize(1700, 700);
-        frame.setTitle("Financial Portfolio Personal History Chart");
+        frame.setTitle("Financial Portfolio Personal Investment History Chart");
         frame.setLocationRelativeTo(null);
         frame.add(chartPanel);
     }
@@ -53,11 +53,7 @@ class LineChartService extends ApplicationFrame { //Line Chart Service
         String fileline;
         while ((fileline = in.readLine()) != null) {
             String[] token = fileline.split(",");
-            System.out.println(token[0]);
-            System.out.println(token[1]);
-            System.out.println(token[2]);
             double thevalue = Double.valueOf(String.format("%.2f", Double.valueOf(token[0])));
-
             thedataset.addValue(thevalue, token[1], token[2]);
         }
         return thedataset;

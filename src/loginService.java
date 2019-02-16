@@ -25,9 +25,7 @@ public class loginService { //Login Service
                 System.out.println("User File Read Successfully");
             } else {
                 String users = "NR,teamNR,\nED,teamED,\nDC,teamDC,\nKM,teamKM,\nCK,teamCK,\nKL,teamKL";
-
                 writer = new BufferedWriter(new FileWriter(file));
-
                 writer.write(users);
                 writer.close();
                 System.out.println("No File Existed, File Has Been Created in //UserAccounts/members.csv");

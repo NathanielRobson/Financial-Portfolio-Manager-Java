@@ -10,6 +10,7 @@ class MenuFrame extends JFrame {//Main Menu Frame
         new MenuFrame("NR");
     }
 
+    //The Current User Logged In
     private String theCurrentUser;
 
     MenuFrame(String theCurrentUser) {//Frame initialisation and design and layout
@@ -37,13 +38,13 @@ class MenuFrame extends JFrame {//Main Menu Frame
         displayTable.setBackground(myBtnColor);
 
         JButton searchDate = new JButton("<html><font color = orange>Search</font> a <font color = orange>" +
-                "Date</font> to View Share Information</html>");
+                "Date</font> - View Company Share Data</html>");
         searchDate.setFont(myBtnFont);
         searchDate.setForeground(w);
         searchDate.setBackground(myBtnColor);
 
         JButton viewGraph = new JButton("<html><font color = #00FFFF>View</font> up to Date <font color = #00FFFF>" +
-                "Graphs</font></html>");
+                "Company Graphs</font></html>");
         viewGraph.setFont(myBtnFont);
         viewGraph.setForeground(w);
         viewGraph.setBackground(myBtnColor);
@@ -54,17 +55,17 @@ class MenuFrame extends JFrame {//Main Menu Frame
         updateBtn.setForeground(w);
         updateBtn.setBackground(myBtnColor);
 
-        JButton bankBtn = new JButton("<html><font color = #79FF27>Bank Account</font> Deposit/Withdraw</html>");
+        JButton bankBtn = new JButton("<html><font color = #79FF27>Personal Bank Account</font> Deposit/Withdraw Money</html>");
         bankBtn.setFont(myBtnFont);
         bankBtn.setForeground(w);
         bankBtn.setBackground(myBtnColor);
 
-        JButton purchaseBtn = new JButton("<html><font color = #32CD32>Purchase</font> Shares</html>");
+        JButton purchaseBtn = new JButton("<html><font color = #32CD32>Purchase or Sell</font> Shares</html>");
         purchaseBtn.setFont(myBtnFont);
         purchaseBtn.setForeground(w);
         purchaseBtn.setBackground(myBtnColor);
 
-        JButton addSharesBtn = new JButton("<html><font color = yellow>Add</font> <font color = yellow>Owned " +
+        JButton addSharesBtn = new JButton("<html><font color = yellow>Add</font> <font color = yellow>Already Owned " +
                 "Shares</font></html>");
         addSharesBtn.setFont(myBtnFont);
         addSharesBtn.setForeground(w);
@@ -106,15 +107,15 @@ class MenuFrame extends JFrame {//Main Menu Frame
 
         //Adding Objects to panels
         p1.add(message, c);
+        p1.add(ownedSharesBtn, c);
+        p1.add(purchaseBtn, c);
+        p1.add(addSharesBtn, c);
+        p1.add(bankBtn, c);
+        p1.add(viewHistoryBtn, c);
+        p1.add(viewGraph, c);
         p1.add(updateBtn, c);
         p1.add(searchDate, c);
         p1.add(displayTable, c);
-        p1.add(viewGraph, c);
-        p1.add(bankBtn, c);
-        p1.add(purchaseBtn, c);
-        p1.add(addSharesBtn, c);
-        p1.add(viewHistoryBtn, c);
-        p1.add(ownedSharesBtn, c);
         p1.add(logOutBtn, c);
 
         //Adding panel to Frame

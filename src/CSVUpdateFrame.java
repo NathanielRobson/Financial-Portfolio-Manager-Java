@@ -77,7 +77,7 @@ public class CSVUpdateFrame extends JFrame { //CSV Update Frame
 
         //Frame Constraints
         setLayout(new FlowLayout());
-        setTitle("Financial Portfolio Manager CSV Updater");
+        setTitle("Financial Portfolio Manager Download Up To Date Company CSV");
         setResizable(false);
         setLocationRelativeTo(null);
         setVisible(true);

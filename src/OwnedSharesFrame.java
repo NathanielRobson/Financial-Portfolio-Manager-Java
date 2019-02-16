@@ -104,8 +104,9 @@ class OwnedSharesFrame extends JFrame { //Currently Owned Shares Frame
         setVisible(true);
         setSize(550, 460);
 
-        //Method Call to Find Shares Owned
         File folder = new File(".//UserShares");
+
+        //Method Call to Find Shares Owned
         listAllFiles(folder);
 
     }

@@ -14,6 +14,11 @@ class LoginFrame extends JFrame { //Login Frame
     private JTextField userField, passField;
 
     LoginFrame() { //Frame init and design and layout functionality
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         //Custom fonts and colors for look and feel
         Font myFieldFont = new Font("Century Gothic", Font.BOLD, 14);
@@ -41,11 +46,15 @@ class LoginFrame extends JFrame { //Login Frame
         JButton resetBtn = new JButton("Reset");
         JButton loginBtn = new JButton("Login");
 
-        JLabel welcomeLabel = new JLabel("Welcome to Team 3's Financial Portfolio Manager");
+        JLabel welcomeLabel = new JLabel("<html><font color = #2F4F4F> Welcome to Team 3's " +
+                "Financial Portfolio Manager</font><br/><font color = #F4A460>" +
+                " We Hope You Enjoy Your Time Using Our Program<br>" +
+                "If You Have Any Queries Please Do Not Hesitate To<br>" +
+                "<font color = #F4A460>Contact Us At Team3@essex.ac.uk Thank you :)</font></html>");
         welcomeLabel.setForeground(myBlueColor);
-        welcomeLabel.setFont(myTextFont);
+        welcomeLabel.setFont(myLabelFont);
 
-        JLabel helpLabel = new JLabel("Please login using your unique credentials");
+        JLabel helpLabel = new JLabel("Please Login Using Your Unique Login Credentials");
         helpLabel.setForeground(myBlueColor);
         helpLabel.setFont(myLabelFont);
 
@@ -95,7 +104,7 @@ class LoginFrame extends JFrame { //Login Frame
         setResizable(false);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize(500, 500);
+        setSize(480, 360);
         setVisible(true);
 
         //Individual action listeners for each button

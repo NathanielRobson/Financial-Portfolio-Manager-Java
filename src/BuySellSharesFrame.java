@@ -25,6 +25,13 @@ class BuySellSharesFrame extends JFrame { //Purchase and Sell Shares Frame
         //Sets the Current user
         this.theCurrentUser = theCurrentUser;
 
+        //Look and Feel Effects
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         //Gets Current Date
         DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         LocalDate localDate = LocalDate.now();
@@ -157,7 +164,7 @@ class BuySellSharesFrame extends JFrame { //Purchase and Sell Shares Frame
 
         //Frame Constraints
         setLayout(new FlowLayout());
-        setTitle("Financial Portfolio Manager Stock Purchase Tool");
+        setTitle("Financial Portfolio Manager Stock Purchase or Sell Shares");
         setResizable(false);
         setLocationRelativeTo(null);
         setVisible(true);

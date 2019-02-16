@@ -5,7 +5,6 @@ import java.util.Scanner;
 class SearchandViewService extends JFrame { //Search and View Service
 
     static void readFile(String filepath, String Search) {//Search for file, search for chosen date then provide information regarding that day for selected company
-
         String[] data;
         JFrame frame = new JFrame();
         frame.setAlwaysOnTop(true);
@@ -19,7 +18,6 @@ class SearchandViewService extends JFrame { //Search and View Service
                 Close = "",
                 AdjClose = "",
                 Volume = "";
-
         try {
             Scanner a = new Scanner(new File(filepath));
             a.useDelimiter("[,\n]");
@@ -58,8 +56,7 @@ class SearchandViewService extends JFrame { //Search and View Service
             }
             a.close();
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Error");
-            System.out.println(e.toString());
+            JOptionPane.showMessageDialog(null, "Unable To Find Date of Record");
         }
 
     }

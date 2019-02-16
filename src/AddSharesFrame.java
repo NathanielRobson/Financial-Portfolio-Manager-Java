@@ -26,6 +26,13 @@ public class AddSharesFrame extends JFrame { //Add Shares Frame
     AddSharesFrame(String theCurrentUser) {//Frame initialisation, layout and functionality
         this.theCurrentUser = theCurrentUser;
 
+        //Look and Feel Effects
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         //Custom fonts and colors for look and feel
         Font myFieldFont = new Font("Century Gothic", Font.BOLD, 14);
         Font myTextFont = new Font("Century Gothic", Font.BOLD, 16);

@@ -30,7 +30,7 @@ class DisplayTableService { //Display Table Service
             TableFrame.add(pane);
             TableFrame.setSize(1600, 800);
             TableFrame.setVisible(true);
-            TableFrame.setTitle("Financial Portfolio Manager Stock Table");
+            TableFrame.setTitle("Financial Portfolio Manager CSV Table");
 
         } catch (IOException e) {
             e.printStackTrace();

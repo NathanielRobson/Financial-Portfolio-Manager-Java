@@ -14,7 +14,12 @@ class GraphBuilderFrame extends JFrame { //Graph Building Frame
     private JLabel errorLabel;
 
     GraphBuilderFrame() { //Frame init and design and layout
-
+        //Look and Feel Settings
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         //Custom Fonts for Look and Feel
         Font myFieldFont = new Font("Century Gothic", Font.BOLD, 14);
         Font myTextFont = new Font("Century Gothic", Font.BOLD, 16);
@@ -127,7 +132,7 @@ class GraphBuilderFrame extends JFrame { //Graph Building Frame
 
         //Frame Constraints
         setLayout(new FlowLayout());
-        setTitle("Financial Portfolio Manager Graph Builder");
+        setTitle("Financial Portfolio Manager Graph Scenario Creator");
         setResizable(false);
         setLocationRelativeTo(null);
         setVisible(true);
