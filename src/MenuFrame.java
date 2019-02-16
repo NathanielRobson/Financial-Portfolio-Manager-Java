@@ -4,7 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 
-class MenuFrame extends JFrame {//Main Menu
+class MenuFrame extends JFrame {//Main Menu Frame
 
     public static void main(String[] args) {
         new MenuFrame("NR");
@@ -36,12 +36,14 @@ class MenuFrame extends JFrame {//Main Menu
         displayTable.setForeground(w);
         displayTable.setBackground(myBtnColor);
 
-        JButton searchDate = new JButton("<html><font color = orange>Search</font> a <font color = orange>Date</font> to View Share Information</html>");
+        JButton searchDate = new JButton("<html><font color = orange>Search</font> a <font color = orange>" +
+                "Date</font> to View Share Information</html>");
         searchDate.setFont(myBtnFont);
         searchDate.setForeground(w);
         searchDate.setBackground(myBtnColor);
 
-        JButton viewGraph = new JButton("<html><font color = #00FFFF>View</font> up to Date <font color = #00FFFF>Graphs</font></html>");
+        JButton viewGraph = new JButton("<html><font color = #00FFFF>View</font> up to Date <font color = #00FFFF>" +
+                "Graphs</font></html>");
         viewGraph.setFont(myBtnFont);
         viewGraph.setForeground(w);
         viewGraph.setBackground(myBtnColor);
@@ -62,10 +64,21 @@ class MenuFrame extends JFrame {//Main Menu
         purchaseBtn.setForeground(w);
         purchaseBtn.setBackground(myBtnColor);
 
-        JButton addSharesBtn = new JButton("<html><font color = yellow>Add</font> <font color = yellow>Owned Shares</font></html>");
+        JButton addSharesBtn = new JButton("<html><font color = yellow>Add</font> <font color = yellow>Owned " +
+                "Shares</font></html>");
         addSharesBtn.setFont(myBtnFont);
         addSharesBtn.setForeground(w);
         addSharesBtn.setBackground(myBtnColor);
+
+        JButton viewHistoryBtn = new JButton("<html><font color = orange>View Account History Chart</font</html>");
+        viewHistoryBtn.setFont(myBtnFont);
+        viewHistoryBtn.setForeground(w);
+        viewHistoryBtn.setBackground(myBtnColor);
+
+        JButton ownedSharesBtn = new JButton("<html><font color = #00FFFF>View Owned Shares</font></html>");
+        ownedSharesBtn.setFont(myBtnFont);
+        ownedSharesBtn.setForeground(w);
+        ownedSharesBtn.setBackground(myBtnColor);
 
         JButton logOutBtn = new JButton("Log out Or Switch User");
         logOutBtn.setFont(myBtnFont);
@@ -74,7 +87,8 @@ class MenuFrame extends JFrame {//Main Menu
 
         //Label to inform user what to do, where they are and also states who is currently logged in
         JLabel message = new JLabel();
-        message.setText("<html><font color = #F4A460>Main Menu - </font><br/>'<font color = purple>" + theCurrentUser + "'</font> Please Choose an Option From the List Below<br/></html>");
+        message.setText("<html><font color = #F4A460>Main Menu - </font><br/>'<font color = purple>" + theCurrentUser +
+                "'</font> Please Choose an Option From the List Below<br/></html>");
         message.setFont(myNextFont);
         message.setForeground(myBtnColor);
 
@@ -99,6 +113,8 @@ class MenuFrame extends JFrame {//Main Menu
         p1.add(bankBtn, c);
         p1.add(purchaseBtn, c);
         p1.add(addSharesBtn, c);
+        p1.add(viewHistoryBtn, c);
+        p1.add(ownedSharesBtn, c);
         p1.add(logOutBtn, c);
 
         //Adding panel to Frame
@@ -114,6 +130,9 @@ class MenuFrame extends JFrame {//Main Menu
         purchaseBtn.addActionListener(new ButtonHandler(this, 6));
         bankBtn.addActionListener(new ButtonHandler(this, 7));
         addSharesBtn.addActionListener(new ButtonHandler(this, 8));
+        viewHistoryBtn.addActionListener(new ButtonHandler(this, 9));
+        ownedSharesBtn.addActionListener(new ButtonHandler(this, 10));
+
     }
 
     //Button Handler
@@ -130,7 +149,7 @@ class MenuFrame extends JFrame {//Main Menu
         //Individual button actions
         @Override
         public void actionPerformed(ActionEvent e) {
-            if (action == 1) {
+            if (action == 1) { //Log out button
                 new LoginFrame();
                 MenuFrame.this.dispose();
             }
@@ -147,13 +166,22 @@ class MenuFrame extends JFrame {//Main Menu
                 new GraphBuilderFrame();
             }
             if (action == 6) {//Purchase Stocks from companies most recent value
-                new PurchaseSharesFrame(theApp.theCurrentUser);
+                new BuySellSharesFrame(theApp.theCurrentUser);
             }
             if (action == 7) {//View Bank Account and Withdraw and Deposit Funds
                 new BankAccountFrame(theApp.theCurrentUser);
             }
-            if (action == 8) {
+            if (action == 8) { //Add Share to Account
                 new AddSharesFrame(theApp.theCurrentUser);
+
+            }
+            if (action == 9) { //View Line Chart of Account Purchases and Sales
+                new LineChartService(
+                        "Financial Portfolio Manager Personal Value Chart",
+                        "History of Investment Chart", theApp.theCurrentUser);
+            }
+            if (action == 10) {
+                new OwnedSharesFrame(theApp.theCurrentUser);
             }
         }
 
@@ -196,7 +224,8 @@ class MenuFrame extends JFrame {//Main Menu
                         }
                     }
                 } else {
-                    System.out.println("Unable to view table data using the Symbol: " + name + "  Please Ensure that .csv is added and the company symbol exists on the web");
+                    System.out.println("Unable to view table data using the Symbol: " + name + "" +
+                            "  Please Ensure that .csv is added and the company symbol exists on the web");
                     JOptionPane.showMessageDialog(null, "Unable to show selected data");
                 }
             } catch (Exception el) {
@@ -242,7 +271,8 @@ class MenuFrame extends JFrame {//Main Menu
                         }
                     }
                 } else {
-                    System.out.println("Unable to download data using the Symbol: " + input.toUpperCase() + "  Please Ensure that .csv is added and the company symbol exists on the web");
+                    System.out.println("Unable to download data using the Symbol: " + input.toUpperCase() + " " +
+                            " Please Ensure that .csv is added and the company symbol exists on the web");
                 }
             } catch (Exception el) {
                 JOptionPane.showMessageDialog(null, "Cancelled");

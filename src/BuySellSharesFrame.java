@@ -11,7 +11,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Collections;
 import java.util.Scanner;
 
-class PurchaseSharesFrame extends JFrame {
+class BuySellSharesFrame extends JFrame { //Purchase and Sell Shares Frame
 
     private String theCurrentUser, userMoney, purchaseDate;
     private Double price;
@@ -20,12 +20,17 @@ class PurchaseSharesFrame extends JFrame {
     private JTextField symbolField, totalField;
     private JTextArea priceArea, currentMoney;
 
-    PurchaseSharesFrame(String theCurrentUser) {//Frame initialisation, layout and functionality
+    BuySellSharesFrame(String theCurrentUser) {//Frame initialisation, layout and functionality
+
+        //Sets the Current user
         this.theCurrentUser = theCurrentUser;
+
+        //Gets Current Date
         DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         LocalDate localDate = LocalDate.now();
         purchaseDate = dateFormat.format(localDate);
 
+        //Reads User Portfolio
         try {
             readPersonalPortfolio();
             setCurrentMoney(userMoney);
@@ -34,11 +39,12 @@ class PurchaseSharesFrame extends JFrame {
             errorLabel.setText("Unable to read personal portfolio, File may not exist");
         }
 
+        //Custom Fonts and Colors for Look and Feel
         Font myFieldFont = new Font("Century Gothic", Font.BOLD, 14);
         Font myTextFont = new Font("Century Gothic", Font.BOLD, 16);
         Font myNextFont = new Font("HelveticaNeue-Light", Font.ITALIC, 18);
-
         Font myButtonFont = new Font("Tahoma", Font.BOLD, 16);
+
         Color myBlueColor = new Color(59, 69, 182);
         Color priceColor = new Color(38, 200, 191);
 
@@ -112,6 +118,7 @@ class PurchaseSharesFrame extends JFrame {
         sellBtn.setForeground(myBlueColor);
         sellBtn.setFont(myButtonFont);
 
+        //Panel Initialisation
         JPanel userPanel = new JPanel();
         JPanel panelOne = new JPanel();
         JPanel panelTwo = new JPanel();
@@ -121,6 +128,7 @@ class PurchaseSharesFrame extends JFrame {
         JPanel panelSix = new JPanel();
         JPanel panelSeven = new JPanel();
 
+        //Adding objects to panels
         userPanel.add(userLabel);
         userPanel.add(userMoneyLabel);
         userPanel.add(currentMoney);
@@ -137,6 +145,7 @@ class PurchaseSharesFrame extends JFrame {
         panelSix.add(errorLabel);
         panelSeven.add(infoLabel);
 
+        //Adding panels to Frame
         add(userPanel);
         add(panelOne);
         add(panelTwo);
@@ -146,6 +155,7 @@ class PurchaseSharesFrame extends JFrame {
         add(panelSix);
         add(panelSeven);
 
+        //Frame Constraints
         setLayout(new FlowLayout());
         setTitle("Financial Portfolio Manager Stock Purchase Tool");
         setResizable(false);
@@ -160,10 +170,10 @@ class PurchaseSharesFrame extends JFrame {
     }
 
     public class ButtonHandler implements ActionListener { //Implements the action listener
-        PurchaseSharesFrame theApp;
+        BuySellSharesFrame theApp;
         int action;
 
-        ButtonHandler(PurchaseSharesFrame app, int action) {
+        ButtonHandler(BuySellSharesFrame app, int action) {
             this.theApp = app;
             this.action = action;
         }
@@ -284,19 +294,22 @@ class PurchaseSharesFrame extends JFrame {
                     File file = new File(".//UserPortfolios/" + getTheCurrentUser() + "-BANK.csv");
                     writeToCsv(file, moneyupdate);
 
+                    dataCollection(cmoney, theCurrentUser, symbol, purchaseDate);
+
                     errorLabel.setText("<html>Thankyou For Your Transaction!<br>Purchased: "
                             + numOfShares + " " + symbol + " Share(s)</html");
                 } else {
                     errorLabel.setText("Unable to Purchase Shares, You Have Insufficient Funds");
                 }
             } catch (Exception el) {
-                errorLabel.setText("You Have Cancelled Your Purchase");
+                errorLabel.setText("You have Cancelled The Transaction Successfully");
             }
         } else {
-            errorLabel.setText("You have Clicked Cancel");
+            errorLabel.setText("You have Cancelled The Transaction Successfully");
         }
     }
 
+    //Updates the price of the company selected
     private void UpdatePrice(String symbol) {
         CSVtoArrayService csvtoarray = new CSVtoArrayService();
         csvtoarray.CSVtoArray(symbol + ".csv");
@@ -305,6 +318,7 @@ class PurchaseSharesFrame extends JFrame {
         this.priceArea.setText(String.valueOf(String.format("%.2f", price)));
     }
 
+    //Saves Information to file
     private void saveDataToFile(Double currentMoney, String symbol, int buying) throws IOException {
         File savefile = new File(".//UserShares/" + getTheCurrentUser().toUpperCase() + "-" + symbol + "-" + "shares.csv");
         double thecost = Double.parseDouble(priceArea.getText());
@@ -337,6 +351,7 @@ class PurchaseSharesFrame extends JFrame {
         }
     }
 
+    //Sell Share Method
     private void sellShare(String symbol, double userMoney, String selling) throws IOException {
         File savefile = new File(".//UserShares/" + getTheCurrentUser().toUpperCase() + "-" + symbol + "-" + "shares.csv");
 
@@ -378,14 +393,13 @@ class PurchaseSharesFrame extends JFrame {
                         System.out.println(profitloss);
 
                     }
-                    String addedshares = String.valueOf(sharesaftersale);
 
                     userMoney = userMoney + totalsale;
                     String cmoney = String.valueOf(String.format("%.2f", userMoney));
                     setCurrentMoney(cmoney);
                     this.currentMoney.setText(cmoney);
 
-                    dataCollection(symbol, addedshares, sharesaftersale, profitloss, totalsale);
+                    dataCollection(cmoney, theCurrentUser, symbol, purchaseDate);
 
                     String[] newcsvlines = new String[]{purchaseDate, String.valueOf(sharesaftersale), boughtat};
 
@@ -403,24 +417,30 @@ class PurchaseSharesFrame extends JFrame {
                 } else {
                     errorLabel.setText("Unable to Sell Shares, Ensure the Correct Input is Used and Price is Updated");
                 }
-
             } else {
                 errorLabel.setText("Sorry No Shares Data Has Been Found");
             }
         }
     }
 
-    private void dataCollection(String symbol, String sharestowrite, int sharessold, double profitloss, double total) {
-        File savefile = new File(".//UserShares/" + getTheCurrentUser().toUpperCase() + "-" + symbol + "-" + "SALE.csv");
+    //Data Collection method for Line Chart
+    private void dataCollection(String totalworth, String theCurrentUser, String symbol, String purchaseDate) throws IOException {
+        File savefile = new File(".//UserPortfolios/" + getTheCurrentUser().toUpperCase() + "-" + "Data.txt");
+        Writer output = new BufferedWriter(new FileWriter(savefile, true));
 
-        String[] csvsale = new String[]{symbol, sharestowrite, String.valueOf(sharessold), String.valueOf(profitloss), String.valueOf(String.format("%.2f", total))};
-        try {
-            writeToCsv(savefile, csvsale);
-        } catch (IOException e) {
-            errorLabel.setText("Unable to create Save File for Sale");
-        }
+        output.append(totalworth);
+        output.append(",");
+        output.append(theCurrentUser);
+        output.append(",");
+        output.append(purchaseDate);
+        output.append(symbol);
+        output.append("\n");
+
+        output.close();
+
     }
 
+    //Writes Data to CSV
     private void writeToCsv(File file, String[] details) throws IOException {
         FileWriter fileWriter = new FileWriter(file);
         CSVWriter csvWriter = new CSVWriter(fileWriter);
@@ -429,6 +449,7 @@ class PurchaseSharesFrame extends JFrame {
         csvWriter.close();
     }
 
+    //Getters and Setters, Current user and Money
     private String getTheCurrentUser() {
         return theCurrentUser;
     }

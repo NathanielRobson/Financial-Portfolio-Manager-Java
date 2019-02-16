@@ -14,11 +14,12 @@ import java.util.List;
 
 import static org.apache.commons.lang3.StringEscapeUtils.unescapeJava;
 
-class CSVUpdateService {
+class CSVUpdateService { //CSV Updating Service By Connecting to Yahoo Finance
 
     private HttpClient client;
     HttpClientContext context;
 
+    //HTTP Constraints
     CSVUpdateService() {
         CookieStore cookieStore = new BasicCookieStore();
         client = HttpClientBuilder.create().build();
@@ -50,29 +51,28 @@ class CSVUpdateService {
         return page;
     }
 
+    //Splits page data by }
     private List<String> splitPageData(String page) {
         return Arrays.asList(page.split("}"));
 
     }
 
+    //Finds the crumb within the HTML source of the page and stores it in memory
     private String findCrumb(List<String> lines) {
         //crumb is a personal browser cookie.
         //without this the page will not load within software
         String crumb = "";
         String rtn = "";
-
         for (String l : lines) {
             if (l.contains("CrumbStore")) {
                 rtn = l;
                 break;
             }
         }
-
         if (!rtn.isEmpty()) {
             String[] vals = rtn.split(":");                 // get third item
             crumb = vals[2].replace("\"", ""); // strip quotes
             crumb = unescapeJava(crumb);
-
         }
         return crumb;
     }

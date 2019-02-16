@@ -4,12 +4,13 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-class DisplayTableService {
+class DisplayTableService { //Display Table Service
 
     static void ViewTable(String Filepath) { //Creates a table for each column value found in the csv file
         JFrame TableFrame = new JFrame();
         JTable Table = new JTable(new DefaultTableModel());
 
+        //Reads each line in CSV and Displays table
         try (BufferedReader br = new BufferedReader(new FileReader(Filepath))) {
             String ColumnLine = br.readLine().trim();
             String[] ColumnNames = ColumnLine.split(",");
@@ -24,6 +25,7 @@ class DisplayTableService {
                 Model.addRow(RowData);
             }
 
+            //Frame/pane constaints
             JScrollPane pane = new JScrollPane(Table);
             TableFrame.add(pane);
             TableFrame.setSize(1600, 800);

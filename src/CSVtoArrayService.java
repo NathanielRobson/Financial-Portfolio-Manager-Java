@@ -6,14 +6,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class CSVtoArrayService {
+public class CSVtoArrayService { //CSV to Array Service
     //Testing with Main
     public static void main(String[] args) {
         CSVtoArrayService c = new CSVtoArrayService();
         c.CSVtoArray("NFLX.csv");
     }
 
-    //Each array is initialised
+    //Array Initialisation
     List<String> datearray = new ArrayList<>(Arrays.asList());
     List<String> openarray = new ArrayList<>(Arrays.asList());
     List<String> higharray = new ArrayList<>(Arrays.asList());
@@ -25,6 +25,7 @@ public class CSVtoArrayService {
     void CSVtoArray(String file) {
         CSVReader reader;
 
+        //Adds each value to an individual array for future queries
         try {
             reader = new CSVReader(new FileReader(file));
             String[] line = reader.readNext();
@@ -47,7 +48,6 @@ public class CSVtoArrayService {
                     line[6] = "6";
                     System.out.println("CSV contains a null value, Exception handled");
                 }
-                //Adds each value to an individual array for future queries
                 datearray.add(line[0]);
                 openarray.add(line[1]);
                 higharray.add(line[2]);
@@ -63,6 +63,7 @@ public class CSVtoArrayService {
         }
     }
 
+    //Getters and Setters
     public ArrayList<String> getDate() {
         return (new ArrayList<>(datearray));
     }
@@ -90,6 +91,4 @@ public class CSVtoArrayService {
     public List<Long> getVolume() {
         return (new ArrayList<>(volumearray));
     }
-
-
 }

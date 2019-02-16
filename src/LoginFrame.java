@@ -3,9 +3,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-class LoginFrame extends JFrame {
+class LoginFrame extends JFrame { //Login Frame
+    //Main method for Testing
     public static void main(String[] args) { //Testing using Main
-
         new LoginFrame();
     }
 
@@ -15,14 +15,12 @@ class LoginFrame extends JFrame {
 
     LoginFrame() { //Frame init and design and layout functionality
 
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize(500, 500);
-
+        //Custom fonts and colors for look and feel
         Font myFieldFont = new Font("Century Gothic", Font.BOLD, 14);
         Font myTextFont = new Font("Century Gothic", Font.BOLD, 16);
         Font myLabelFont = new Font("Century Gothic", Font.BOLD, 18);
-
         Font myButtonFont = new Font("Tahoma", Font.BOLD, 20);
+
         Color myBlueColor = new Color(59, 69, 182);
         Color resetColor = new Color(200, 0, 200);
 
@@ -64,6 +62,7 @@ class LoginFrame extends JFrame {
         loginBtn.setFocusPainted(false);
         loginBtn.setFont(myButtonFont);
 
+        //Panel initialisation
         JPanel panelOne = new JPanel();
         JPanel panelTwo = new JPanel();
         JPanel panelThree = new JPanel();
@@ -71,6 +70,7 @@ class LoginFrame extends JFrame {
         JPanel panelFive = new JPanel();
         JPanel panelSix = new JPanel();
 
+        //Adding objects to panels
         panelOne.add(userLabel);
         panelOne.add(userField);
         panelTwo.add(passLabel);
@@ -81,6 +81,7 @@ class LoginFrame extends JFrame {
         panelSix.add(helpLabel);
         panelFour.add(errorLabel);
 
+        //Adding panels to frame
         add(panelOne);
         add(panelTwo);
         add(panelThree);
@@ -88,11 +89,13 @@ class LoginFrame extends JFrame {
         add(panelFive);
         add(panelSix);
 
+        //Frame Constraints
         setLayout(new FlowLayout());
         setTitle("Financial Portfolio Manager Login");
         setResizable(false);
         setLocationRelativeTo(null);
-
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setSize(500, 500);
         setVisible(true);
 
         //Individual action listeners for each button

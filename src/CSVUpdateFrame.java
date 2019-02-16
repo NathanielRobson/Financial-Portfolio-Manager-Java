@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class CSVUpdateFrame extends JFrame {
+public class CSVUpdateFrame extends JFrame { //CSV Update Frame
     public static void main(String[] args) { //Main method for testing
         new CSVUpdateFrame();
 
@@ -13,7 +13,6 @@ public class CSVUpdateFrame extends JFrame {
     private JLabel errorLabel;
 
     public CSVUpdateFrame() {//Frame initialisation and layout functionality
-        setSize(450, 380);
 
         Font myFieldFont = new Font("Century Gothic", Font.BOLD, 14);
         Font myFieldFont2 = new Font("Century Gothic", Font.BOLD, 12);
@@ -52,6 +51,7 @@ public class CSVUpdateFrame extends JFrame {
         submitBtn.setForeground(Color.white);
         submitBtn.setFont(myNextFont);
 
+        //Panel initialisation
         JPanel panelOne = new JPanel();
         JPanel panelTwo = new JPanel();
         JPanel panelThree = new JPanel();
@@ -59,6 +59,7 @@ public class CSVUpdateFrame extends JFrame {
         JPanel panelFive = new JPanel();
         JPanel panelSix = new JPanel();
 
+        //Adds objects to panels
         panelOne.add(symbolLabel);
         panelOne.add(symbolField);
         panelTwo.add(submitBtn);
@@ -66,6 +67,7 @@ public class CSVUpdateFrame extends JFrame {
         panelThree.add(helpLabel);
         panelFour.add(errorLabel);
 
+        //Adds panels to frame
         add(panelOne);
         add(panelTwo);
         add(panelThree);
@@ -73,11 +75,13 @@ public class CSVUpdateFrame extends JFrame {
         add(panelFive);
         add(panelSix);
 
+        //Frame Constraints
         setLayout(new FlowLayout());
         setTitle("Financial Portfolio Manager CSV Updater");
         setResizable(false);
         setLocationRelativeTo(null);
         setVisible(true);
+        setSize(450, 380);
 
         //Each button with individual action listener
         resetBtn.addActionListener(new ButtonHandler(this, 1));

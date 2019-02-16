@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-class StockGraphService {
+class StockGraphService { //Stock Graph Service
     //Main method for testing
     public static void main(String[] args) {
         StockGraphService Graph = new StockGraphService();
@@ -46,6 +46,7 @@ class StockGraphService {
         JFrame frame = new JFrame();
         CategoryChart chart = new CategoryChartBuilder().width(1000).height(800).xAxisTitle("Date").yAxisTitle("Stock price").build();
 
+        //Chart Customisation
         chart.setTitle("Up to Date Graph of Company Stocks from: " + filename);
         chart.getStyler().setLegendPosition(Styler.LegendPosition.InsideNE);
         chart.getStyler().setHasAnnotations(true);
@@ -78,8 +79,6 @@ class StockGraphService {
         frame.setLocationRelativeTo(null);
         JPanel panel = new XChartPanel<>(chart);
         frame.add(panel);
-
-        //return custom chart
     }
 }
 

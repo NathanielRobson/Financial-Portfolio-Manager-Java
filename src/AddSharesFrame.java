@@ -10,7 +10,8 @@ import java.io.IOException;
 import java.util.Collections;
 import java.util.Scanner;
 
-public class AddSharesFrame extends JFrame {
+public class AddSharesFrame extends JFrame { //Add Shares Frame
+    //Main method for testing
     public static void main(String[] args) {
         new AddSharesFrame("NR");
     }
@@ -25,11 +26,12 @@ public class AddSharesFrame extends JFrame {
     AddSharesFrame(String theCurrentUser) {//Frame initialisation, layout and functionality
         this.theCurrentUser = theCurrentUser;
 
+        //Custom fonts and colors for look and feel
         Font myFieldFont = new Font("Century Gothic", Font.BOLD, 14);
         Font myTextFont = new Font("Century Gothic", Font.BOLD, 16);
         Font myNextFont = new Font("HelveticaNeue-Light", Font.ITALIC, 18);
-
         Font myButtonFont = new Font("Tahoma", Font.BOLD, 16);
+
         Color myBlueColor = new Color(59, 69, 182);
         Color priceColor = new Color(38, 200, 191);
 
@@ -90,6 +92,7 @@ public class AddSharesFrame extends JFrame {
         resetBtn.setForeground(Color.white);
         resetBtn.setFont(myButtonFont);
 
+        //Panel initialisation
         JPanel userPanel = new JPanel();
         JPanel panelOne = new JPanel();
         JPanel panelTwo = new JPanel();
@@ -99,6 +102,7 @@ public class AddSharesFrame extends JFrame {
         JPanel panelSix = new JPanel();
         JPanel panelSeven = new JPanel();
 
+        //Adding Objects to panels
         userPanel.add(userLabel);
         panelOne.add(symbolLabel);
         panelOne.add(symbolField);
@@ -113,6 +117,7 @@ public class AddSharesFrame extends JFrame {
         panelSix.add(helpLabel);
         panelSeven.add(errorLabel);
 
+        //Adding panels to frame
         add(userPanel);
         add(panelOne);
         add(panelTwo);
@@ -122,6 +127,7 @@ public class AddSharesFrame extends JFrame {
         add(panelSix);
         add(panelSeven);
 
+        //Frame Constraints
         setLayout(new FlowLayout());
         setTitle("Financial Portfolio Manager Add Your Owned Shares");
         setResizable(false);

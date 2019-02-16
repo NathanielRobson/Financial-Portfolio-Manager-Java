@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.io.File;
 import java.util.Scanner;
 
-class SearchandViewService extends JFrame {
+class SearchandViewService extends JFrame { //Search and View Service
 
     static void readFile(String filepath, String Search) {//Search for file, search for chosen date then provide information regarding that day for selected company
 

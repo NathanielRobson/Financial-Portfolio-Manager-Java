@@ -4,7 +4,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 
-class GraphBuilderFrame extends JFrame {
+class GraphBuilderFrame extends JFrame { //Graph Building Frame
+    //Main method for Testing
     public static void main(String[] args) { //Test using Main
         new GraphBuilderFrame();
     }
@@ -14,47 +15,58 @@ class GraphBuilderFrame extends JFrame {
 
     GraphBuilderFrame() { //Frame init and design and layout
 
-        setSize(500, 500);
-
+        //Custom Fonts for Look and Feel
         Font myFieldFont = new Font("Century Gothic", Font.BOLD, 14);
         Font myTextFont = new Font("Century Gothic", Font.BOLD, 16);
         Font myNextFont = new Font("HelveticaNeue-Light", Font.ITALIC, 15);
-
         Font myButtonFont = new Font("Tahoma", Font.BOLD, 20);
+
+        //Custom colors for look and feel
         Color myBlueColor = new Color(59, 69, 182);
         Color resetColor = new Color(200, 0, 200);
 
+        //symbol label
         JLabel symbolLabel = new JLabel("<html>Symbol or Filename: <html>");
         symbolLabel.setFont(myFieldFont);
         symbolLabel.setForeground(myBlueColor);
 
+        //symbol field
         symbolField = new JTextField(20);
         symbolField.setFont(myFieldFont);
 
+        //days label
         JLabel daysLabel = new JLabel("<html>From - To and Graph Range: </html>");
         daysLabel.setFont(myTextFont);
         daysLabel.setForeground(myBlueColor);
 
+        //from field
         fromField = new JTextField(3);
         fromField.setFont(myFieldFont);
 
+        //range label
         JLabel rangeLabel = new JLabel("Range for Graph");
         rangeLabel.setForeground(myBlueColor);
         rangeLabel.setFont(myNextFont);
 
+        //to field
         toField = new JTextField(3);
         toField.setFont(myFieldFont);
 
+        //range field
         rangeField = new JTextField(3);
         rangeField.setFont(myFieldFont);
 
+        //reset button
         JButton resetBtn = new JButton("Reset");
+        //submit button
         JButton submitBtn = new JButton("Submit");
 
+        //welcome label
         JLabel welcomeLabel = new JLabel("");
         welcomeLabel.setForeground(myBlueColor);
         welcomeLabel.setFont(myNextFont);
 
+        //help label
         JLabel helpLabel = new JLabel("<html><font color = purple>Scenario Graph Builder!</font><br/><br/>Please Enter a Company Symbol<br/>" +
                 "And Number of Days to Display (1 == Today)(Range Default == 0)<br/><br/>" +
                 "<font color = #FF00FF>(1 == Today!)</font><br/>Graph Range = Minimum Y Value (0 for Default!) <br/>" +
@@ -68,19 +80,23 @@ class GraphBuilderFrame extends JFrame {
         helpLabel.setForeground(myBlueColor);
         helpLabel.setFont(myNextFont);
 
+        //error label
         errorLabel = new JLabel();
         errorLabel.setForeground(Color.red);
         errorLabel.setFont(myNextFont);
 
+        //reset button
         resetBtn.setBackground(myBlueColor);
         resetBtn.setForeground(resetColor);
         resetBtn.setFont(myButtonFont);
 
+        //submit button
         submitBtn.setBackground(myBlueColor);
         submitBtn.setForeground(Color.white);
         submitBtn.setFocusPainted(false);
         submitBtn.setFont(myButtonFont);
 
+        //Initialisation of Panels
         JPanel panelOne = new JPanel();
         JPanel panelTwo = new JPanel();
         JPanel panelThree = new JPanel();
@@ -88,6 +104,7 @@ class GraphBuilderFrame extends JFrame {
         JPanel panelFive = new JPanel();
         JPanel panelSix = new JPanel();
 
+        //Adding Objects to Panels
         panelOne.add(symbolLabel);
         panelOne.add(symbolField);
         panelTwo.add(daysLabel);
@@ -100,7 +117,7 @@ class GraphBuilderFrame extends JFrame {
         panelTwo.add(rangeField);
         panelSix.add(helpLabel);
 
-
+        //Adding Panels to Frame
         add(panelOne);
         add(panelTwo);
         add(panelThree);
@@ -108,17 +125,20 @@ class GraphBuilderFrame extends JFrame {
         add(panelFive);
         add(panelSix);
 
+        //Frame Constraints
         setLayout(new FlowLayout());
         setTitle("Financial Portfolio Manager Graph Builder");
         setResizable(false);
         setLocationRelativeTo(null);
         setVisible(true);
+        setSize(500, 500);
 
         //Action listeners for the individual buttons
         resetBtn.addActionListener(new ButtonHandler(this, 1));
         submitBtn.addActionListener(new ButtonHandler(this, 2));
     }
 
+    //Button Handler Class allows for action listeners to be added to each button
     public class ButtonHandler implements ActionListener { //Implements the action listener
         GraphBuilderFrame theApp;
         int action;
@@ -193,7 +213,6 @@ class GraphBuilderFrame extends JFrame {
                     errorLabel.setText("Error One of the fields is empty");
                 }
             }
-
         }
     }
 }

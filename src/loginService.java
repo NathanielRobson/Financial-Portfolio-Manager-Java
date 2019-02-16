@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.LinkedList;
 
-public class loginService {
+public class loginService { //Login Service
     public static void main(String[] args) {
         new loginService();
     }

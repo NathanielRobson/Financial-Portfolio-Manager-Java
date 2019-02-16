@@ -11,7 +11,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Collections;
 
-public class BankAccountFrame extends JFrame {
+public class BankAccountFrame extends JFrame { //Bank Account Frame
+    //Main method for testing
     public static void main(String[] args) {
         new BankAccountFrame("NR");
     }
@@ -23,15 +24,18 @@ public class BankAccountFrame extends JFrame {
     private JTextArea currentMoney;
 
     BankAccountFrame(String theCurrentUser) {//Frame initialisation, layout and functionality
+        //Sets the current user
         this.theCurrentUser = theCurrentUser;
+
+        //Reads personal portfolio to output current money
         try {
             readPersonalPortfolio();
             setCurrentMoney(userMoney);
         } catch (IOException e) {
             errorLabel.setText("Unable to Read Current Money File, File May Not Exist.");
         }
-        setSize(550, 330);
 
+        //Custom Colors and Fonts for look and feel
         Font myFieldFont = new Font("Century Gothic", Font.BOLD, 14);
         Font myTextFont = new Font("Century Gothic", Font.BOLD, 16);
         Font myNextFont = new Font("HelveticaNeue-Light", Font.ITALIC, 18);
@@ -81,6 +85,7 @@ public class BankAccountFrame extends JFrame {
         withdrawBtn.setForeground(Color.white);
         withdrawBtn.setFont(myButtonFont);
 
+        //Panel initialisation
         JPanel userPanel = new JPanel();
         JPanel panelOne = new JPanel();
         JPanel panelTwo = new JPanel();
@@ -89,6 +94,7 @@ public class BankAccountFrame extends JFrame {
         JPanel panelFive = new JPanel();
         JPanel panelSix = new JPanel();
 
+        //Adding Objects to Panels
         userPanel.add(userLabel);
         userPanel.add(userMoneyLabel);
         userPanel.add(currentMoney);
@@ -99,6 +105,7 @@ public class BankAccountFrame extends JFrame {
         panelFive.add(helpLabel);
         panelSix.add(errorLabel);
 
+        //Adding panels to frame
         add(userPanel);
         add(panelOne);
         add(panelTwo);
@@ -107,11 +114,13 @@ public class BankAccountFrame extends JFrame {
         add(panelFive);
         add(panelSix);
 
+        //Frame Constraints
         setLayout(new FlowLayout());
         setTitle("Financial Portfolio Manager Bank Account");
         setResizable(false);
         setLocationRelativeTo(null);
         setVisible(true);
+        setSize(550, 330);
 
         //Individual action listeners for each button
         depositBtn.addActionListener(new BankAccountFrame.ButtonHandler(this, 1));
@@ -163,6 +172,7 @@ public class BankAccountFrame extends JFrame {
         }
     }
 
+    //Read How much money the current user has in their account at this moment in time
     private void readPersonalPortfolio() throws IOException {
         File file = new File(".//UserPortfolios/" + getTheCurrentUser() + "-BANK.csv");
 
@@ -189,6 +199,7 @@ public class BankAccountFrame extends JFrame {
         }
     }
 
+    //Deposit money and add it to the money in file
     private void depositMoney(double deposit, double userMoney) {
         int choice = JOptionPane.showConfirmDialog(this,
                 "Confirm, You Are Depositing: $" + deposit + " in to your Bank Account");
@@ -207,6 +218,7 @@ public class BankAccountFrame extends JFrame {
         }
     }
 
+    //Withdraw money--
     private void withdrawMoney(double withdraw, double userMoney) {
         int choice = JOptionPane.showConfirmDialog(this,
                 "Confirm, You Are Withdrawing: $" + withdraw + " from your Bank Account to Your Vault");
@@ -223,6 +235,7 @@ public class BankAccountFrame extends JFrame {
         }
     }
 
+    //Adjusts the user money file
     private void adjustUserMoney(double userMoney) {
         try {
             String str = String.valueOf(String.format("%.2f", userMoney));
@@ -241,16 +254,7 @@ public class BankAccountFrame extends JFrame {
         }
     }
 
-    private String getTheCurrentUser() {
-        return theCurrentUser;
-
-    }
-
-    private void setCurrentMoney(String newUserMoney) {
-        this.userMoney = newUserMoney;
-    }
-
-
+    //Writes information to CSV file
     private void writeToCsv(File file, String[] details) throws IOException {
         FileWriter fileWriter = new FileWriter(file);
         CSVWriter csvWriter = new CSVWriter(fileWriter);
@@ -259,6 +263,15 @@ public class BankAccountFrame extends JFrame {
         System.out.println();
         fileWriter.flush();
         csvWriter.close();
+    }
+
+    //Getters and Setters
+    private String getTheCurrentUser() {
+        return theCurrentUser;
+    }
+
+    private void setCurrentMoney(String newUserMoney) {
+        this.userMoney = newUserMoney;
     }
 }
 
