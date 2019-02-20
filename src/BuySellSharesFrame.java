@@ -98,7 +98,7 @@ class BuySellSharesFrame extends JFrame { //Purchase and Sell Shares Frame
         errorLabel.setFont(myFieldFont);
 
         infoLabel = new JLabel("");
-        infoLabel.setForeground(Color.green);
+        infoLabel.setForeground(Color.blue);
         infoLabel.setFont(myNextFont);
 
         JButton getPriceBtn = new JButton("Get Current Price");
@@ -387,7 +387,7 @@ class BuySellSharesFrame extends JFrame { //Purchase and Sell Shares Frame
 
                     } else if (Double.parseDouble(boughtat) <= newsharevalue) {
                         profitloss = (Math.abs(Double.parseDouble(boughtat) - newsharevalue));
-                        infoLabel.setText("Profit or Breaking Even in Sale by: " + profitloss + " Per Share");
+                        infoLabel.setText("Profit or Breaking Even in Sale by: " + String.format("%.2f",profitloss) + " Per Share");
                         System.out.println(profitloss);
 
                     }

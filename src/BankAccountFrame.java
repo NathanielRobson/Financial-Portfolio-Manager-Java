@@ -162,10 +162,10 @@ public class BankAccountFrame extends JFrame { //Bank Account Frame
                     double inputDouble = Double.parseDouble(input);
                     String moneyArea = currentMoney.getText();
                     double thecurrentmoney = Double.parseDouble(moneyArea);
-                    if (inputDouble > 1 && inputDouble < 10000 && thecurrentmoney > 0) {
+                    if (inputDouble > 1 && inputDouble < 1000000 && thecurrentmoney > 0) {
                         withdrawMoney(inputDouble, thecurrentmoney);
                     } else {
-                        errorLabel.setText("<html>Please ensure Amount is Between 1-10,000<br/>Please ensure Current Money is more than 0</html>");
+                        errorLabel.setText("<html>Please ensure Amount is Between 1-10,00000<br/>Please ensure Current Money is more than 0</html>");
                     }
                 } catch (Exception el) {
                     errorLabel.setText("<html>Please ensure Amount is Between 1-10,000<br/>Please ensure Current Money is more than 0</html>");
