@@ -21,18 +21,10 @@ class BuySellSharesFrame extends JFrame { //Purchase and Sell Shares Frame
     private JTextArea priceArea, currentMoney;
 
     BuySellSharesFrame(String theCurrentUser) {//Frame initialisation, layout and functionality
-
         //Sets the Current user
         this.theCurrentUser = theCurrentUser;
 
-        //Look and Feel Effects
-        try {
-            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        //Gets Current Date
+        //Gets Current Date and Formats the same as CSV data
         DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         LocalDate localDate = LocalDate.now();
         purchaseDate = dateFormat.format(localDate);
@@ -41,7 +33,6 @@ class BuySellSharesFrame extends JFrame { //Purchase and Sell Shares Frame
         try {
             readPersonalPortfolio();
             setCurrentMoney(userMoney);
-
         } catch (IOException e) {
             errorLabel.setText("Unable to read personal portfolio, File may not exist");
         }

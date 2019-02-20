@@ -14,15 +14,9 @@ class LoginFrame extends JFrame { //Login Frame
     private JTextField userField, passField;
 
     LoginFrame() { //Frame init and design and layout functionality
-        try {
-            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
 
         //Custom fonts and colors for look and feel
         Font myFieldFont = new Font("Century Gothic", Font.BOLD, 14);
-        Font myTextFont = new Font("Century Gothic", Font.BOLD, 16);
         Font myLabelFont = new Font("Century Gothic", Font.BOLD, 18);
         Font myButtonFont = new Font("Tahoma", Font.BOLD, 20);
 
@@ -160,6 +154,7 @@ class LoginFrame extends JFrame { //Login Frame
         }
     }
 
+    //Set Current User
     private void setCurrentUser(String theNewCurrentUser) {
         this.theCurrentUser = theNewCurrentUser;
     }

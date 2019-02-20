@@ -14,6 +14,7 @@ public class CSVUpdateFrame extends JFrame { //CSV Update Frame
 
     public CSVUpdateFrame() {//Frame initialisation and layout functionality
 
+        //Custom fonts and colors for look and feel
         Font myFieldFont = new Font("Century Gothic", Font.BOLD, 14);
         Font myFieldFont2 = new Font("Century Gothic", Font.BOLD, 12);
         Font myNextFont = new Font("HelveticaNeue-Light", Font.ITALIC, 17);

@@ -10,7 +10,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/Dependencies/httpclient-4.5.7.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/commons-codec-1.11.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -19,7 +19,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/Dependencies/httpclient-win-4.5.7.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/commons-lang3-3.8.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -28,7 +28,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/Dependencies/httpclient-osgi-4.5.7.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/commons-logging-1.2.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -37,7 +37,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/Dependencies/httpclient-cache-4.5.7.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/fluent-hc-4.5.7.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -46,7 +46,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/Dependencies/fluent-hc-4.5.7.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/httpclient-4.5.7.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -55,7 +55,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/Dependencies/commons-codec-1.11.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/httpclient-cache-4.5.7.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -64,7 +64,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/Dependencies/commons-logging-1.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/httpclient-osgi-4.5.7.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -73,7 +73,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/Dependencies/httpmime-4.5.7.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/httpclient-win-4.5.7.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -82,7 +82,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/Dependencies/httpcore-4.4.11.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/httpcore-4.4.11.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -91,7 +91,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/Dependencies/jna-4.5.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/httpmime-4.5.7.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -100,7 +100,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/Dependencies/jna-platform-4.5.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/jcommon-1.0.23.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -109,7 +109,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/Dependencies/xchart-3.5.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/jfreechart-1.0.19-demo.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -118,7 +118,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/Dependencies/xchart-demo-3.5.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/jfreechart-1.0.19.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -127,7 +127,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/Dependencies/commons-lang3-3.8.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/jna-4.5.2.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -136,7 +136,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/Dependencies/opencsv-4.4.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/jna-platform-4.5.2.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -145,7 +145,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/Dependencies/jcommon-1.0.23.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/opencsv-4.4.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -154,7 +154,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/Dependencies/jfreechart-1.0.19-demo.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/xchart-3.5.2.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -163,79 +163,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/Dependencies/jfreechart-1.0.19.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/Dependencies/javafx-sdk-11.0.2/lib/javafx-swt.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/Dependencies/javafx-sdk-11.0.2/lib/javafx.base.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/Dependencies/javafx-sdk-11.0.2/lib/javafx.controls.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/Dependencies/javafx-sdk-11.0.2/lib/javafx.fxml.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/Dependencies/javafx-sdk-11.0.2/lib/javafx.graphics.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/Dependencies/javafx-sdk-11.0.2/lib/javafx.media.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/Dependencies/javafx-sdk-11.0.2/lib/javafx.swing.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/Dependencies/javafx-sdk-11.0.2/lib/javafx.web.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/xchart-demo-3.5.2.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

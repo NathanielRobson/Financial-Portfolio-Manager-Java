@@ -25,13 +25,6 @@ public class BankAccountFrame extends JFrame { //Bank Account Frame
 
     BankAccountFrame(String theCurrentUser) {//Frame initialisation, layout and functionality
 
-        //Look and Feel Effects
-        try {
-            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
         //Sets the current user
         this.theCurrentUser = theCurrentUser;
 
@@ -52,6 +45,7 @@ public class BankAccountFrame extends JFrame { //Bank Account Frame
         Color myBlueColor = new Color(59, 69, 182);
         Color priceColor = new Color(38, 200, 191);
 
+        //Labels and Buttons Customisation
         JLabel userLabel = new JLabel("Current User: " + theCurrentUser);
         userLabel.setFont(myNextFont);
         userLabel.setForeground(Color.BLACK);
