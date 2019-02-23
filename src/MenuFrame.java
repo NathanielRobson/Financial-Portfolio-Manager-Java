@@ -32,7 +32,7 @@ class MenuFrame extends JFrame {//Main Menu Frame
         Color w = Color.white;
 
         //Frame icons
-        ImageIcon img = new ImageIcon(".//icons/menuIcon.png");
+        ImageIcon img = new ImageIcon(".//icons/frameIcon.png");
         setIconImage(img.getImage());
 
         //Each Button on Menu Frame
