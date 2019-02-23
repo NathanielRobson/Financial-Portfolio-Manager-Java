@@ -25,6 +25,10 @@ class GraphBuilderFrame extends JFrame { //Graph Building Frame
         Color myBlueColor = new Color(59, 69, 182);
         Color resetColor = new Color(200, 0, 200);
 
+        //Frame icon
+        ImageIcon img = new ImageIcon(".//icons/graphIcon.png");
+        setIconImage(img.getImage());
+
         //symbol label
         JLabel symbolLabel = new JLabel("<html>Symbol or Filename: <html>");
         symbolLabel.setFont(myFieldFont);

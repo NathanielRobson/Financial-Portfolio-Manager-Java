@@ -35,6 +35,10 @@ public class AddSharesFrame extends JFrame { //Add Shares Frame
         Color myBlueColor = new Color(59, 69, 182);
         Color priceColor = new Color(38, 200, 191);
 
+        //Frame icon
+        ImageIcon img = new ImageIcon(".//icons/addIcon.png");
+        setIconImage(img.getImage());
+
         //Labels and Buttons Customisation
         JLabel userLabel = new JLabel("The Current User Logged In: " + theCurrentUser);
         userLabel.setFont(myNextFont);

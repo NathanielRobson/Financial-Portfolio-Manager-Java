@@ -31,6 +31,10 @@ class MenuFrame extends JFrame {//Main Menu Frame
         Color myBtnColor = new Color(59, 69, 182);
         Color w = Color.white;
 
+        //Frame icons
+        ImageIcon img = new ImageIcon(".//icons/menuIcon.png");
+        setIconImage(img.getImage());
+
         //Each Button on Menu Frame
         JButton displayTable = new JButton("<html><font color = #00FF00>Display Table</font> of Shares</html>");
         displayTable.setFont(myBtnFont);
@@ -76,7 +80,7 @@ class MenuFrame extends JFrame {//Main Menu Frame
         viewHistoryBtn.setForeground(w);
         viewHistoryBtn.setBackground(myBtnColor);
 
-        JButton ownedSharesBtn = new JButton("<html><font color = #00FFFF>View Owned Shares</font></html>");
+        JButton ownedSharesBtn = new JButton("<html><font color = #00FFFF>View Personal Portfolio & Owned Shares</font></html>");
         ownedSharesBtn.setFont(myBtnFont);
         ownedSharesBtn.setForeground(w);
         ownedSharesBtn.setBackground(myBtnColor);
@@ -182,7 +186,7 @@ class MenuFrame extends JFrame {//Main Menu Frame
                         "History of Investment Chart", theApp.theCurrentUser);
             }
             if (action == 10) {
-                new OwnedSharesFrame(theApp.theCurrentUser);
+                new FinancialPortfolioFrame(theApp.theCurrentUser);
             }
         }
 

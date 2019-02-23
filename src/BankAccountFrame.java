@@ -40,10 +40,14 @@ public class BankAccountFrame extends JFrame { //Bank Account Frame
         Font myFieldFont = new Font("Century Gothic", Font.BOLD, 14);
         Font myTextFont = new Font("Century Gothic", Font.BOLD, 16);
         Font myNextFont = new Font("HelveticaNeue-Light", Font.ITALIC, 18);
-
         Font myButtonFont = new Font("Tahoma", Font.BOLD, 16);
+
         Color myBlueColor = new Color(59, 69, 182);
         Color priceColor = new Color(38, 200, 191);
+
+        //Frame icon
+        ImageIcon img = new ImageIcon(".//icons/bankIcon.png");
+        setIconImage(img.getImage());
 
         //Labels and Buttons Customisation
         JLabel userLabel = new JLabel("Current User: " + theCurrentUser);

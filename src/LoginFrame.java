@@ -19,9 +19,13 @@ class LoginFrame extends JFrame { //Login Frame
         Font myFieldFont = new Font("Century Gothic", Font.BOLD, 14);
         Font myLabelFont = new Font("Century Gothic", Font.BOLD, 18);
         Font myButtonFont = new Font("Tahoma", Font.BOLD, 20);
+        Font myNextFont = new Font("HelveticaNeue-Light", Font.ITALIC, 26);
 
         Color myBlueColor = new Color(59, 69, 182);
         Color resetColor = new Color(200, 0, 200);
+
+        ImageIcon img = new ImageIcon(".//icons/frameIcon.png");
+        setIconImage(img.getImage());
 
         JLabel userLabel = new JLabel("User Name: ");
         userLabel.setFont(myLabelFont);
@@ -40,15 +44,18 @@ class LoginFrame extends JFrame { //Login Frame
         JButton resetBtn = new JButton("Reset");
         JButton loginBtn = new JButton("Login");
 
-        JLabel welcomeLabel = new JLabel("<html><font color = #2F4F4F> Welcome to Team 3's " +
-                "Financial Portfolio Manager</font><br/><font color = #F4A460>" +
-                " We Hope You Enjoy Your Time Using Our Program<br>" +
-                "If You Have Any Queries Please Do Not Hesitate To<br>" +
-                "<font color = #F4A460>Contact Us At Team3@essex.ac.uk Thank you :)</font></html>");
+        JLabel welcomeLabel = new JLabel("<html><font color = #2F4F4F> Welcome to our " +
+                "Financial Portfolio Manager!</font><br/><br/><font color = #790048>" +
+                "We Hope You Enjoy Using Our Program<br>");
+
         welcomeLabel.setForeground(myBlueColor);
         welcomeLabel.setFont(myLabelFont);
 
-        JLabel helpLabel = new JLabel("Please Login Using Your Unique Login Credentials");
+        JLabel topLabel = new JLabel("Team 3's Financial Portfolio Manager");
+        topLabel.setForeground(Color.black);
+        topLabel.setFont(myNextFont);
+
+        JLabel helpLabel = new JLabel("Please Login by Using Your Login Credentials");
         helpLabel.setForeground(myBlueColor);
         helpLabel.setFont(myLabelFont);
 
@@ -66,6 +73,7 @@ class LoginFrame extends JFrame { //Login Frame
         loginBtn.setFont(myButtonFont);
 
         //Panel initialisation
+        JPanel nextPanel = new JPanel();
         JPanel panelOne = new JPanel();
         JPanel panelTwo = new JPanel();
         JPanel panelThree = new JPanel();
@@ -74,6 +82,7 @@ class LoginFrame extends JFrame { //Login Frame
         JPanel panelSix = new JPanel();
 
         //Adding objects to panels
+        nextPanel.add(topLabel);
         panelOne.add(userLabel);
         panelOne.add(userField);
         panelTwo.add(passLabel);
@@ -85,6 +94,7 @@ class LoginFrame extends JFrame { //Login Frame
         panelFour.add(errorLabel);
 
         //Adding panels to frame
+        add(nextPanel);
         add(panelOne);
         add(panelTwo);
         add(panelThree);
@@ -98,7 +108,7 @@ class LoginFrame extends JFrame { //Login Frame
         setResizable(false);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize(480, 360);
+        setSize(480, 600);
         setVisible(true);
 
         //Individual action listeners for each button

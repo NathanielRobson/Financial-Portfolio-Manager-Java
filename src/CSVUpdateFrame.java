@@ -18,8 +18,14 @@ public class CSVUpdateFrame extends JFrame { //CSV Update Frame
         Font myFieldFont = new Font("Century Gothic", Font.BOLD, 14);
         Font myFieldFont2 = new Font("Century Gothic", Font.BOLD, 12);
         Font myNextFont = new Font("HelveticaNeue-Light", Font.ITALIC, 17);
+
+        //Frame Colours
         Color myBlueColor = new Color(59, 69, 182);
         Color resetColor = new Color(200, 147, 183);
+
+        //Frame icon
+        ImageIcon img = new ImageIcon(".//icons/docIcon.png");
+        setIconImage(img.getImage());
 
         JLabel symbolLabel = new JLabel("<html>Company Symbol: <html>");
         symbolLabel.setFont(myFieldFont);

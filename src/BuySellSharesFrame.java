@@ -46,6 +46,10 @@ class BuySellSharesFrame extends JFrame { //Purchase and Sell Shares Frame
         Color myBlueColor = new Color(59, 69, 182);
         Color priceColor = new Color(38, 200, 191);
 
+        //Frame icon
+        ImageIcon img = new ImageIcon(".//icons/buysellIcon.png");
+        setIconImage(img.getImage());
+
         JLabel userLabel = new JLabel("Current User: " + theCurrentUser);
         userLabel.setFont(myNextFont);
         userLabel.setForeground(Color.BLACK);
@@ -378,7 +382,7 @@ class BuySellSharesFrame extends JFrame { //Purchase and Sell Shares Frame
 
                 if (ownedshares >= Integer.valueOf(selling)) {
                     int sharesaftersale = ownedshares - Integer.valueOf(selling);
-                    double profitloss = 0;
+                    double profitloss;
                     if (Double.parseDouble(boughtat) > newsharevalue) {
 
                         profitloss = -(Math.abs(Double.parseDouble(boughtat) - newsharevalue));
