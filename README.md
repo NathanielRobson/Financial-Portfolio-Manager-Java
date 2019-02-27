@@ -123,7 +123,7 @@ Once both inputs have been successfully filled in, the program will display data
 The 'Display Table of Shares' button will display the company of your choosing's CSV in a table format in a new frame for you to navigate and investigate.  
 A JOptionPane will appear like before asking which company you would like to display, simply input the company symbol/ticker of choice E.g 'NFLX' and the table will be created, like so:  
 
-![Screenshot](/README-Images/tableoutput.jpg)  
+![Screenshot](/README-Images/tableoutputimg.jpg)  
 
 #### Log out or Switch User
 
