@@ -6,6 +6,11 @@ These instructions will get you a copy of the project up and running on your loc
 To run our program successfully, download our repository and execute/run the file named 'ProgramJAR.jar'.  
 ![Screenshot](/README-Images/jarlocation.jpg)  
 
+If you would like to run it from the src folder in an IDE like IntelliJ then you can run the class 'MAIN'.  Both of the stated options to run the program perform well and as expected.  
+![Screenshot](/README-Images/runmain.jpg)  .
+
+This will require setting the module depencencies and adding all of the files in the 'lib' folder as dependencies. Please follow a tutorial on how to add project dependencies online.  
+
 ## Logging in  
 
 You will then be greeted with our 'Login' page of which you will need to enter your login details. 
@@ -65,7 +70,7 @@ This is what will appear. Below is the also the type of input that should be use
 ![Screenshot](/README-Images/addshareimg.jpg)  
 
 If the incorrect input is placed or the company symbol does not exist then the following error label will be displayed.  
-![Screenshot](/README=Images/addshareerror.jpg)  
+![Screenshot](/README-Images/addshareerror.jpg)  
 
 #### Personal Bank Account Deposit/Withdraw Money
 
