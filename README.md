@@ -161,12 +161,28 @@ A JOptionPane will appear like before asking which company you would like to dis
 
 And finally the 'Log out or Switch User' button pretty much does what it says on the tin.  It allows the user to log out and or switch user accounts.  
 
-
 ## Built With
 
 * [IntelliJ](https://www.jetbrains.com/idea/) - Programming IDE used
 * [Java](https://www.java.com/en/) - Java Version 11.0.2
 
+## Dependencies
+These are the dependencies used in our program.  
+All depency files can be found in the ['lib'](/lib) folder.  
+
+* [Apache Commons Codec](https://commons.apache.org/) - 'commons-codec-1.11'
+* [Apache Commons Lang](https://commons.apache.org/) - 'commons-lang3-3.8.1'
+* [Apache Commons Logging](https://commons.apache.org/) - 'commons-logging-1.2'
+* [Apache HttpClient Fluent API](https://hc.apache.org/) - 'fluent-hc-4.5.7'
+* [Apache HttpClient 4.5.7](https://hc.apache.org/) - 'httpclient-4.5.7', 'httpclient-cache-4.5.7', 'httpclient-osgi-4.5.7', 'httpclient-win-4.5.7'  
+* [Apache HttpCore](https://hc.apache.org/) - 'httpcore-4.4.11'
+* [Apache HttpClient Mime](https://hc.apache.org/) - 'httpmime-4.5.7'
+* [iText](https://itextpdf.com/en) - 'itext-1.3.1'
+* [JFree JCommon](http://www.jfree.org/jcommon/) - 'jcommon-1.0.23'
+* [JFree JFreeChart](http://www.jfree.org/jfreechart/) - 'jfreechart-1.0.23', 'jfreechart-1.0.19-demo'
+* [Java Native Access](https://github.com/java-native-access/jna) - 'jna-4.5.2', 'jna-platform-4.5.2'
+* [Maven OpenCSV](http://opencsv.sourceforge.net/) - 'Opencsv-4.4'
+* [Knowm XChart](https://knowm.org/open-source/xchart/) - 'xchart-3.5.2', 'xchart-demo-3.5.2'
 
 ## Author
 
