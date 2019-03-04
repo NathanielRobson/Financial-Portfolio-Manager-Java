@@ -115,7 +115,7 @@ As you can see in the image below the data in our program provides the same info
 The 'Download up to Date Shares Information' button will bring the user to a new frame upon which the user can input a company symbol to download the latest shares information.  
 The data downloaded is the full history up to the current date of the companies shares.  
 If input is incorrect or not revelevant to the information required then a label will appear instructing you on how to fix the issue.
-Again you are required to input a company symbol ticker e.g 'AAPL' for the company Apple etc.
+Again you are required to input a company symbol ticker e.g 'AAPL' for the company Apple etc.  
 ![Screenshot](/README-Images/updateimg.jpg)  
 
 Once the data has been downloaded, it will output the information to a .CSV file in the program's root directory.  
