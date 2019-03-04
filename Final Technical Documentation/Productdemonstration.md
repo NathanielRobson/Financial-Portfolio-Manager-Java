@@ -7,7 +7,7 @@ To run our program successfully, download our repository and execute/run the fil
 ![Screenshot](/README-Images/jarlocation.jpg)  
 
 If you would like to run it from the src folder in an IDE like IntelliJ then you can run the class 'MAIN'.  Both of the stated options to run the program perform well and as expected.  
-![Screenshot](/README-Images/runmain.jpg)  .
+![Screenshot](/README-Images/runmain.jpg)   
 
 This will require setting the module depencencies and adding all of the files in the 'lib' folder as dependencies. Please follow a tutorial on how to add project dependencies online.  
 
@@ -21,7 +21,12 @@ View the user accounts file to retain a username and password, so you can make u
 If the information input is incorrect, a label will be displayed to inform you of what error has occurred.  
 ![Screenshot](/README-Images/loginerror1.jpg)  
 
-After logging in you will arrive at our 'Menu' page from which you can select from many different options.  
+## Menu Page
+
+After logging in you will arrive at our 'Menu' page from which you can select from many different options.    
+
+ ![Screenshot](/README-Images/menupage.jpg)  
+
 
 1.  View Personal Portfolio & Owned Shares
 2.  Purchase or Sell Shares
@@ -36,6 +41,8 @@ After logging in you will arrive at our 'Menu' page from which you can select fr
 
 #### View Personal Portfolio & Owned Shares  
 
+![Screenshot](/README-Images/viewbtn.jpg)  
+
 Upon clicking the first button you will be see all of the shares you currently own.  
 If you do not own any shares then nothing will be displayed here.  
 ![Screenshot](/README-Images/ownedsharesimg.jpg)  
@@ -45,6 +52,8 @@ The button 'View The User: 'CurrentUser's Personal Portfolio' toward the bottom 
 ![Screenshot](/README-Images/portfolioimg.jpg)  
 
 #### Purchase or Sell Shares  
+
+![Screenshot](/README-Images/buybtn.jpg)  
 
 The second button will bring you to the purchase and sell frame. From here you can buy and sell shares from any of the companies listed on Yahoo Finance.  
 By inputting the company symbol and then selecting 'Get Current Price' you can get the current price per share and purchase or sell however many you wish. 
@@ -65,6 +74,9 @@ If the user has no shares for the symbol then the error label will inform the us
 
 #### Add Already Owned Shares  
 
+![Screenshot](/README-Images/addbtn.jpg)  
+
+
 Clicking the third button will bring you to a page where you can add your previously purchased shares to the program to allow you to manipulate and create scenarios for personal use.    
 This is what will appear. Below is the also the type of input that should be used for successful output.    
 ![Screenshot](/README-Images/addshareimg.jpg)  
@@ -73,6 +85,9 @@ If the incorrect input is placed or the company symbol does not exist then the f
 ![Screenshot](/README-Images/addshareerror.jpg)  
 
 #### Personal Bank Account Deposit/Withdraw Money
+
+![Screenshot](/README-Images/bankbtn.jpg)  
+
 
 Upon clicking the Personal Bank Account button you will be greeted with a simple yet functional frame to allow the user to input an amount to either deposit in or withdraw from your account.  
 There are also instructions on the frame for use.  
@@ -83,12 +98,18 @@ If the user enters incorrect or invalid input this will be displayed.
 
 #### View Account History
 
+![Screenshot](/README-Images/historybtn.jpg)  
+
+
 The 'View Account History' button creates a graph using the history of the users purchases and sales on different dates.  
 Be aware if the graph will need data from more than one day to be effective.  
 Below is a screenshot of the history for the user 'NR'.
 ![Screenshot](/README-Images/pastimg.jpg)  
 
 #### View up to Date Company Graphs
+
+![Screenshot](/README-Images/graphbtn.jpg)  
+
 
 Upon clicking the 'View up to Date Company Graphs' button a new frame will be displayed from which the user is able to input a company symbol ticker and a number of days to display on a graph.  
 The graphs are built by using up to date information. The program will automatically download the required data when performing specific actions such as building a graph or buying shares.  
@@ -112,6 +133,8 @@ As you can see in the image below the data in our program provides the same info
 
 #### Download up to Date Shares Information
 
+![Screenshot](/README-Images/downloadbtn.jpg)  
+
 The 'Download up to Date Shares Information' button will bring the user to a new frame upon which the user can input a company symbol to download the latest shares information.  
 The data downloaded is the full history up to the current date of the companies shares.  
 If input is incorrect or not revelevant to the information required then a label will appear instructing you on how to fix the issue.
@@ -127,7 +150,9 @@ Upon opening the file you will see the full history of the companies shares info
 If the user inputs an incorrect company symbol or one that does not exist the following label will be displayed to the user.  
 ![Screenshot](/README-Images/downloaderror.jpg)  
 
-#### Search a Date - View Company Share Data
+#### Search a Date - View Company Share Data   
+
+![Screenshot](/README-Images/searchbtn.jpg)  
 
 'Search a Date - View Company Share Data' with this button you are greeted with a JOptionPane asking for a company symbol. For demonstration purposes I will use Netflix 'NFLX'.  
 If input is incorrect or not revelevant to the information required then a label will appear instructing you on how to fix the issue.  
@@ -148,15 +173,22 @@ If the input for the symbol was invalid, incorrect or the company symbol doesn't
 
 #### Display Table of Shares
 
+![Screenshot](/README-Images/displaybtn.jpg)  
+
 The 'Display Table of Shares' button will display the company of your choosing's CSV in a table format in a new frame for you to navigate and investigate.  
 A JOptionPane will appear like before asking which company you would like to display, simply input the company symbol/ticker of choice E.g 'NFLX' and the table will be created, like so:  
 If input is incorrect or not revelevant to the information required then a JOptionPane will appear instructing you that input is incorrect.  
 ![Screenshot](/README-Images/tableoutputimg.jpg)  
+![Screenshot](/README-Images/displaybtn.jpg)  
+
 
 If the user inputs the incorrect or invalid information for the company symbol then the table will not display.  
 
 #### Log out or Switch User
 
+![Screenshot](/README-Images/logoutbtn.jpg)  
+
 And finally the 'Log out or Switch User' button pretty much does what it says on the tin.  It allows the user to log out and or switch user accounts.  
 This will bring the user back to the Login page.
+![Screenshot](/README-Images/logoutbtn.jpg)  
 
