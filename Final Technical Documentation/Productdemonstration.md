@@ -16,10 +16,10 @@ This will require setting the module depencencies and adding all of the files in
 You will then be greeted with our 'Login' page of which you will need to enter your login details. 
 For testing purposes you may use the username 'NR' and the password 'teamNR' (case sensitive).  
 View the user accounts file to retain a username and password, so you can make use of our program click this link [here!](/UserAccounts/members.csv)  
-![Screenshot](/README-Images/loginimg.jpg)  
+![Screenshot](/README-Images/loginimg1.jpg)  
 
 If the information input is incorrect, a label will be displayed to inform you of what error has occurred.  
-![Screenshot](/README-Images/loginerror.jpg)  
+![Screenshot](/README-Images/loginerror1.jpg)  
 
 After logging in you will arrive at our 'Menu' page from which you can select from many different options.  
 
