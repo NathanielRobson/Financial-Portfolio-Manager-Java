@@ -26,6 +26,11 @@ Place: For our product to be distributed, it would needed to be put on major mob
 
 Spending on Internet advertising has reached $137.5 billion and is expected to pass TV advertising within a couple of years. This has led the team to believe that internet advertising is major way that we should promote our product. 
 
+As a group we had decided that using a email marketing and search engine optimisation would be the best ways that enabled us to advertise the product and reach a large audience as well as our potential target audience.
+
+Using a mid-sized agency to aid with the Search Engine Optimisation otherwise known as SEO could set the team back £1500 monthly. Using Email Marketing could cost between $300 or £228 a month to $500 or £380 a month excluding set up fees and the $0.03 per recipient. Using email marketing could be very beneficial as it would help the many subscribers of the product. As it is a start-up, initially only £500 could be spent to set up the mid-range server. 
+
+£1500 + £380 + £500 = £2380. This will be the cost to acquire a server and factoring in the costs for advertising. However, it can be noted that the server set up could be a onetime event. Taking these into consideration, the costs could be lower on a monthly basis by £500. However, if the company were to expand at an exponential rate, then the costs to set up to accommodate the newer users could range from £500 for a mid-range server to £800+ for a high-end server. Furthermore, the cost to using the email marketing advertisement technique would also increase. 
 # Sales Forecast
 * How many downloads / sales / shipped units could you realistically achieve in the first 12 months?  
 * How much cash would that bring in?
