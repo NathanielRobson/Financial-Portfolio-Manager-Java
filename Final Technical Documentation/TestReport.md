@@ -19,6 +19,31 @@ Screenshots: before/ after
 ![Screenshot](/README-Images/test2.JPG)
 ![Screenshot](/README-Images/test2b.JPG)
 
+Test 3 
+Test Description: User is able to see how much a share for facebook is and is able to purchase 50 shares for FaceBook
+Test result: pass.
+Screenshots: before/ after
+![Screenshot](/README-Images/test3.JPG)
+![Screenshot](/README-Images/test3b.JPG)
+![Screenshot](/README-Images/test3c.JPG)
+![Screenshot](/README-Images/test3d.JPG)
+![Screenshot](/README-Images/test3e.JPG)
+
+Test 4
+Test Description: User is able to see how many shares he/she owns.
+Test result: pass.
+Screenshots: before/after
+![Screenshot](/README-Images/test4.JPG)
+![Screenshot](/README-Images/test4b.JPG)
+
+Test 5
+Test Description: User is able to add  8 more shares to the already bought shares
+Test result: pass.
+Screenshots: before/after
+![Screenshot](/README-Images/test5.JPG)
+![Screenshot](/README-Images/test5b.JPG)
+![Screenshot](/README-Images/test5c.JPG)
+
 
 
 
