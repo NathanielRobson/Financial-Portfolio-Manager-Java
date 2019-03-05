@@ -10,19 +10,6 @@ As it would be a mobile application, we have decided to role out our product to 
 
 Below is the demographic of what we think
 
-| Demograhic | Frequency | Percent |
-
-| Gender |
-
-| Male |  | 105 | 65 |
-
-| Female | 57 | 35 |
-
-| ------ | ------ |
-| header ||
-| ------ | ------ |
-| cell | cell |
-| cell | cell | 
 
 # Economics
 According to Broker Notes, it show that there were 13.9 million online traders in 2018 which was up from the previous year’s 9.6 million which is an increase of 4.3million or just under 50%. This is likely to increase as more people start to become interested in trading. 
@@ -92,25 +79,29 @@ Location
 Competitive Analysis vs Robinhood:
 
 Price
+
 |             | Strength | Weakness | Importance to Customer |
 |:-----------:|:--------:|:--------:|:----------------------:|
 |  RobinHood  |     5    |     3    |            5           |
 | Our Product |     4    |     2    |            5           |
 
 Quality
+
 |             | Strength | Weakness | Importance to Customer |
 |:-----------:|:--------:|:--------:|:----------------------:|
 |  RobinHood  |     5    |     1    |            5           |
 | Our Product |     5    |     1    |            5           |
 
 Reliability
+
 |             | Strength | Weakness | Importance to Customer |
 |:-----------:|:--------:|:--------:|:----------------------:|
 |  RobinHood  |     4    |     3    |            5           |
 | Our Product |     4    |     2    |            5           |
 
 Location
- |             | Strength | Weakness | Importance to Customer |
+
+|             | Strength | Weakness | Importance to Customer |
 |:-----------:|:--------:|:--------:|:----------------------:|
 |  RobinHood  |     3    |     4    |            5           |
 | Our Product |     4    |     3    |            5           |
