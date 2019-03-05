@@ -30,3 +30,7 @@ Spending on Internet advertising has reached $137.5 billion and is expected to p
 * How many downloads / sales / shipped units could you realistically achieve in the first 12 months?  
 * How much cash would that bring in?
 
+
+References 
+
+[https://brokernotes.co/modern-trader/] //Statistic used for how many online traders there are.
