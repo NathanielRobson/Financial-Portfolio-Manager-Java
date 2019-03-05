@@ -11,10 +11,14 @@ As it would be a mobile application, we have decided to role out our product to 
 Below is the demographic of what we think
 
 | Demograhic | Frequency | Percent |
+
 | ------ | ------ |
 | Gender |
+
 | Male |  | 105 | 65 |
+
 | Female | 57 | 35 |
+
 | ------ | ------ |
 | header ||
 | ------ | ------ |
