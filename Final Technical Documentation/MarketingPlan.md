@@ -107,7 +107,35 @@ Location
 | Our Product |     4    |     3    |            5           |
 
 
+Competitive analysis vs Yahoo Finance
 
+Price
+
+|             | Strength | Weakness | Importance to Customer |
+|:-----------:|:--------:|:--------:|:----------------------:|
+| YahooFinance  |     3    |     4    |            5           |
+| Our Product |     5    |     1    |            5           |
+
+Quality
+
+|             | Strength | Weakness | Importance to Customer |
+|:-----------:|:--------:|:--------:|:----------------------:|
+|  YahooFinance  |     5    |     1    |            5           |
+| Our Product |     4    |     1    |            5           |
+
+Reliability
+
+|             | Strength | Weakness | Importance to Customer |
+|:-----------:|:--------:|:--------:|:----------------------:|
+|  YahooFinance  |     4    |     3    |            5           |
+| Our Product |     4    |     2    |            5           |
+
+Location
+
+|             | Strength | Weakness | Importance to Customer |
+|:-----------:|:--------:|:--------:|:----------------------:|
+|  YahooFinance  |     5    |     4    |            5           |
+| Our Product |     4    |     3    |            5           |
 
 
 # Product, Price, Promotion, Place
