@@ -82,9 +82,40 @@ Our main advantage over our competitors is that our app can be operated offline.
 
 Other advantages although they may be minor, are that our document will provide documentation throughout and it will continue to update itself over time without the user having to feel outdated. 
 
-	Strength 	Weakness	Importance to customer
-RobinHood			
-Our Product			
+To compare ourselves to the competition, we had used a competitive analysis to compare certain aspects. The rating goes from 1-5 with 1 being the weakest and 5 being the strongest. These aspects include:
+Price
+Quality
+Reliability
+Location
+
+
+Competitive Analysis vs Robinhood:
+
+Price
+|             | Strength | Weakness | Importance to Customer |
+|:-----------:|:--------:|:--------:|:----------------------:|
+|  RobinHood  |     5    |     3    |            5           |
+| Our Product |     4    |     2    |            5           |
+
+Quality
+|             | Strength | Weakness | Importance to Customer |
+|:-----------:|:--------:|:--------:|:----------------------:|
+|  RobinHood  |     5    |     1    |            5           |
+| Our Product |     5    |     1    |            5           |
+
+Reliability
+|             | Strength | Weakness | Importance to Customer |
+|:-----------:|:--------:|:--------:|:----------------------:|
+|  RobinHood  |     4    |     3    |            5           |
+| Our Product |     4    |     2    |            5           |
+
+Location
+ |             | Strength | Weakness | Importance to Customer |
+|:-----------:|:--------:|:--------:|:----------------------:|
+|  RobinHood  |     3    |     4    |            5           |
+| Our Product |     4    |     3    |            5           |
+
+
 
 
 
