@@ -17,6 +17,18 @@ The demand for user friendly financial portfolio has been on the rise. This new 
 Coming into the market, we will have a small market share at first compared to the well-established programs. This estimation would between 0.5%-2%. But as the market grows, the company aims to have a 15%-30% share of the market. 
 
 # Competition
+
+Whilst browsing the market, there was a lot of products/services that were similar to ours. This brought up a few concerns as it means that we would have to burst into a market that already has few well established products . The list of established products which are very similar to the product that we are delivering are: 
+
+Yahoo Finance 
+
+RobinHood 
+
+Trading212 
+
+TD Ameritrade. 
+
+
 The image below shows what our products graph will look like when displaying the stocks for Apple. 
 
  
