@@ -8,7 +8,6 @@
 The likely interest for the customers would be those that range from the ages 18 and upwards. This age had been selected since the customers must have some prior knowledge even if a little, of how the stock market works. Furthermore, the app does not need a skill gap for the customers as it has a relatively simple interface, meaning that all from the most experienced user to the least experienced user will be able effectively use the app. Due to trading becoming increasingly popular in first world countries, it is more 
 As it would be a mobile application, we have decided to role out our product to the major markers such as the Uk, USA, certain countries in Europe such as France and Germany. The app could then be rolled over to other markets if the demand is there and also if it is succesful in the initial set of countries.
 
-Below is the demographic of what we think
 
 
 # Economics
@@ -156,7 +155,30 @@ Using a mid-sized agency to aid with the Search Engine Optimisation otherwise kn
 * How many downloads / sales / shipped units could you realistically achieve in the first 12 months?  
 * How much cash would that bring in?
 
+Below shows a cash-flow forecast, the company makes no income from initial sales, however there is a monthly subscribtion that is what generates the income from the application. 
+
+| Month                    | Jan | Feb | Mar | Apr | May | Jun | Jul | Aug | Sep | Oct | Nov  | Dec  |
+|--------------------------|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|------|------|
+|                          |     |     |     |     |     |     |     |     |     |     |      |      |
+|        Cash Inflow       |     |     |     |     |     |     |     |     |     |     |      |      |
+|   Sales from downloads   |  0  |  0  | 0   | 0   |  0  | 0   | 0   | 0   | 0   | 0   | 0    | 0    |
+| Sales from subscriptions |  50 | 150 | 200 | 275 | 380 | 500 | 600 | 750 | 745 | 890 | 1000 | 1500 |
+| Monthly Cash Inflow      | 5  | 15 | 20 | 27.5 | 38 | 50 | 60 | 75 | 74.5 | 89 | 100 | 150 |
 
 References 
 
 [https://brokernotes.co/modern-trader/] //Statistic used for how many online traders there are.
+
+[https://cointelegraph.com/news/top-10-crypto-deals-in-2017-returned-over-136-000-on-average-report-shows]
+
+https://www.axios.com/verizon-restructures-media-division-launches-subscriptions-1541966320-7cc14b71-89b4-4ea2-86be-a36b378e8cce.html 
+
+[https://www.cnbc.com/2018/05/11/how-commission-free-trading-app-robinhood-tries-to-make-money.html]
+
+[https://postcron.com/en/blog/internet-advertising/]
+
+[https://anicca.co.uk/blog/how-much-does-seo-cost-seo-pricing-models-explained/]
+
+[https://uk.tradingview.com/markets/stocks-usa/market-movers-active/]
+
+[http://ijbssnet.com/journals/Vol_6_No_2_February_2015/2.pdf]
