@@ -17,9 +17,7 @@ The likely interest for the customers would be those that range from the ages 18
 The image below shows what our products graph will look like when displaying the stocks for Apple. 
 
  
-![Screenshot](/README-Images/burndown21.jpg) 
- 
-
+![Screenshot](/README-Images/graphimg.jpg ) 
  
 
 The image underneath shows Yahoo Finances graph when displaying the stocks for Apple. 
@@ -35,7 +33,7 @@ What our product does differently from the Yahoo finance is that it displays the
 Below shows the Main Menu for our financial portfolio. As it shows it is straight to the point and has buttons for every function that our program has to offer.  
 
  
-![Screenshot](/README-Images/burndown21.jpg) 
+![Screenshot](/README-Images/menupage.jpg) 
  
 
 The image below is the menu of Yahoo Finance: 
