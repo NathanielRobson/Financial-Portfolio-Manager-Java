@@ -8,7 +8,7 @@
 *Test Description: user can login into the financial portfolio*
 *Test result: pass*
 *Screenshots: before/ after*
-![Screenshot](/README-Images/Capture.jpg)  
+![Screenshot](/README-Images/Capture.JPG)  
 
 
 
