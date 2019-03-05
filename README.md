@@ -190,7 +190,7 @@ All depency files can be found in the ['lib'](/lib) folder.
 
 ## License
 
-This project is licensed under the University of Essex - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the University of Essex - see the [LICENSE.md](https://cseegit.essex.ac.uk/ce291/team3/teamproject/blob/master/LICENSE) file for details
 
 ## Acknowledgments
 
