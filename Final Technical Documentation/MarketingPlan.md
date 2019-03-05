@@ -12,7 +12,6 @@ Below is the demographic of what we think
 
 | Demograhic | Frequency | Percent |
 
-| ------ | ------ |
 | Gender |
 
 | Male |  | 105 | 65 |
