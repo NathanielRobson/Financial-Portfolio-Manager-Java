@@ -2,13 +2,18 @@
 
 ## Testing performed
 
-*This section should describe your test plans, and results.*
+This section will describe some of the test planned, and results. 
+Every test will include the goal and will also indicate if the test passed or failed.
+Screenshots will be include the tests with results of such testsFor some tests, it is a good idea to use screenshots of target and actual results.
+Test 1.
+Test Description: user can login into the financial portfolio.
+Test result: pass.
+Screenshots: before/ after.
+![Screenshot](/README-Images/test1.JPG)
+![Screenshot](/README-Images/test1b.JPG)  
 
-*Every test should have a clear goal so that pass/fail can be indicated against all tests actually performed.*
 
-*For some tests, it is a good idea to use screenshots of target and actual results.*
 
-*You should research testing to set your testing within the known methodologies.*
 
 
 
