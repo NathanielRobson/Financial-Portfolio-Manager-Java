@@ -5,7 +5,7 @@
 
 # Customers
 
-*Who is likey to use/buy this product.  What demographic?*
+The likely interest for the customers would be those that range from the ages 18 and upwards. This age had been selected since the customers must have some prior knowledge even if a little, of how the stock market works. Furthermore, the app does not need a skill gap for the customers as it has a relatively simple interface, meaning that all from the most experienced user to the least experienced user will be able effectively use the app. 
 
 # Economics
 * What is the total size of your market?
