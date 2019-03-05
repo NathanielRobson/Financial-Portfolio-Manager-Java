@@ -155,14 +155,14 @@ Using a mid-sized agency to aid with the Search Engine Optimisation otherwise kn
 * How many downloads / sales / shipped units could you realistically achieve in the first 12 months?  
 * How much cash would that bring in?
 
-Below shows a cash-flow forecast, the company makes no income from initial sales, however there is a monthly subscribtion that is what generates the income from the application. 
+Below shows a cash-flow forecast, the company makes no income from initial sales, however there is a monthly subscribtion that is what generates the income from the application. it is calculated in 1000's so 5 would represent 5000
 
 | Month                    | Jan | Feb | Mar | Apr | May | Jun | Jul | Aug | Sep | Oct | Nov  | Dec  |
 |--------------------------|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|------|------|
 |                          |     |     |     |     |     |     |     |     |     |     |      |      |
 |        Cash Inflow       |     |     |     |     |     |     |     |     |     |     |      |      |
 |   Sales from downloads   |  0  |  0  | 0   | 0   |  0  | 0   | 0   | 0   | 0   | 0   | 0    | 0    |
-| Sales from subscriptions |  50 | 150 | 200 | 275 | 380 | 500 | 600 | 750 | 745 | 890 | 1000 | 1500 |
+| Sales from subscriptions |  50 | 15  |  20 | 27.5| 38  | 50  | 60  | 75  | 74.5| 89  | 100  | 150  |
 | Monthly Cash Inflow      | 5  | 15 | 20 | 27.5 | 38 | 50 | 60 | 75 | 74.5 | 89 | 100 | 150 |
 
 References 
