@@ -8,10 +8,13 @@
 The likely interest for the customers would be those that range from the ages 18 and upwards. This age had been selected since the customers must have some prior knowledge even if a little, of how the stock market works. Furthermore, the app does not need a skill gap for the customers as it has a relatively simple interface, meaning that all from the most experienced user to the least experienced user will be able effectively use the app. 
 
 # Economics
-* What is the total size of your market?
-* What percent share of the market will you have?
-* What is the current demand in target market?
-* What are the trends in target market?
+According to Broker Notes, it show that there were 13.9 million online traders in 2018 which was up from the previous year’s 9.6 million which is an increase of 4.3million or just under 50%. This is likely to increase as more people start to become interested in trading. 
+
+Market trends may vary based upon the age group of any said demographic. This suggest that there is not any one said given trend for the entire market as some may chose to trade in only currencies and others may chose to trade stocks or bunds. The former market trend for ager group 18-35 was crypto-currencies due to high return values. However due to the decline of the crypto market, this trend has died with it.  
+
+The demand for user friendly financial portfolio has been on the rise. This new demand can be explained due to the overwhelming amounts of users that are downloading and using financial portfolios/trading applications.  
+
+Coming into the market, we will have a small market share at first compared to the well-established programs. This estimation would between 0.5%-2%. But as the market grows, the company aims to have a 15%-30% share of the market. 
 
 # Competition
 The image below shows what our products graph will look like when displaying the stocks for Apple. 
@@ -22,13 +25,9 @@ The image below shows what our products graph will look like when displaying the
 
 The image underneath shows Yahoo Finances graph when displaying the stocks for Apple. 
 
- ![Screenshot](/README-Images/burndown21.jpg) 
-
- 
+ ![Screenshot](/README-Images/Yahoo_Graph.jpg) 
 
 What our product does differently from the Yahoo finance is that it displays the graph as a bar chart rather than a stock chart. This could give our product an advantage over competitors as it makes the graph easier to read for newer customers who may not understand what the stock graph may represent. 
-
- ![Screenshot](/README-Images/Yahoo_Graph.jpg) 
 
 Below shows the Main Menu for our financial portfolio. As it shows it is straight to the point and has buttons for every function that our program has to offer.  
 
@@ -48,7 +47,7 @@ This image is from the menu screen of the Trading App, Trading212:
 
 What our competitors apps do differently from ours varies upon which trading app/ financial portfolio. As shown with Yahoo Finance, it does not offer any services that involve trading rather services that would help the customer customise the application. On the other hand, Trading212 has a similar function to ours. The difference is that Trading212 main menu does not allow them to either invest or view investment.  
 
-These features would put us at an advantage over our competitors as it cuts out what could be “unnecessary” 
+These features would put us at an advantage over our competitors as it cuts out what could be “unnecessary” settings. Compared to our 
 
 
 # Product, Price, Promotion, Place
