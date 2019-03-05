@@ -5,15 +5,18 @@
 
 # Customers
 
-The likely interest for the customers would be those that range from the ages 18 and upwards. This age had been selected since the customers must have some prior knowledge even if a little, of how the stock market works. Furthermore, the app does not need a skill gap for the customers as it has a relatively simple interface, meaning that all from the most experienced user to the least experienced user will be able effectively use the app. 
+The likely interest for the customers would be those that range from the ages 18 and upwards. This age had been selected since the customers must have some prior knowledge even if a little, of how the stock market works. Furthermore, the app does not need a skill gap for the customers as it has a relatively simple interface, meaning that all from the most experienced user to the least experienced user will be able effectively use the app. Due to trading becoming increasingly popular in first world countries, it is more 
 As it would be a mobile application, we have decided to role out our product to the major markers such as the Uk, USA, certain countries in Europe such as France and Germany. The app could then be rolled over to other markets if the demand is there and also if it is succesful in the initial set of countries.
 
+Below is the demographic of what we think
 
-| header | header |
+| Demograhic | Frequency | Percent |
 | ------ | ------ |
-| cell | cell |
-| cell | cell | 
-| header | header |
+| Gender |
+| Male |  | 105 | 65 |
+| Female | 57 | 35 |
+| ------ | ------ |
+| header ||
 | ------ | ------ |
 | cell | cell |
 | cell | cell | 
