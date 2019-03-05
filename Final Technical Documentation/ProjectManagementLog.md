@@ -18,22 +18,46 @@ One way to improve the effectiveness of these standup meetings would be to ensur
 
 ## Sprint Burndown Charts
 Screenshots of teams burndown charts.  
-[Screenshot](/README-Images/burndown21.jpg)  
-[Screenshot](/README-Images/burndown20.jpg)  
-[Screenshot](/README-Images/burndown19.jpg)  
-[Screenshot](/README-Images/burndown18.jpg)  
-[Screenshot](/README-Images/burndown10.jpg)  
-[Screenshot](/README-Images/burndown09.jpg)  
-[Screenshot](/README-Images/burndown08.jpg)  
-[Screenshot](/README-Images/burndown07.jpg)  
-[Screenshot](/README-Images/burndown04.jpg)  
-[Screenshot](/README-Images/burndown03.jpg)  
-[Screenshot](/README-Images/burndown02.jpg)  
-[Screenshot](/README-Images/burndown01.jpg)   
 
-*TODO - More StandUp Meetings*
+### Sprint Burndown 21  
+![Screenshot](/README-Images/burndown21.jpg)   
+
+### Sprint Burndown 20
+![Screenshot](/README-Images/burndown20.jpg)  
+
+### Sprint Burndown 19
+![Screenshot](/README-Images/burndown19.jpg)   
+
+### Sprint Burndown 18
+![Screenshot](/README-Images/burndown18.jpg)  
+
+### Sprint Burndown 10
+![Screenshot](/README-Images/burndown10.jpg)  
+
+### Sprint Burndown 09
+![Screenshot](/README-Images/burndown09.jpg)  
+
+### Sprint Burndown 08
+![Screenshot](/README-Images/burndown08.jpg)  
+
+### Sprint Burndown 07
+![Screenshot](/README-Images/burndown07.jpg)  
+
+### Sprint Burndown 04
+![Screenshot](/README-Images/burndown04.jpg)  
+
+### Sprint Burndown 03
+![Screenshot](/README-Images/burndown03.jpg)  
+
+### Sprint Burndown 02
+![Screenshot](/README-Images/burndown02.jpg)  
+
+### Sprint Burndown 01
+![Screenshot](/README-Images/burndown01.jpg)   
+
+*TODO - More StandUp Meetings*  
+
 *For each sprint, include links to the standup meetings (recorded on Jira, hopefully) associated with each sprint.*
-
 
 ## Burndown-Charts Discussion
 
@@ -41,12 +65,14 @@ In the early stages of development, as with everyone else new to Jira our team w
 From the burndown charts we can see that progress in the beginning was slow and not many issues were getting completed, but later on in development say week 10 there are many issues being completed. The burndown charts indicate what occurred on what stages of development, for example after the Minimal viable product was submitted there were many ideas for the program to be implemented and we can see that as we progressively implemented these there is a resemblance to how many issues were completed in Jira as replicated in the burndown charts.  
 To improve our teams velocity estimation ability in future sprints we have come to the agreement that we would each dedicate a day to focus on our module CE291. We would each find a day where we would spend around 4 hours on our assigned task to ensure that we would complete or make significant progress on it.
 
-*TODO - More to implement*
-*Add a discussion of what the burndown charts indicate, and how your team might improve their velocity / estimation ability in future sprints.*
+*TODO - More to implement*  
+
+*Add a discussion of what the burndown charts indicate, and how your team might improve their velocity / estimation ability in future sprints.*  
+
 
 ## Product Backlog
 This is our teams current back log as of [04/03/2019]
-[Screenshot](/README-Images/backlogimg.jpg)  
+![Screenshot](/README-Images/backlogimg.jpg)  
 
 
 ## Other Areas
