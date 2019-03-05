@@ -6,12 +6,14 @@
 ## Techical Diagrams
 
 **TODO - sequence diagram?**
-*Inlcude a class diagram / circuit diagram, and/or any other relevant technical diagrams.*  
+*Inlcude a class diagram / circuit diagram, and/or any other relevant technical diagrams.*    
+
 This is an in depth class diagram made in IntelliJ, demonstrating all of the classes used in our program.  
-[Screenshot](/README-Images/ClassDiagram.png)  
+Click to open in a new tab and view in higher detail.  
+![ClassDiagram](/README-Images/ClassDiagram.png)  
 
 I have also created a use case diagram for our program. In this diagram we can see the user requesting to buy a share and also view their total financial worth.  
-[Screenshot](/README-Images/UseCaseDiagram.jpg)  
+![UseCaseDiagram](/README-Images/UseCaseDiagram.jpg)  
 
 ## Technical Description
 **TODO**
@@ -23,7 +25,8 @@ I have also created a use case diagram for our program. In this diagram we can s
 ## Algorithms and Data Structures
 
 **TODO - needs more**
-*Describe datastructures of at least one component of your implementation.*
+*Describe datastructures of at least one component of your implementation.*  
+
 In our program there are many different data structures used here are some of the examples:  
 In our program there is a class called CSVtoArrayService which sole purpose it to take the downloaded CSV file name and read the data in the file and output into an Array for further program data manipulation.  
 To view the class [click here](/src/CSVtoArrayService.java)  
