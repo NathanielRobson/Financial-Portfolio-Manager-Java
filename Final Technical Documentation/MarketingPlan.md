@@ -14,7 +14,43 @@ The likely interest for the customers would be those that range from the ages 18
 * What are the trends in target market?
 
 # Competition
-* Which other products are on the market, and what advantages can you offer over them?
+The image below shows what our products graph will look like when displaying the stocks for Apple. 
+
+ 
+![Screenshot](/README-Images/burndown21.jpg) 
+ 
+
+ 
+
+The image underneath shows Yahoo Finances graph when displaying the stocks for Apple. 
+
+ ![Screenshot](/README-Images/burndown21.jpg) 
+
+ 
+
+What our product does differently from the Yahoo finance is that it displays the graph as a bar chart rather than a stock chart. This could give our product an advantage over competitors as it makes the graph easier to read for newer customers who may not understand what the stock graph may represent. 
+
+ ![Screenshot](/README-Images/burndown21.jpg) 
+
+Below shows the Main Menu for our financial portfolio. As it shows it is straight to the point and has buttons for every function that our program has to offer.  
+
+ 
+![Screenshot](/README-Images/burndown21.jpg) 
+ 
+
+The image below is the menu of Yahoo Finance: 
+
+ ![Screenshot](/README-Images/burndown21.jpg) 
+
+This image is from the menu screen of the Trading App, Trading212: 
+
+ 
+![Screenshot](/README-Images/burndown21.jpg) 
+ 
+
+What our competitors apps do differently from ours varies upon which trading app/ financial portfolio. As shown with Yahoo Finance, it does not offer any services that involve trading rather services that would help the customer customise the application. On the other hand, Trading212 has a similar function to ours. The difference is that Trading212 main menu does not allow them to either invest or view investment.  
+
+These features would put us at an advantage over our competitors as it cuts out what could be “unnecessary” 
 
 
 # Product, Price, Promotion, Place
