@@ -2,6 +2,10 @@
 
 ## Running the Program  
 
+[Link to our Program JAR Executable file](ProgramJAR)  
+The executable JAR for our program can be found in the root folder as 'ProgramJAR.jar'.  
+The whole repository will need to be downloaded and extracted with no files moved to allow for successful execution.  
+
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.  
 To run our program successfully, download our repository and execute/run the file named 'ProgramJAR.jar'.  
 ![Screenshot](/README-Images/jarlocation.jpg)  
