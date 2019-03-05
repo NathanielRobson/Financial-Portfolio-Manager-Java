@@ -14,10 +14,9 @@ Our standup meeting was held on [06-02-19] and it involved each team member prov
 [Link to Team 3 Standup Meeting 06-02-19 - Jira](https://cseejira.essex.ac.uk/browse/CE291T3-67)
 
 One way to improve the effectiveness of these standup meetings would be to ensure everyone has to have some input. This could be to demonstrate a future implementation for the program or to share a idea or view of a future implementation.
-*If standup meetings were used, then include a Jira link, and discuss their effectiveness.*
 
 ## Sprint Burndown Charts
-Screenshots of teams burndown charts.  
+Screenshots of our teams burndown charts.  
 
 ### Sprint Burndown 21  
 ![Screenshot](/README-Images/burndown21.jpg)   
@@ -55,26 +54,33 @@ Screenshots of teams burndown charts.
 ### Sprint Burndown 01
 ![Screenshot](/README-Images/burndown01.jpg)   
 
-*TODO - More StandUp Meetings*  
-
-*For each sprint, include links to the standup meetings (recorded on Jira, hopefully) associated with each sprint.*
-
 ## Burndown-Charts Discussion
 
 In the early stages of development, as with everyone else new to Jira our team were still learning the ropes of Jira sprints and issue creation and issue assignment and this is shown from week 1 until week 4. From week 7 on wards there is a massive improvement of how many sprint issues were completed and assigned. The backlog also got a lot cleaner as well as out active sprint sections. This is because by then we felt as if we understood what was required of us and we grasped the Jira basics.  
 From the burndown charts we can see that progress in the beginning was slow and not many issues were getting completed, but later on in development say week 10 there are many issues being completed. The burndown charts indicate what occurred on what stages of development, for example after the Minimal viable product was submitted there were many ideas for the program to be implemented and we can see that as we progressively implemented these there is a resemblance to how many issues were completed in Jira as replicated in the burndown charts.  
-To improve our teams velocity estimation ability in future sprints we have come to the agreement that we would each dedicate a day to focus on our module CE291. We would each find a day where we would spend around 4 hours on our assigned task to ensure that we would complete or make significant progress on it.
-
-*TODO - More to implement*  
-
-*Add a discussion of what the burndown charts indicate, and how your team might improve their velocity / estimation ability in future sprints.*  
-
+To improve our teams velocity / estimation ability in future sprints we have come to the agreement that we would each dedicate a day to focus on our module CE291. We would each find a day where we would spend around 4 hours on our assigned task to ensure that we would complete or make significant progress on it. We have also found that under estimating time frames for completion can cause complications, for example when we were in the early stages of development, we were struggling to visualize what we were making because we had not created the GUI or Menu Frame at this point. This made it difficult to visualize how we were meant to navigate through the program. This issue was definitely completed slightly too late and it negatively impacted our team, however once it was implemented and fully functional we were able to begin combining our work to piece together the program.  
+To prevent this in future sprints I recommend that we be honest with each other and our selves about how long an implementation may take so we do not impact our whole team if wee need more time on said implementation or task.  
 
 ## Product Backlog
 This is our teams current back log as of [04/03/2019]
 ![Screenshot](/README-Images/backlogimg.jpg)  
 
-
 ## Other Areas
-*TODO - IDEAS??*
-*If your team has anything else they want to demonstrate, e.g. advanced project management tools, reporting graphs with suitable explanation and interpretation, advanced use of Jira (e.g. issue links, epics, versions), or continuous integration tools, then include a summary here.*
+
+### Final Sprint Overview
+In the image below is of our most recent sprint. You can see that there are already an extensive range of jira methodologies used such as subtasks, comments, and flagging. Every one of these methods promotes development to others even further. Using this aided in producing some implementations at speed.  
+![Screenshot](/README-Images/jiraext.jpg)   
+
+### Program Epic and User Requirement Epic Chart
+Following [this link (CE291T3-69)](https://cseejira.essex.ac.uk/browse/CE291T3-69) will bring you to our main Epic on Jira. Here you will find many different tasks assigned to the epic which have been completed.  
+![Screenshot](/README-Images/jiraepic.jpg)  
+
+#### User Requirements
+For our programs user requirements we created an Epic which would allow us to add tasks and issues which were essential for our program to be a success. Below is the screenshot of the chart.  
+![Screenshot](/README-Images/jirareq.jpg)  
+
+### Velocity Chart
+
+Here is our teams Velocity Chart which:  
+![Screenshot](/README-Images/jiravel.jpg)  
+
