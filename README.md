@@ -184,13 +184,22 @@ All depency files can be found in the ['lib'](/lib) folder.
 * [Maven OpenCSV](http://opencsv.sourceforge.net/) - 'Opencsv-4.4'
 * [Knowm XChart](https://knowm.org/open-source/xchart/) - 'xchart-3.5.2', 'xchart-demo-3.5.2'
 
+
+## Known Issues
+
+The only currently known issue is when displaying the users history.  
+If the user has just started and has no data on their account in our program. The view account history line chart will not display data.  
+It will display data if the user's account is more than one day old because it works on a date basis. The chart cannot shot increase/decrease over time if there is not more than 1 day to display.  
+Thankfully all of the accounts which are in the program have data on file and they have history.   
+If you log into one with out enough data (more than 1 day) then switch user to 'NR' with the password 'teamNR'.   (Resolution)
+
 ## Author
 
 * **Nathaniel Jarvis Robson**
 
 ## License
 
-This project is licensed under the University of Essex - see the [LICENSE.md](https://cseegit.essex.ac.uk/ce291/team3/teamproject/blob/master/LICENSE) file for details
+This project is licensed under the University of Essex - see the [LICENSE.md](https://cseegit.essex.ac.uk/ce291/team3/teamproject/blob/master/LICENSE) file for more details.
 
 ## Acknowledgments
 
