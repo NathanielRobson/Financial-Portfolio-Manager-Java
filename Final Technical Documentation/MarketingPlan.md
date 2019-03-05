@@ -82,6 +82,11 @@ Our main advantage over our competitors is that our app can be operated offline.
 
 Other advantages although they may be minor, are that our document will provide documentation throughout and it will continue to update itself over time without the user having to feel outdated. 
 
+	Strength 	Weakness	Importance to customer
+RobinHood			
+Our Product			
+
+
 
 # Product, Price, Promotion, Place
 Price: For our product, we aim to make it a monthly subscription that could be paid by PayPal or direct debit. Compared to our direct competitors such as Yahoo Finance and RobinHood, we aim to have the same premium monthly services but at a lower cost. This is as Yahoo finance are aiming to introduce a monthly service which would cost up to $100 or £76.24. Whereas RobinHood already has an established subscription ranges from $40 or £30.50 to $60 or £45.75 monthly. To have an edge over the market, we have established that a monthly subscription fee of $25 to customers in the United States , £25 to customers within the UK and €25 to customers within Europe.. 
