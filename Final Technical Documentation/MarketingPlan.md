@@ -59,7 +59,11 @@ This image is from the menu screen of the Trading App, Trading212:
 
 What our competitors apps do differently from ours varies upon which trading app/ financial portfolio. As shown with Yahoo Finance, it does not offer any services that involve trading rather services that would help the customer customise the application. On the other hand, Trading212 has a similar function to ours. The difference is that Trading212 main menu does not allow them to either invest or view investment.  
 
-These features would put us at an advantage over our competitors as it cuts out what could be “unnecessary” settings. Compared to our 
+These features would put us at an advantage over our competitors as it cuts out what could be “unnecessary” navigation. Another advantage that our product has is that our product can be used worldwide. This is an advantage that is most notably against RobinHood as it cannot be accessed by the UK Apple App Store. 
+
+Our main advantage over our competitors is that our app can be operated offline. This means that customers are able to log in to view their investments and as long as they have previously downloaded the most recent shares information. For example, this will allow the customer to compare their investments to current or the most recent stocks if they were to go underground or were under a tunnel. 
+
+Other advantages although they may be minor, are that our document will provide documentation throughout and it will continue to update itself over time without the user having to feel outdated. 
 
 
 # Product, Price, Promotion, Place
