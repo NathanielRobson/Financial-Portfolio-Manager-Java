@@ -61,11 +61,7 @@ Screenshots will be include the tests with results of such testsFor some tests, 
 
 #### Test 8 
 #### Test Description: User is able to view bank account and is unabled to more than it owns.
-<<<<<<< HEAD
 #### Test result: Fail.
-=======
-#### Test result: Pass.
->>>>>>> 0c91cd2d0ad3770739db525c41eb3436fabc45d7
 #### Screenshots: before/ after
 ![Screenshot](/README-Images/test8.JPG)
 ![Screenshot](/README-Images/test8b.JPG)
@@ -91,10 +87,12 @@ Screenshots will be include the tests with results of such testsFor some tests, 
 ![Screenshot](/README-Images/test11c.JPG)
 
 #### Test 12 
-#### Test Description: User is able to view investment chart.
+#### Test Description: User is able to download the data on apple .
 #### Test result: Pass.
 #### Screenshots: before/ after
-![Screenshot](/README-Images/test10.JPG)
+![Screenshot](/README-Images/test12.JPG)
+![Screenshot](/README-Images/test12.JPG)
+
 
 #### Test 13 
 #### Test Description: User is able to view investment chart.
