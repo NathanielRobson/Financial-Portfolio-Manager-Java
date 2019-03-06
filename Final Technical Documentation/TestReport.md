@@ -87,7 +87,7 @@ Screenshots will be include the tests with results of such testsFor some tests, 
 ![Screenshot](/README-Images/test11c.JPG)
 
 #### Test 12 
-#### Test Description: User is able to download the data on apple .
+#### Test Description: User is able to download the data on apple and data matches Google finances data on apple.
 #### Test result: Pass.
 #### Screenshots: before/ after
 ![Screenshot](/README-Images/test12.JPG)
@@ -97,22 +97,31 @@ As you can see below data is pulled correctly as checked from google finance dat
 ![Screenshot](/README-Images/test12d.JPG)
 
 #### Test 13 
-#### Test Description: User is able to view investment chart.
+#### Test Description: User is able to search for data about Microsoft with data 2019-03-05 .
 #### Test result: Pass.
 #### Screenshots: before/ after
-![Screenshot](/README-Images/test10.JPG)
+![Screenshot](/README-Images/test13.JPG)
+![Screenshot](/README-Images/test13b.JPG)
+As you can see the data searched matches the records that Google finance holds.
+![Screenshot](/README-Images/test13c.JPG)
+![Screenshot](/README-Images/test13d.JPG)
 
 #### Test 14 
-#### Test Description: User is able to view investment chart.
+#### Test Description: Incorrect symbol(mst) and date format(05-03-2019) input by user to search for share data will display approriate error message.
 #### Test result: Pass.
 #### Screenshots: before/ after
-![Screenshot](/README-Images/test10.JPG)
+![Screenshot](/README-Images/test14.JPG)
+![Screenshot](/README-Images/test14b.JPG)
+![Screenshot](/README-Images/test14c.JPG)
 
 #### Test 15 
-#### Test Description: User is able to view investment chart.
+#### Test Description: by inputting company name symbol (nflx) user is able to view table of shares which also matches share data on Google finance.
 #### Test result: Pass.
 #### Screenshots: before/ after
-![Screenshot](/README-Images/test10.JPG)
+![Screenshot](/README-Images/test15.JPG)
+![Screenshot](/README-Images/test15b.JPG)
+As you can see the data matches data held in Google fincance.
+![Screenshot](/README-Images/test15c.JPG)
 
 
 
