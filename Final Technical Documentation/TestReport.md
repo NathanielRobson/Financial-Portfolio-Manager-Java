@@ -78,52 +78,37 @@ Screenshots will be include the tests with results of such testsFor some tests, 
 #### Screenshots: before/ after
 ![Screenshot](/README-Images/test10.JPG)
 
-<<<<<<< HEAD
-#### Test 11 
-#### Test Description: User is able to view twitters up date shares with rangesto 20 a.
-=======
-#### Test 10 
-#### Test Description: User is able to view investment chart.
->>>>>>> 3061235735f499b726e1f5505c8e97279c195713
+#### Test 11
+#### Test Description: User is able to view twitters up date shares/stock  prices from 20 days ago.
 #### Test result: Pass.
 #### Screenshots: before/ after
-![Screenshot](/README-Images/test10.JPG)
+![Screenshot](/README-Images/test11.JPG)
+![Screenshot](/README-Images/test11b.JPG)
+![Screenshot](/README-Images/test11c.JPG)
 
-<<<<<<< HEAD
 #### Test 12 
-=======
-#### Test 10 
->>>>>>> 3061235735f499b726e1f5505c8e97279c195713
-#### Test Description: User is able to view investment chart.
+#### Test Description: User is able to download the data on apple .
 #### Test result: Pass.
 #### Screenshots: before/ after
-![Screenshot](/README-Images/test10.JPG)
+![Screenshot](/README-Images/test12.JPG)
+![Screenshot](/README-Images/test12b.JPG)
+As you can see below data is pulled correctly as checked from google finance data about apple
+![Screenshot](/README-Images/test12c.JPG)
+![Screenshot](/README-Images/test12d.JPG)
 
-<<<<<<< HEAD
 #### Test 13 
-=======
-#### Test 10 
->>>>>>> 3061235735f499b726e1f5505c8e97279c195713
 #### Test Description: User is able to view investment chart.
 #### Test result: Pass.
 #### Screenshots: before/ after
 ![Screenshot](/README-Images/test10.JPG)
 
-<<<<<<< HEAD
 #### Test 14 
-=======
-#### Test 10 
->>>>>>> 3061235735f499b726e1f5505c8e97279c195713
 #### Test Description: User is able to view investment chart.
 #### Test result: Pass.
 #### Screenshots: before/ after
 ![Screenshot](/README-Images/test10.JPG)
 
-<<<<<<< HEAD
 #### Test 15 
-=======
-#### Test 10 
->>>>>>> 3061235735f499b726e1f5505c8e97279c195713
 #### Test Description: User is able to view investment chart.
 #### Test result: Pass.
 #### Screenshots: before/ after

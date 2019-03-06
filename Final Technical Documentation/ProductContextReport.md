@@ -58,6 +58,8 @@ lead to addiction and our users slowly losing significant amounts of money. To h
 they are taking a major risk that they may not be able to afford. This wouldn't prevent the user from doing what they want but instead
 ensure that they are fully informed.
 
+If our program was open publicly this would also pose an ethical issue as a specialist software like this could be used by untrained traders without knowledge and could lead to some financial loses. This could be prevented by limiting its availability and maybe posing some checks or financial proof of users.
+
 ## Health & Safety
 
 As our product is software based there aren’t many health and safety risks. Users should take breaks when using the product and make sure they 

@@ -362,7 +362,7 @@ class StockGraphService { //Stock Graph Service
 
 #### Time Complexity
  
-
+**TODO How it relates to our company**
 * [Add()] O(1) - Adding to the ArrayList is O(1) time where O is the approximate time for the given task and O(1) is constant time.  
 * [Get()] O(1) - Retrieving an element is always a constant time O(1).  
 * [Remove()] O(n) - however we do not remove from the arrays in our program, only overwrite.

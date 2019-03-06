@@ -16,8 +16,11 @@ According to Broker Notes, it show that there were 13.9 million online traders i
 Market trends may vary based upon the age group of any said demographic. This suggest that there is not any one said given trend for the entire market as some may chose to trade in only currencies and others may chose to trade stocks or bunds. The former market trend for ager group 18-35 was crypto-currencies due to high return values. However due to the decline of the crypto market, this trend has died with it.  
 
 The demand for user friendly financial portfolio has been on the rise. This new demand can be explained due to the overwhelming amounts of users that are downloading and using financial portfolios/trading applications.  
+From Market research, it was noticed that there were a relatively small barrier to entry into the market. This was as no other product that would be able to incite Predatory Pricing or limit pricing due to the inital software being free to download. However there were barriers to entry within the program
 
-Coming into the market, we will have a small market share at first compared to the well-established programs. This estimation would between 0.5%-2%. But as the market grows, the company aims to have a 15%-30% share of the market. 
+
+would be able to push others out of the market because they were all free to download. However, the barriers to entry were more to do with the High marketing costs and the brand recogniiton as well as customer acceptance. These barriers to entry may have an effect whether it be immediate or in the long run. 
+Going into the market, we will have a small market share at first compared to the well-established programs. This estimation would between 0.5%-2%. But as the market grows, the company aims to have a 15%-30% share of the market. 
 
 # Competition
 
@@ -136,9 +139,41 @@ Location
 |  YahooFinance  |     5    |     4    |            5           |
 | Our Product |     4    |     3    |            5           |
 
+Competitive analysis vs Trading212
+
+Price
+
+|             | Strength | Weakness | Importance to Customer |
+|:-----------:|:--------:|:--------:|:----------------------:|
+| Trading212  |     4    |     1    |            5           |
+| Our Product |     5    |     1    |            5           |
+
+Quality
+
+|             | Strength | Weakness | Importance to Customer |
+|:-----------:|:--------:|:--------:|:----------------------:|
+|  Trading212  |     5    |     1    |            5           |
+| Our Product |     5    |     1    |            5           |
+
+Reliability
+
+|             | Strength | Weakness | Importance to Customer |
+|:-----------:|:--------:|:--------:|:----------------------:|
+|  Trading212  |     3    |     3    |            5           |
+| Our Product |     4    |     3    |            5           |
+
+Location
+
+|             | Strength | Weakness | Importance to Customer |
+|:-----------:|:--------:|:--------:|:----------------------:|
+|  Trading212  |     3    |     2    |            5           |
+| Our Product |     3   |     2    |            5           |
 
 # Product, Price, Promotion, Place
-Price: For our product, we aim to make it a monthly subscription that could be paid by PayPal or direct debit. Compared to our direct competitors such as Yahoo Finance and RobinHood, we aim to have the same premium monthly services but at a lower cost. This is as Yahoo finance are aiming to introduce a monthly service which would cost up to $100 or £76.24. Whereas RobinHood already has an established subscription ranges from $40 or £30.50 to $60 or £45.75 monthly. To have an edge over the market, we have established that a monthly subscription fee of $25 to customers in the United States , £25 to customers within the UK and €25 to customers within Europe.. 
+
+Product: For the name of our we have decided to keep it simple and go with EssexFinance. We had decided on that name for our product due to getting inspiration from the major giants of financal products such as Google Finance and Yahoo Finance. Similarly to the Yahoo Finance we decided to have no variety/ changes in the product wether it was used on the Andriod operating system or iOS. This was to make it easier for the user so that if they were to swtich devices that they would not have to relearn the mechanics of the program. The same can also be said about the design of the product. Due to the product being placed on the app store, there would be customer service that would help the user if there was an issue with the application. However due to the program having a monthly subscription, we have a feature that would allow the customer to cancel their subscription and in some serious instance the user would be eligible for a refund. However the app aims to remind the user via the method they had used to download the app(App store or Google Play store)
+
+Price: For our product, we aim to make it a monthly subscription that could be paid by PayPal or direct debit. Compared to our direct competitors such as Yahoo Finance and RobinHood, we aim to have the same premium monthly services but at a lower cost. This is as Yahoo finance are aiming to introduce a monthly service which would cost up to $100 or £76.24. Whereas RobinHood already has an established subscription ranges from $40 or £30.50 to $60 or £45.75 monthly. To have an edge over the market, we have established that a monthly subscription fee of $25 to customers in the United States , £25 to customers within the UK and €25 to customers within Europe. In this regards we aim to undercut our competition
 
 Promotion: Due to having such a wide demographic and a wide geographic release, we aim to promote our products using major advertising techniques such as Television and internet advertising. As there are many products that will be selling the same or similar services, our main marketing technique that we aim to get across is that the customer can use the service without the need for an internet connection (if they’re using a mobile device). However, the use of television and internet advertising will need to be on a moderate level as it may cause a negative backlash as it may be perceived to be annoying. 
 
