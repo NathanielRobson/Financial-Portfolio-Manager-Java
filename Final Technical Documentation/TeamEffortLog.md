@@ -12,7 +12,7 @@
 ## Nathaniel J Robson
 
 ### Sprint 10 (University Week 10)  
-After the MVP we had many ideas of what we were going to implement next. I began to focus on the starting point of our program, the Login page which is what the user will see first. It is important that this works well and allows the only users who are authorised to use the program to log in.
+After the MVP we had many ideas of what we were going to implement next. I began to focus on the forefront of our program, the Login page which is what the user will see first. It is important that this works well and allows the only users who are authorised to use the program to log in.
 [Jira Issue - (Login function/page)](https://cseejira.essex.ac.uk/browse/CE291T3-32) This was completed in week 14. With full functionality. Overall it took aroud 5 hours to complete and to ensure that there was no way to log in without havng specific credentials found in the 'members.csv' file. The algorithm I coded will continue to allow the specified users to log in even if the file does not exist, because it will write the file for you if it doens exist.
 
 I was also assigned to create a function to allow users to be able to view their total value of their investment. This however could not be implemented until we had a system to store user data in a file to read later on.  
