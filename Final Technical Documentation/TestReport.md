@@ -82,6 +82,36 @@ Screenshots will be include the tests with results of such testsFor some tests, 
 #### Screenshots: before/ after
 ![Screenshot](/README-Images/test10.JPG)
 
+#### Test 10 
+#### Test Description: User is able to view investment chart.
+#### Test result: Pass.
+#### Screenshots: before/ after
+![Screenshot](/README-Images/test10.JPG)
+
+#### Test 10 
+#### Test Description: User is able to view investment chart.
+#### Test result: Pass.
+#### Screenshots: before/ after
+![Screenshot](/README-Images/test10.JPG)
+
+#### Test 10 
+#### Test Description: User is able to view investment chart.
+#### Test result: Pass.
+#### Screenshots: before/ after
+![Screenshot](/README-Images/test10.JPG)
+
+#### Test 10 
+#### Test Description: User is able to view investment chart.
+#### Test result: Pass.
+#### Screenshots: before/ after
+![Screenshot](/README-Images/test10.JPG)
+
+#### Test 10 
+#### Test Description: User is able to view investment chart.
+#### Test result: Pass.
+#### Screenshots: before/ after
+![Screenshot](/README-Images/test10.JPG)
+
 
 
 
