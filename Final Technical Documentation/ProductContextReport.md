@@ -25,8 +25,28 @@ Furthermore, we haven't backed any of the data we have stored. This would violat
 data stored in our product. To improve the issues I have mentioned above, we will need to implement more security by encrypting user data 
 and login info as well as backing up saved data.
 
-When releasing our product a freeware license would be most suitable. Freeware would be suitable as other products similar to ours are offered
-for free. Therefore to be able to be competitive we would need to offer our product for free as well.
+When releasing our product a subscription license would be most suitable. As seen in our marketing plan we have found similar products that
+offer a subscription service. We have therefore decided to follow what our competitors have done and also offer a subscription service. This
+would also make our product more affordable and give our users more freedom.
+
+Below you can see a list of the dependencies used in our product:  
+
+* [Apache Commons Codec](https://commons.apache.org/) - 'commons-codec-1.11'
+* [Apache Commons Lang](https://commons.apache.org/) - 'commons-lang3-3.8.1'
+* [Apache Commons Logging](https://commons.apache.org/) - 'commons-logging-1.2'
+* [Apache HttpClient Fluent API](https://hc.apache.org/) - 'fluent-hc-4.5.7'
+* [Apache HttpClient 4.5.7](https://hc.apache.org/) - 'httpclient-4.5.7', 'httpclient-cache-4.5.7', 'httpclient-osgi-4.5.7', 'httpclient-win-4.5.7'  
+* [Apache HttpCore](https://hc.apache.org/) - 'httpcore-4.4.11'
+* [Apache HttpClient Mime](https://hc.apache.org/) - 'httpmime-4.5.7'
+* [iText](https://itextpdf.com/en) - 'itext-1.3.1'
+* [JFree JCommon](http://www.jfree.org/jcommon/) - 'jcommon-1.0.23'
+* [JFree JFreeChart](http://www.jfree.org/jfreechart/) - 'jfreechart-1.0.23', 'jfreechart-1.0.19-demo'
+* [Java Native Access](https://github.com/java-native-access/jna) - 'jna-4.5.2', 'jna-platform-4.5.2'
+* [Maven OpenCSV](http://opencsv.sourceforge.net/) - 'Opencsv-4.4'
+* [Knowm XChart](https://knowm.org/open-source/xchart/) - 'xchart-3.5.2', 'xchart-demo-3.5.2'
+
+All of these dependencies are free for users to use in their programs. We therefore wouldn't have to deal with any legal issues caused by the
+dependencies.
 
 ## Ethical
 One ethical issue involves the method we have used to download stock data. As mentioned earlier we have used a unlawful workaround to get
