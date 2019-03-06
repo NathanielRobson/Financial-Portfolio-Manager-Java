@@ -91,8 +91,10 @@ Screenshots will be include the tests with results of such testsFor some tests, 
 #### Test result: Pass.
 #### Screenshots: before/ after
 ![Screenshot](/README-Images/test12.JPG)
-![Screenshot](/README-Images/test12.JPG)
-
+![Screenshot](/README-Images/test12b.JPG)
+As you can see below data is pulled correctly as checked from google finance data about apple
+![Screenshot](/README-Images/test12c.JPG)
+![Screenshot](/README-Images/test12d.JPG)
 
 #### Test 13 
 #### Test Description: User is able to view investment chart.
