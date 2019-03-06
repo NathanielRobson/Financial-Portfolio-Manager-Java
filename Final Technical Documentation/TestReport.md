@@ -90,9 +90,11 @@ Screenshots will be include the tests with results of such testsFor some tests, 
 #### Test Description: User is able to download the data on apple and data matches Google finances data on apple.
 #### Test result: Pass.
 #### Screenshots: before/ after
-![Screenshot](/README-Images/test12.JPG)
+![Screenshot](/README-Images/test12.JPG) 
 ![Screenshot](/README-Images/test12b.JPG)
+
 As you can see below data is pulled correctly as checked from google finance data about apple
+
 ![Screenshot](/README-Images/test12c.JPG)
 ![Screenshot](/README-Images/test12d.JPG)
 
@@ -102,8 +104,11 @@ As you can see below data is pulled correctly as checked from google finance dat
 #### Screenshots: before/ after
 ![Screenshot](/README-Images/test13.JPG)
 ![Screenshot](/README-Images/test13b.JPG)
-As you can see the data searched matches the records that Google finance holds.
+
+*As you can see the data searched matches the records that Google finance holds.*
+
 ![Screenshot](/README-Images/test13c.JPG)
+
 ![Screenshot](/README-Images/test13d.JPG)
 
 #### Test 14 
@@ -120,7 +125,9 @@ As you can see the data searched matches the records that Google finance holds.
 #### Screenshots: before/ after
 ![Screenshot](/README-Images/test15.JPG)
 ![Screenshot](/README-Images/test15b.JPG)
+
 As you can see the data matches data held in Google fincance.
+
 ![Screenshot](/README-Images/test15c.JPG)
 
 
