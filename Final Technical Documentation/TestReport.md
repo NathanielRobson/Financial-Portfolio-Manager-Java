@@ -61,11 +61,7 @@ Screenshots will be include the tests with results of such testsFor some tests, 
 
 #### Test 8 
 #### Test Description: User is able to view bank account and is unabled to more than it owns.
-<<<<<<< HEAD
 #### Test result: Fail.
-=======
-#### Test result: Pass.
->>>>>>> 0c91cd2d0ad3770739db525c41eb3436fabc45d7
 #### Screenshots: before/ after
 ![Screenshot](/README-Images/test8.JPG)
 ![Screenshot](/README-Images/test8b.JPG)
@@ -77,6 +73,36 @@ Screenshots will be include the tests with results of such testsFor some tests, 
 ![Screenshot](/README-Images/test9.JPG)
 
 #### Test 10 
+#### Test Description: User is able to view investment chart.
+#### Test result: Pass.
+#### Screenshots: before/ after
+![Screenshot](/README-Images/test10.JPG)
+
+#### Test 11 
+#### Test Description: User is able to view twitters up date shares with rangesto 20 a.
+#### Test result: Pass.
+#### Screenshots: before/ after
+![Screenshot](/README-Images/test10.JPG)
+
+#### Test 12 
+#### Test Description: User is able to view investment chart.
+#### Test result: Pass.
+#### Screenshots: before/ after
+![Screenshot](/README-Images/test10.JPG)
+
+#### Test 13 
+#### Test Description: User is able to view investment chart.
+#### Test result: Pass.
+#### Screenshots: before/ after
+![Screenshot](/README-Images/test10.JPG)
+
+#### Test 14 
+#### Test Description: User is able to view investment chart.
+#### Test result: Pass.
+#### Screenshots: before/ after
+![Screenshot](/README-Images/test10.JPG)
+
+#### Test 15 
 #### Test Description: User is able to view investment chart.
 #### Test result: Pass.
 #### Screenshots: before/ after
