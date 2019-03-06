@@ -16,10 +16,8 @@ According to Broker Notes, it show that there were 13.9 million online traders i
 Market trends may vary based upon the age group of any said demographic. This suggest that there is not any one said given trend for the entire market as some may chose to trade in only currencies and others may chose to trade stocks or bunds. The former market trend for ager group 18-35 was crypto-currencies due to high return values. However due to the decline of the crypto market, this trend has died with it.  
 
 The demand for user friendly financial portfolio has been on the rise. This new demand can be explained due to the overwhelming amounts of users that are downloading and using financial portfolios/trading applications.  
-From Market research, it was noticed that there were a relatively small barrier to entry into the market. This was as no other product that would be able to incite Predatory Pricing or limit pricing due to the inital software being free to download. However there were barriers to entry within the program
+From Market research, it was noticed that there were a relatively small barrier to entry into the market. This was as no other product that would be able to incite Predatory Pricing or limit pricing due to the inital software being free to download. However there were barriers to entry within the market. These stem from the advertising cost as well as brand loyalty. As advertising can be expensive this may push competitors out of the market, especially since alot of trading apps are free to download thus meaning that they may not reaching a breakeven stage. Brand Loyalty is another barrier to entry. This is can be shown with competitors such as Yahoo finance and TD Ameritrade having a lareg 
 
-
-would be able to push others out of the market because they were all free to download. However, the barriers to entry were more to do with the High marketing costs and the brand recogniiton as well as customer acceptance. These barriers to entry may have an effect whether it be immediate or in the long run. 
 Going into the market, we will have a small market share at first compared to the well-established programs. This estimation would between 0.5%-2%. But as the market grows, the company aims to have a 15%-30% share of the market. 
 
 # Competition
