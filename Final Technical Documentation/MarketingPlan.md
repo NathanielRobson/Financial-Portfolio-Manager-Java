@@ -139,6 +139,35 @@ Location
 |  YahooFinance  |     5    |     4    |            5           |
 | Our Product |     4    |     3    |            5           |
 
+Competitive analysis vs Trading212
+
+Price
+
+|             | Strength | Weakness | Importance to Customer |
+|:-----------:|:--------:|:--------:|:----------------------:|
+| Trading212  |     4    |     1    |            5           |
+| Our Product |     5    |     1    |            5           |
+
+Quality
+
+|             | Strength | Weakness | Importance to Customer |
+|:-----------:|:--------:|:--------:|:----------------------:|
+|  Trading212  |     5    |     1    |            5           |
+| Our Product |     5    |     1    |            5           |
+
+Reliability
+
+|             | Strength | Weakness | Importance to Customer |
+|:-----------:|:--------:|:--------:|:----------------------:|
+|  Trading212  |     3    |     3    |            5           |
+| Our Product |     4    |     3    |            5           |
+
+Location
+
+|             | Strength | Weakness | Importance to Customer |
+|:-----------:|:--------:|:--------:|:----------------------:|
+|  Trading212  |     3    |     2    |            5           |
+| Our Product |     3   |     2    |            5           |
 
 # Product, Price, Promotion, Place
 
