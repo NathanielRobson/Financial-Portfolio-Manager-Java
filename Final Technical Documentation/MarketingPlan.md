@@ -155,15 +155,18 @@ Using a mid-sized agency to aid with the Search Engine Optimisation otherwise kn
 * How many downloads / sales / shipped units could you realistically achieve in the first 12 months?  
 * How much cash would that bring in?
 
-Below shows a cash-flow forecast, the company makes no income from initial sales, however there is a monthly subscribtion that is what generates the income from the application. it is calculated in 1000's so 5 would represent 5000
+Below shows a cash-flow forecast.From the graph it can be interpreted that the company makes no income from initial sales/downloads, however there is a monthly subscribtion that is what generates the income from the application. it is calculated in 1000's so 5 would represent £5000
 
 | Month                    | Jan | Feb | Mar | Apr | May | Jun | Jul | Aug | Sep | Oct | Nov  | Dec  |
 |--------------------------|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|------|------|
 |                          |     |     |     |     |     |     |     |     |     |     |      |      |
 |        Cash Inflow       |     |     |     |     |     |     |     |     |     |     |      |      |
-|   Sales from downloads   |  0  |  0  | 0   | 0   |  0  | 0   | 0   | 0   | 0   | 0   | 0    | 0    |
-| Sales from subscriptions |  50 | 15  |  20 | 27.5| 38  | 50  | 60  | 75  | 74.5| 89  | 100  | 150  |
+|   Income from downloads   |  0  |  0  | 0   | 0   |  0  | 0   | 0   | 0   | 0   | 0   | 0    | 0    |
+| Income from subscriptions |  50 | 15  |  20 | 27.5| 38  | 50  | 60  | 75  | 74.5| 89  | 100  | 150  |
 | Monthly Cash Inflow      | 5  | 15 | 20 | 27.5 | 38 | 50 | 60 | 75 | 74.5 | 89 | 100 | 150 |
+
+Due to the nature of the app being a new one on the market, what can be shown from market research is that it would have a slow growth on its initial release. However through methods such as advertising and word of mouth, the product would continue to grow at a faster rate than previously.
+what the forecast shows is that there was a dip in the sales from subcriptions between July and August. This could be due to a majority of factors unknown to the user.
 
 References 
 

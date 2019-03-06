@@ -78,31 +78,52 @@ Screenshots will be include the tests with results of such testsFor some tests, 
 #### Screenshots: before/ after
 ![Screenshot](/README-Images/test10.JPG)
 
+<<<<<<< HEAD
 #### Test 11 
 #### Test Description: User is able to view twitters up date shares with rangesto 20 a.
+=======
+#### Test 10 
+#### Test Description: User is able to view investment chart.
+>>>>>>> 3061235735f499b726e1f5505c8e97279c195713
 #### Test result: Pass.
 #### Screenshots: before/ after
 ![Screenshot](/README-Images/test10.JPG)
 
+<<<<<<< HEAD
 #### Test 12 
+=======
+#### Test 10 
+>>>>>>> 3061235735f499b726e1f5505c8e97279c195713
 #### Test Description: User is able to view investment chart.
 #### Test result: Pass.
 #### Screenshots: before/ after
 ![Screenshot](/README-Images/test10.JPG)
 
+<<<<<<< HEAD
 #### Test 13 
+=======
+#### Test 10 
+>>>>>>> 3061235735f499b726e1f5505c8e97279c195713
 #### Test Description: User is able to view investment chart.
 #### Test result: Pass.
 #### Screenshots: before/ after
 ![Screenshot](/README-Images/test10.JPG)
 
+<<<<<<< HEAD
 #### Test 14 
+=======
+#### Test 10 
+>>>>>>> 3061235735f499b726e1f5505c8e97279c195713
 #### Test Description: User is able to view investment chart.
 #### Test result: Pass.
 #### Screenshots: before/ after
 ![Screenshot](/README-Images/test10.JPG)
 
+<<<<<<< HEAD
 #### Test 15 
+=======
+#### Test 10 
+>>>>>>> 3061235735f499b726e1f5505c8e97279c195713
 #### Test Description: User is able to view investment chart.
 #### Test result: Pass.
 #### Screenshots: before/ after
