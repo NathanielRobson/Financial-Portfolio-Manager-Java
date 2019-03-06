@@ -8,25 +8,20 @@ However, we were unable to correctly implement this in our product, so we instea
 Yahoo finance is another website that displays stock info on companies. To access this stock data, we had to download it from their website. 
 Yahoo used to offer an API that allowed you to download stock data from the website however, they recently disabled access to the website 
 through the API. Because of this we had to use a workaround. We used a program that tricked the website into thinking that a normal user is 
-accessing it, the website then would allow us to download stock data. 
-
-The Computer Missuse Act (1990) states that unauthorised access is "Any conduct or action which would enable access without
-authorisation." This can be applied to our product as we are accessing Yahoo finance using a method that hasn't been 
-authorised by Yahoo. This would mean that we are violating the Computer Missuse Act and could end up facing legal issues if we
-tried to sell our product.
+accessing it, the website then would allow us to download stock data. This is a legal issue as we would be violating the Data Protection Act
+(1998) due to not obtaining the data 'fairly and lawfully'.
 
 Because of this we would have to find a different, legal method to get the data. A good choice would be the IEX trading API mentioned earlier. 
 We could either learn more about the API so we can implement it ourselves or hire a developer that can implement it for us.
 
 In our program we handle sensitive user data. This includes information on money a user currently has in their bank account as well as stocks
-they currently own. This will need to be kept private. The security system we currently have in place is a login system that requires a 
+they currently own. This information will need to be kept private. The only security we currently have is a login system that requires a 
 password. However, the passwords and logins stored in our product aren’t encrypted. This would make it very easy for a hacker to discover the 
-login information of a user and potentially use the users money to buy shares or sell any shares the user owns. the EU General Data Protection 
-Regulation (2016) states that data controllers have a obiligation to "secure by design". As the current security we have in place
-isn't very strong we could be seen as violating this regulation and could be fined. This would also cause our product to violate the Data Protection 
-Act (1998) as we haven't been able to keep the users data 'Safe and secure'.
+login information of a user and potentially use the users money to buy shares or sell any shares the user owns. This lack of security could 
+cause our program to violate the EU General Data Protection Regulation (2016) as our product isn’t secure by design. This would also cause
+our product to violate the Data Protection Act again as we haven't been able to keep the users data 'Safe and secure'.
 
-Furthermore, we haven't backed up any of the data we have stored. This would violate the Data Protection Act again as we haven’t backed up the 
+Furthermore, we haven't backed any of the data we have stored. This would violate the Data Protection Act again as we haven’t backed up the 
 data stored in our product. To improve the issues I have mentioned above, we will need to implement more security by encrypting user data 
 and login info as well as backing up saved data.
 
@@ -62,6 +57,8 @@ Another ethical issue is that our product provides our users a easy way to take 
 lead to addiction and our users slowly losing significant amounts of money. To help prevent this we could implement a system that warns a user when
 they are taking a major risk that they may not be able to afford. This wouldn't prevent the user from doing what they want but instead
 ensure that they are fully informed.
+
+If our program was open publicly this would also pose an ethical issue as a specialist software like this could be used by untrained traders without knowledge and could lead to some financial loses. This could be prevented by limiting its availability and maybe posing some checks or financial proof of users.
 
 ## Health & Safety
 
