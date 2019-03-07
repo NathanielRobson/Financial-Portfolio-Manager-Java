@@ -1,103 +1,266 @@
 # Team Effort Log
-*In this section, add a heading for each team member, and under it add the sub headings "Sprint 1, Sprint 2, ..., Sprint N", as illustrated below.  Each team member can be responsible for writing their own section.*
-
-### Sprint 1 (University Week 3):
-* *Include a URL to the most siginificant Jira tasks assigned to you in sprint 1, and state when (or whether) it was completed, and the hours spent.*
-* *Example: "Link to Task 2.  It was set and completed in sprint 2.  It took 1 hour.  Extra relevant comment."*
-* *To save time, just describe the main (e.g. no more than 3) Jira issues assigned to you in this sprint. You are free to pick which 3 to describe.*
-* *Describe any relevant java coding completed by you in Sprint 1.  Also include permalinks to your gitlab commits.*
-* *Include the university week number in the subheading, as above.*
-
-
 ## Nathaniel J Robson
+Program Classes built  - 14/16  
+[AddSharesFrame](/src/AddSharesFrame.java), [BankAccountFrame](/src/BankAccountFrame.java), [BuySellSharesFrame](/src/BuySellSharesFrame.java), [CSVtoArrayService](/src/CSVtoArrayService.java), [CSVUpdateFrame](/src/CSVUpdateFrame.java), [CSVUpdateService](/src/CSVUpdateService.java), [FinancialPortfolioFrame](/src/FinancialPortfolioFrame.java), [GraphBuilderFrame](/src/GraphBuilderFrame.java), [LineChartService](/src/LineChartService.java), [LoginFrame](/src/LoginFrame.java), [LoginService](/src/loginService.java), [MenuFrame](/src/MenuFrame.java), [StockGraphService](/src/StockGraphService.java).  
 
-### Sprint 10 (University Week 10 - week 12)  
-After the MVP we had many ideas of what we were going to implement next. I began to focus on the forefront of our program, the Login page which is what the user will see first. It is important that this works well and allows the only users who are authorised to use the program to log in.
-[Jira Issue - (Login function/page)](https://cseejira.essex.ac.uk/browse/CE291T3-32) This was completed in week 14. With full functionality. Overall it took aroud 5 hours to complete and to ensure that there was no way to log in without havng specific credentials found in the 'members.csv' file. The algorithm I coded will continue to allow the specified users to log in even if the file does not exist, because it will write the file for you if it doens exist.
+Program classes refactored to further suit out teams needs - 2/2   
+[DisplayTableService](/src/DisplayTableService.java) previously named DisplayTable.java, [SearchAndViewService](/src/SearchAndViewService.java) previously named SearchAndView.java.  
+
+Technical documentation worked on - 6/9  
+[README.md document](/README.md), [Product Implementation Report](/Final Technical Documentation/ProductImplementationReport.md), [Product Demonstration](/Final Technical Documentation/Productdemonstration.md), [Project ManagementLog](/Final Technical Documentation/ProjectManagementLog.md), [CE29x Team Final Product Report](/Final Technical Documentation/CE29x Team Final Product Report.docx), Team Effort Log (This file).
+
+### Sprint 10 (University Week 10 - Week 12)  
+After the MVP we had many ideas of what we were going to implement next. I began to focus on the forefront of our program, the Login page which is what the user will see first. It is important that this works well and allows the only users who are authorised to use the program to log in.  
+[Jira - (Login function/page)](https://cseejira.essex.ac.uk/browse/CE291T3-32)   
+[Gitlab Commit](b458c61289181d795255f67e0e2adb348bc8f57c)  
+This was completed in week 14. With full functionality. Overall it took around 8-10 hours to complete and to make sure that there was no way to log in without having specific credentials found in the 'members.csv' file. The algorithm I coded will continue to allow the specified users to log in even if the file does not exist, because it will write the file for you if it does not exist.
 
 I was also assigned to create a function to allow users to be able to view their total value of their investment. This however could not be implemented until we had a system to store user data in a file to read later on.  
 [Jira - User Requirement](https://cseejira.essex.ac.uk/browse/CE291T3-9)  
 
-In the later weeks I take it upon myself to improve the program as much as I possibly could and added so many different functions which improve our program.  
-### Sprint 11 (University Week 12 - week 18)
-In week 12 I was assigned to work on program bugs and debugging, also to create buttons for the main page (Menu page).  
+In the later weeks I take it upon myself to improve the program as much as I possibly could and added so many different functions which improve our program.  After receiving feedback from the MVP This gave me the motivation required to code as many functions into our program as I possibly could, to ensure that we get our desired highest grades.
 
-We also decided to add the user requirements to Jira and expand on them to allow for more accurate program ideas and  implementations.  
+### Sprint 11 (University Week 12 - Week 18)
+In week 12 I was assigned to work on program bugs and debugging, and I also took it upon myself to begin development on creating buttons and functionality for the main menu page.  
+[MenuFrame source code](/src/MenuFrame.java)  
+[Jira - Debugging code](https://cseejira.essex.ac.uk/browse/CE291T3-15) 
+[Jira - Program bugs](https://cseejira.essex.ac.uk/browse/CE291T3-40)  
+[Gitlab Commit](f970ca1822b2cb3c2b2bcbb10b5c15ce0bd9b494)  
+The menu took me around 20 hours overall to allow for methods and functions all to work in sync with the menu frame. An example of this is being able to move from one frame to the next and also interact with buttons on the menu page which have important functions such as searching a date in a CSV file.  
 
-[Jira - Debugging code](https://cseejira.essex.ac.uk/browse/CE291T3-15)  
-[Jira - Program bugs](https://cseejira.essex.ac.uk/browse/CE291T3-40)   
+My next task was to combine both the menu frame and the login frame to allow the user to navigate and login to the program.
+[Jira - Menu Frame](https://cseejira.essex.ac.uk/browse/CE291T3-31)  
+[Jira - Combine Menu and Login](https://cseejira.essex.ac.uk/browse/CE291T3-34)  
+[Gitlab Commit](282eb3ae5f0f57de0bb27877fff6df681386723f)  
+The menu was not complete until week 21 as every time a new class or function was added to the program a new button to the menu page would have to follow.  
+
+We also decided to add the user requirements to Jira and expand on them to allow for more accurate program ideas and future implementations.  I was assigned three of them.  
 [Jira - User Requirement](https://cseejira.essex.ac.uk/browse/CE291T3-11)
-### Sprint 12 (University Week 18 - week 19)
-In week 18 many different implementations took shape in our program such as live shares data imported from the internet. This task was quite time consuming and very difficult as I would have to write from scratch a method which could gather data from Yahoo Finance and save it in a CSV file upon request. To do this I researched and read documents on how to use Java to access web pages and collect data using arrays. To collect the data, the class CSVUpdateService was created and it accesses YahooFinance with a signiture to make the website believe that the program is not software accessing the website but it is a user insteas, this way the data is easily downloaded and saved to a CSV file. Without this implementation into our program I believe that we may have not succeeded. [Jira - Online CSV Update](https://cseejira.essex.ac.uk/browse/CE291T3-52)  
-This task took around 10 hours to implement successfully.  
 
-I also set out to create a frame for the class DisplayTableService to allow users to view the table of shares imported from the internet. This was an adaptation of previous code. Callum created the class and I adjusted it to suit our needs more.  
+### Sprint 12 (University Week 18 - Week 19)
+In week 18 many different implementations took shape in our program, one example being live shares data imported from the internet. This task was quite time-consuming and very difficult as I would have to write from scratch a combination of methods which could gather data from Yahoo Finance and save it in a CSV file upon request. To do this I researched and read documents on how to use Java to access web pages and collect HTML data using arrays. To collect the data, I created the CSVUpdateService class. 
+[CSVUpdateService (source code)](/src/CSVUpdateService.java)  
+[Gitlab Commit](05e1bae6aacf6c17c1f283b78f24e706329b9aea)  
+The CSVUpdateService class accesses YahooFinance with a virtual browser created in java to gain a signature(unique website cookie) which is then stored in an array and then applied to the website URL to make the website believe that the program is not software accessing the website, but instead a user. This way the data is easily downloaded and then saved to a CSV file for future manipulation within our program. Without this implementation into our program I strongly believe that our program may have not succeeded as well as it has.  
+
+I also created a dedicated frame for this class which allows the user to manually download the company of their choice share's data upon a click of a button.  
+[CSVUpdateFrame (source code)](/src/CSVUpdateFrame.java)  
+[Jira - Online CSV Update](https://cseejira.essex.ac.uk/browse/CE291T3-52)  
+[Gitlab Commit](7be0f82ee09bf7fe85fc3fc533b5301849ec71b0)  
+This task took around 14-15 hours to implement effectively.  
+
+I also set out to create a frame for the class DisplayTableService to allow users to view the table of shares imported from the internet. This was an adaptation of previous code. Callum created the class and I refactored it to suit the users requirements more effectively.  
+The refactored class not only allows for automatic file locating but it also allows for automatic data downloading. If the file does not exist then the class downloads the file from YahooFinance using the class [CSVUpdateService (source code)](/src/CSVUpdateService.java). I believe this improved the functionality of the code by a large magnitude.  
+[CSVUpdateService (source code)](/src/CSVUpdateService.java)  
 [Jira - JFrame instead of JMessageBox](https://cseejira.essex.ac.uk/browse/CE291T3-50)  
-This task too around 2 hours to implement.  
+[Gitlab Commit](05e1bae6aacf6c17c1f283b78f24e706329b9aea)  
+This class refactor and JFrame creation took me around 4 hours to implement and complete.  
 
-This week I also worked on creating functioning graphs spent a lot of time researching on how to get them to display relevent data to the user in a user friendly manour. I decided to use 'xChart' to create a graph and display data to the user. [xChart source here.](https://knowm.org/open-source/xchart/)  
-To view the code for the Graphs [click here - Source Code](/src/StockGraphService.java)  
-This task took me around 12-14 hours of work spread over the 2 weeks to correctly display the data and fully understand how to implement the graphs correctly.  
+This week I also worked on creating functioning graphs and I spent a lot of time researching on how to get the graphs to display relevent data to the user in a user friendly manner. I decided to use the open source library 'xChart' to create a graph and display data to the user.  
+[xChart Website](https://knowm.org/open-source/xchart/)  
 
+I coded theses two classes to support the graph displays and data collection.  
+[GraphBuilderFrame (source code)](/src/GraphBuilderFrame.java)  
+[StockGraphService (source code)](/src/StockGraphService.java)  
+[Gitlab Commit](05e1bae6aacf6c17c1f283b78f24e706329b9aea)  
+Overall this task took me around 12-14 hours of work to correctly display the data and fully understand how to implement the graphs correctly.  
 
-### Sprint 13 (University Week 19 - week 20)
-This week I believed it would be a good idea to start work on storing user data and credentials in a database, so i began development in that area. I created a database and a database class which allowed the user to store their credentials in, however upon demonstrating this to a supervisor I was advised that an alternate method of saving the data in a CSV file was perfect so I was advised to drop development for this class here, so I did. Had we implemented this further I believe that the program would have become over complex for the client and may be difficult to set up everytime a user wishes to use the program.  [Jira - Remove Database](https://cseejira.essex.ac.uk/browse/CE291T3-60)  
+### Sprint 13 (University Week 19 - Week 20)
+In this sprint I believed it would be a good idea to start work on storing user data and credentials in a database, so I began development in that area. I created a database and a database class which allowed the user to store their credentials in, however upon demonstrating this to a supervisor I was advised that an alternate method of saving the data in a CSV file was perfect so I was advised to drop development for this class here, so I did. Had we implemented this further I believe that the program would have become over complex for the client and may be difficult to set up every time a user wishes to use the program.  
+[Jira - Implement Database](https://cseejira.essex.ac.uk/browse/CE291T3-58)  
+[Jira - Remove Database](https://cseejira.essex.ac.uk/browse/CE291T3-60)  
+[Gitlab Commit](37ae02ac64810c93e737f3f3a5671897bad3fcea)  
+This task took me around 5 hours to implement as I researched and followed tutorials on database implementation, however there was an easier method to storing the data in CSV files so we decided to implement that instead. Even though this function was removed, I still gained very useful technical knowledge when dealing with database functionality for future reference.  
 
-I continued to work on the program and implemented on it further by adding functionality to search a date in a file for the shares information on that day. This allowed the user to simulate past scenarios and view specific timed data. The code can be viewed [here](/src/SearchandViewService.java)  
+I continued to work on the program and implemented on it further by adding functionality to search a date in a file to view the share information on that particular day. This allowed the user to simulate past scenarios and view specific required values and timed data.
+[SearchAndView (source code)](/src/SearchandViewService.java)  
+This class was created by Callum earlier in development however to make it suit the user requirements further I decided to create a frame which displays the information requested by simply inputting the company name and a date.  
+The previous implementation of this class was clunky and inefficient, it required you to locate the file you wish to search a date under manually and only then can you search the date in a file. The display was also in a JMessageBox previously which was not good enough by our supervisors standards, so to resolve this I created a specific JFrame for the gathered data.  
+[Gitlab Commit](ff365f8da88bfaa3089cdae303d898972c859210)  
+This task took me around 2-4 hours to complete.  
 
-This class was created by Callum earlier in development however to make it suit our needs further I decided to create a frame which displays the information requested by simply inputting the company name and a date. The previous implentation of this class required you to locate the file you wish to search a date under and then search the date. The display was also in a JMessageBox previously.  
-### Sprint 14 (University Week 20 - week 22) **TODO**
+This [Gitlab Commit](ff365f8da88bfaa3089cdae303d898972c859210) is enormous however some key changes were implemented in this commit. I had spent lots of time implementing new functions such as a frame and class which allows users to purchase shares with out program previously named PurchaseSharesFrame [(BuySellSharesFrame)](/src/BuySellSharesFrame.java) and refining old code to better suit our program structure. I also restructured our programs classes to better suit our teams needs.  
+This task took me around 6 hours to complete.
 
-### Sprint 15 (University Week 22)
-### Sprint 16 (University Week 23)
+### Sprint 14 (University Week 20 - Week 21) 
+In the coming weeks I push many functions and key aspects to our program/project. The first being a major fix to our Login Frame functionability.  
+[LoginFrame (source code)](/src/LoginFrame.java).  
+[Gitab Commit](6987d9f56fd15a4957cc74bf31ef9589839958ab)  
+In this commit I also implemented a lot of exception handling to prevent the user from being able to break or crash our program. I also fixed the LoginFrame by refactoring the code upon which it worked.  I adjusted the graph building classes to better suit our users needs and also made the code a lot more efficient and I removed irrelevant lines.  
+
+I was also assigned the task in Jira to make sure that the user could view their past investments. To resolve this issue I began development for a new frame which displayed all purchased shares by the user.  
+[Jira - View Past Investment](https://cseejira.essex.ac.uk/browse/CE291T3-59)  
+
+I also continued development of the class [BuySellSharesFrame (source code)](/src/BuySellSharesFrame.java) named PurchaseStocksFrame at this point in time.   
+[Jira - Hold Shares in up to 5 Companies](https://cseejira.essex.ac.uk/browse/CE291T3-11)  
+[Git Commit](eea17a743e44b50768a257e8bcdc9daa3bf77504)  
+In this commit I continued development and I created a system that allows users to simulate purchasing shares with real currency. The user starts with '$10,000' USD and is able to buy shares using the PurchaseStocksFrame at this point in time. The frame contains methods which allow it to read the file containing the users current money, this allows for simulating profit and loss within our program. 
+However they cannot sell their shares until the class has once again been refactored later on in week 22.  
+The class was also designed to give user visual feedback depending on what shares they decided to purchase or sell and for what price.  
+This task took me around 16 hours which I finally completed in week 22.
+
+[Git Commit](eea17a743e44b50768a257e8bcdc9daa3bf77504)  
+In this commit I also renamed most of the classes to better suit their functionality, for example any classes that displayed a JFrame would now end with the term 'Frame' to allow for better distinguishability between the classes. Any classes which did not have a JFrame ended with the term 'Service'.  
+[Git removal](5c76883ca37b014cb85ba0a5ef113ba3c3641729)  
+The database functionality for the login and storing of user credentials was also removed in this sprint.  
+
+### Sprint 15 Final Sprint (University Week 21 - Week 23)  
+As the deadline for the program approaches, it is now time to push as much functions to the program as physically possible by me. I decided to put as much time as possible in throughout the day and the night to ensure that our program was way more than just 'presentable'. I wanted to see what I could produce for our team so I got to work.  
+
+On Jira there are too many tasks to display here which are assigned to me so I have attached the final sprint report link to allow for better understanding.  
+[Jira - Final Sprint Report](https://cseejira.essex.ac.uk/secure/RapidBoard.jspa?rapidView=456&projectKey=CE291T3&view=reporting&chart=sprintRetrospective&sprint=1049)  
+
+I have also attached multiple git commit links to allow for better understand of how much coding was done in these final two weeks.  
+
+[Git Commit](d57bb324de3a4a66ec6bfad7cb54e67c013dd851) - Many key functions of our program took shape in this commit including, adding a frame which allowed the user to add previously owned shares to allow for manipulation through our program [AddSharesFrame (source code)].  
+Another addition is adjusting the [GraphBuilderFrame (source code)](/src/GraphBuilderFrame.java) to allow the user to specify a range in which they would like the graph to display to them.  
+I also added login sessions to the program which would allow the program to store the current user and provide user feedback on this, for example on the menu frame the user us greeted and told who is logged in and also when purchasing shares, the shares are saved in the current users data file found in the [User Portfolio's File](/UserPortfolios).  
+I also refined the [DisplayTableService (source code)](/src/DisplayTableService.java) class code.  
+I also refined the [CSVUpdateFrame (source code)](/src/CSVUpdateFrame.java) class code.  
+Finally I also added a key function to our program, the ability to deposit and withdraw funds in the users account. 
+I created a JFrame which allows the user to see how much money they have in their accounts and then manipulate it by either depositing more funds or withdrawing funds. The class can be viewed here [BankAccountFrame](/src/BankAccountFrame.java).
+
+[Git Commit](8a148326f03d7c9bdfb33042020a3759fa71e93b) - Many many more key functions implemented in this commit including the ability to finally sell shares in the [BuySellShares (source code)](/src/BuySellShares.java) frame. This allows the user to finally find out whether or not they have made a profit on their shares they have been holding.  
+This then leads me on to another addition which was made in this commit, the ability to view account history in a line chart format. This allows the user to find out visually, when they last sold or purchased a share and whether or not they made a profit or a loss on it. It also informs the user of which company the share belonged too. I added this functionality to the main menu [MenuFrame (source code)](/src/MenuFrame.java) to allow the user to quickly and easily find out about their account history. The service class for the line chart can be found here [LineChartService](/src/LineChartService.java).  
+Which leads me on to my next addition to the program, I added a frame which allows the user to see which organisations shares they own and how many of them they own. It is displayed within a JTextArea for easy to understand data like so, 'AAPL shares 20'. This frame was named OwnedSharesFrame but has since been refactored to [FinancialPortfolioFrame](/src/FinancialPortfolioFrame.java).  
+
+[Git Commit](ff1a1976d47f57cbbe54f0586db9e8d841d92df7) - In this commit I adjusting the look and feel of our program to ensure that the program was not only functional but also a pleasure to use and look at. I adjusted simple things like frame size, label contents and attempted to add an automatically adjusting UI Manager to the program which I ended up removing as I did not like the look of it.  
+
+[Git Commit](554531736865813df319d9a8ce07ffc9b9d1b77f) - In this commit I was attempting to refine the current code to ensure it was efficient and unbreakable when executed. I also restructured the Dependency folder and renamed it to 'lib' which can be found here: [lib folder](/lib)  
+I also worked on commenting the whole program to a high standard to ensure that everyone can understand my code and the functions of each method for future reference.
+
+[Git Commit](7bd2bbe3dcb3f2423e8378141d7da1d7d27e824c) - More code refinement to the [BankAccountFrame (source code)](/src/BankAccountFrame.java) to prevent the user from withdrawing too much money at any one time and also to prevent them from depositing too much money. E.g if the user has over $100,000 in their account their only option is to withdraw the funds for safety reasons.  
+
+[Git Commit](0117e1bc11ebd3d60c1f303a3177d5a2c4e94730) - These next two commits are the final commits that contain code changed. In this commit I implemented another major key function to our program, the ability to view the users financial portfolio. This collects all data on the user and combines it to give the user visual feedback. In the [FinancialPortfolioFrame (source code)](/src/FinancialPortfolioFrame.java) the user is displayed their currently owned shares, and a large button when pressed gets the most recent price for all of their owned shares, times it by how many shares they hold for each organisation and then provides the user with the total. This allows the user to view their total worth, see how much money they started with and also see how much profit or loss they have made over time.  
+
+[Git Commit - icons](07035cd4b89d9e5a14774a490d857c8d5cfa8283) - In this commit I also refined most other classes in the program and also added a visual icon to each frame in the program to illustrate to the user of which type of window they are currently in. For example in the [BankAccountFrame (source code)](/src/BankAccountFrame.java) there is an icon of a bank in the top left corner. Another example of this is in the [GraphBuilderFrame (source code)](/src/GraphBuilderFrame.java), there is an icon of a graph. Simple yet effective UI tweak. 
+
+[Git Commit](151318db9100258bf5df955f14660e19eb08dd72) - In this commit I added the executable file of our program, at this point in time, named Team_3_Financial_Portfolio_Manager.jar and then renamed [ProgramJAR.jar](/ProgramJAR.jar). [Git commit rename](42938faf292e54f12d0b2dbe769242e3e66094c5)  
+
+After producing the executable file for the program, this concludes the coding of the project, the next commits are documentation based. Overall the time put into the program for the final sprint, two weeks is unknown but If I had to give an approximate answer I would say I have easily put in over 60 hours of work and hopefully this shows. For the following gitlab commits, they involve the work done towards completing the documentation of the program.  
+
+#### Documents
+[Jira - README.md Task](https://cseejira.essex.ac.uk/browse/CE291T3-74)
+[Git Commit - README.md](f14ee9b0121dee1b1a9fc6aa4f6de4e5855e60a4) - In this commit, I completed the README.md document for our team. This took me around 3-4 hours to complete.  
+[README.md Link](/README.md)  
+
+[Jira - Product Demonstration Task](https://cseejira.essex.ac.uk/browse/CE291T3-97)
+[Git Commit - Productdemonstration.md](735b81092f0c597dc34cc92e76b8b9208c78cc84) - I completed the product demonstration document which took me around 7 hours, hopefully it is of a high standard.  
+[Productdemonstration.md Link](/Final Technical Documentation/Productdemonstration.md)  
+
+[Jira - Technical Details Report Task](https://cseejira.essex.ac.uk/browse/CE291T3-79)  
+[Git Commit - ProjectImplementationReport.md](735b81092f0c597dc34cc92e76b8b9208c78cc84) - I completed the project implementation report which took me around 7 hours to complete.  
+[ProductImplementationReport.md Link](/Final Technical Documentation/ProductImplementationReport.md)  
+
+[Jira - Complete MarkDown Documents Task](https://cseejira.essex.ac.uk/browse/CE291T3-70)  
+[Git Commit - ProjectManagementLog.md](a077627e03af171c7aec5a594401dc7c9e6cd9d2) - I completed the project management log which took me around 5 hours to complete.  
+[ProjectManagementLog.md Link](/Final Technical Documentation/ProjectManagementLog.md)  
+
+#### Diagrams - Type Diagram, Use Case Diagram, Class Diagrams, CRC Cards
+[Git Commit - Type Diagram](8e695d4ded0973794e657faa9661fe32f633ea45) - For this commit I produced a Type Diagram to demonstrate our program from a technical perspective.   
+[Git Commit - CRC Cards](3a53ef00eeec8e3794c80427d6a5df79e9c19f95) - CRC Cards Commit, for more in-depth class demonstration.  
+
+[Jira - Class Diagram Task](https://cseejira.essex.ac.uk/browse/CE291T3-70)  
+[Git Commit - Class Diagram](8473c7468ab9ac5694f9827cd0cea80271696b93)
+[Git Commit - Use Case Diagram](8473c7468ab9ac5694f9827cd0cea80271696b93)  
+I also exported from IntelliJ a class diagram for our program demonstrating relationships between each class. Finally I also created a Use Case Diagram to demonstrate a user scenario for purchasing a share and also viewing their total financial value.  
+
 
 ## Callum Kleber
 
+
+
 ### Sprint 10 (University Week 10)
+
 ### Sprint 11 (University Week 12)
+
 ### Sprint 12 (University Week 18)
+
 ### Sprint 13 (University Week 19)
+
 ### Sprint 14 (University Week 20)
+
 ### Sprint 15 (University Week 22)
+
 ### Sprint 16 (University Week 23)
+
+
 
 ## Daniel Callender
 
+
+
 ### Sprint 10 (University Week 10)
+
 ### Sprint 11 (University Week 12)
+
 ### Sprint 12 (University Week 18)
+
 ### Sprint 13 (University Week 19)
+
 ### Sprint 14 (University Week 20)
+
 ### Sprint 15 (University Week 22)
+
 ### Sprint 16 (University Week 23)
+
+
 
 ## Koranteng Lartey
 
+
+
 ### Sprint 10 (University Week 10)
+
 ### Sprint 11 (University Week 12)
+
 ### Sprint 12 (University Week 18)
+
 ### Sprint 13 (University Week 19)
+
 ### Sprint 14 (University Week 20)
+
 ### Sprint 15 (University Week 22)
+
 ### Sprint 16 (University Week 23)
+
+
 
 ## Elios Dauti
 
+
+
 ### Sprint 10 (University Week 10)
+
 ### Sprint 11 (University Week 12)
+
 ### Sprint 12 (University Week 18)
+
 ### Sprint 13 (University Week 19)
+
 ### Sprint 14 (University Week 20)
+
 ### Sprint 15 (University Week 22)
+
 ### Sprint 16 (University Week 23)
+
+
 
 ## Kyle Moody
 
+
+
 ### Sprint 10 (University Week 10)
+
 ### Sprint 11 (University Week 12)
+
 ### Sprint 12 (University Week 18)
+
 ### Sprint 13 (University Week 19)
+
 ### Sprint 14 (University Week 20)
+
 ### Sprint 15 (University Week 22)
+
 ### Sprint 16 (University Week 23)
 
