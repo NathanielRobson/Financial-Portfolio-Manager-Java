@@ -202,7 +202,7 @@ Week 18, I had decided that I would work on the graphs of the program. During th
 ### Sprint 13 (University Week 19)
 During the week 19 sprint, I had decided to switch to using a Java API to create the graph I was working on. I had originally made the switch as I was wondering how we as a group would be able to implement the data fromour csv into the graph which would not make it to difficult to understand. When creating the graph using the API, I had created data that I would use to test to see whether or not the program was displaying the correct output. Initially it was not displaying the correct output however, due to perseverance I had found a way to fix this error. Initially, I was planning for our graph to displayed like a typical bar chart but as it was not clear, I had decided it was simpler to display it as a line chart.
 During this time, Nathaniel had a completed a graph that was working with our current program, thus resulting me to retire my version of the chart. <br>
-[Jira- Graphs](https://cseejira.essex.ac.uk/browse/CE291T3-55)
+[Jira- Graphs](https://cseejira.essex.ac.uk/browse/CE291T3-55)<br>
 [Git commit - StockGraph](31ba0a65ec13d25adc7834ae27de8f782445d041)
 
 ### Sprint 14 (University Week 20)
