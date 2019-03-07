@@ -188,12 +188,12 @@ I also exported from IntelliJ a class diagram for our program demonstrating rela
 
 ## Daniel Callender
 
-
-
 ### Sprint 10 (University Week 10- Week 12)
 Personally, I felt as if our MVP had lacked many of the features that we stated that we woulkd like implemented to demonstrate. This way I had set out to edit the original menu class that I had initially made for our program. However, another member of the group had volunteered to make the menu page, and I had chosen decided that I would research methods of implementing other features into the team project and getting information about what we could implement back into the team. I had realised that we could implement a login feature into our program which Nathaniel had set out to do.This week, I had also suggested we add a main page/menue page to our program.
-These weeks, I had also decided to research more companies that we could have added to our csv file to increase it. <br>
+These weeks, I had also decided to research more companies that we could have added to our csv file to increase it.   
 [Jira - (Main Page function)](https://cseejira.essex.ac.uk/browse/CE291T3-31)
+
+
 [Jira - (Login function/page)](https://cseejira.essex.ac.uk/browse/CE291T3-32)  
 
 ### Sprint 12 (University Week 18)
@@ -207,11 +207,12 @@ During this time, Nathaniel had a completed a graph that was working with our cu
 
 ### Sprint 14 (University Week 20)
 
-### Sprint 15 (University Week 22)
+### Sprint 15 - Final Sprint (University Week 21 - Week 23 )
+As we had finished our program, I compared it to the requirements that we had set out earlier on and during the product to see if we had matched them. During this time, I had also volunteered to complete the marketing document for the project. This included alot of research that was to know what type of market that our product aimed to go through. To also complete this, I had downloaded some stock trading applications to get a much better understanding of how we were going to enter market and how to distinguish ourselves. Due to the proactive thinking, this had enabled me to have a wider range of topics to talk about and compare us to our competition and what we had to offer that they had not. Also, talking to people that were already using financial portfolios helped play a role in choosing demogrpahics and what methods worked well. These were noted down and added to the marketing document.
 
-### Sprint 16 (University Week 23)
+[Jira - Marketing Document](https://cseejira.essex.ac.uk/browse/CE291T3-71)
 
-
+[Git Commit Marketing Document](bef256dcf24ea9ba7655b321a83fb00468bef031)
 
 ## Koranteng Lartey
 
