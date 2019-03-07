@@ -190,7 +190,8 @@ I also exported from IntelliJ a class diagram for our program demonstrating rela
 
 
 
-### Sprint 10 (University Week 10)
+### Sprint 10 (University Week 10
+As a group, we felt as if our MVP had lacked many of the features that we stated that we woulkd like implemented. This way I had set out to edit the buttons file that I had initially made for our program. Hiow fjgnbssdfsddfg asdfghsdjkfgs
 
 ### Sprint 11 (University Week 12)
 
