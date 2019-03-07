@@ -34,4 +34,16 @@ public class loginService { //Login Service
             System.out.println("Error While Trying to Parse Login Details");
         }
     }
+
+    public LinkedList<String> getUserNames(){
+        return userNames;
+
+    }
+
+    public LinkedList<String> getPassWords(){
+        return passWords;
+
+    }
+
+
 }

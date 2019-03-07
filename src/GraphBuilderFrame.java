@@ -13,6 +13,12 @@ class GraphBuilderFrame extends JFrame { //Graph Building Frame
     private JTextField symbolField, fromField, toField, rangeField;
     private JLabel errorLabel;
 
+
+    public JTextField getSymbolField() {
+        return this.symbolField;
+
+    }
+
     GraphBuilderFrame() { //Frame init and design and layout
 
         //Custom Fonts for Look and Feel

@@ -23,6 +23,11 @@ public class BankAccountFrame extends JFrame { //Bank Account Frame
     private JTextField inputField;
     private JTextArea currentMoney;
 
+    public JTextArea getCurrentMoney() {
+        return this.currentMoney;
+
+    }
+
     BankAccountFrame(String theCurrentUser) {//Frame initialisation, layout and functionality
 
         //Sets the current user

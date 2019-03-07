@@ -10,7 +10,8 @@ import java.io.IOException;
 import java.util.Collections;
 import java.util.Scanner;
 
-public class AddSharesFrame extends JFrame { //Add Shares Frame
+public class AddSharesFrame extends JFrame {
+
     //Main method for testing
     public static void main(String[] args) {
         new AddSharesFrame("NR");
@@ -22,6 +23,11 @@ public class AddSharesFrame extends JFrame { //Add Shares Frame
     private JTextField symbolField;
     private JTextField priceField;
     private JTextField dateField;
+
+    public JTextField getdateField() {
+        return this.dateField;
+
+    }
 
     AddSharesFrame(String theCurrentUser) {//Frame initialisation, layout and functionality
         this.theCurrentUser = theCurrentUser;
