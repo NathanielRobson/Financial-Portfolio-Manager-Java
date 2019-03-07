@@ -361,13 +361,17 @@ class StockGraphService { //Stock Graph Service
 ````
 
 #### Time Complexity
- 
-**TODO How it relates to our company**
 * [Add()] O(1) - Adding to the ArrayList is O(1) time where O is the approximate time for the given task and O(1) is constant time.  
 * [Get()] O(1) - Retrieving an element is always a constant time O(1).  
 * [Remove()] O(n) - however we do not remove from the arrays in our program, only overwrite.
 * [IndexOf()] O(n) - this is because when checking it will iterate through n items in the array.  
 * [Contains()] O(n) - this will run based on indexOf so it will run O(n) as above.  
+
+Above is the standard Java time complexity for Arrays. In our program when we want to find a specific date to display in graph format this uses the IndexOf() time complexity, finding the specified data required to display will take O(n) time where 'n' is the amount of elements in the array, so if we wanted to view the most recent date for a company we would have to find the element at the size of the array. O(sizeofarray) would be our time complexity here.
+
+If we wanted to add user data to an array in our program we would take into consideration the Add() time complexity which is O(1) where '1' is the element of which we are adding to the array. If we were intending to add more than one item, eg. 2 it would take 2xO(1) as we are still performing the same function 'Add()', only we are performing it twice.
+
+The above code displayed uses the IndexOf() function meaning that the time complexity would be O(n) where n is the date/element we wish to find. The function will run O(n) times until 'n' is found. This means that if the element which we are searching for is at the last element of the array, the longest time complexity of this function could only be O(sizeofarray) whereas if we wanted the first element in the array this would only be O(1).
 
 ## Imported Libraries 
 
@@ -406,11 +410,13 @@ OpenCSV allows for more efficient reading of CSV files and more efficient writin
 This is used to create Graph scenarios in our program and to allow the user to simulate finances from any company listed on Yahoo Finance.  
 
 ## Known Issues
-
 Currently known issues:  
 
 If the user has just started and has no data on their account in our program. The view account history line chart will not display data.  
 It will display data if the user's account is more than one day old because it works on a date basis. The chart cannot shot increase/decrease over time if there is not more than 1 day to display.  
 Thankfully all of the accounts which are in the program have data on file and they have history.   
-If you log into one with out enough data (more than 1 day) then switch user to 'NR' with the password 'teamNR'.   (Resolution)
+If you log into one with out enough data (more than 1 day) then switch user to 'NR' with the password 'teamNR'.   
+(Partially Resolved)
 
+We do not currently have a reset function so all data stored on the user is permanant. There is however a work around. Either delete the files in the 'UserShares' folder and the 'UserPortfolios' folder to wipe the data or as an alternative, open the corresponding account data file found in 'Userportfolios' and remove as many lines as you please.   
+(Partially Resolved)
