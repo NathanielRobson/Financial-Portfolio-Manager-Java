@@ -190,8 +190,9 @@ I also exported from IntelliJ a class diagram for our program demonstrating rela
 
 
 
-### Sprint 10 (University Week 10
-As a group, we felt as if our MVP had lacked many of the features that we stated that we woulkd like implemented. This way I had set out to edit the buttons file that I had initially made for our program. Hiow fjgnbssdfsddfg asdfghsdjkfgs
+### Sprint 10 (University Week 10- Week 12)
+As a group, we felt as if our MVP had lacked many of the features that we stated that we woulkd like implemented. This way I had set out to edit the original menu class that I had initially made for our program. However, another member of the group had volunteered to make the menu page, and I had chosen decided that I would research methods of implementing other features into the team project and getting information about what we could implement back into the team. I had realised that we could implement a login feature into our program which Nathaniel had set out to do.
+[Jira - (Login function/page)](https://cseejira.essex.ac.uk/browse/CE291T3-32)  
 
 ### Sprint 11 (University Week 12)
 
