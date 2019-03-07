@@ -142,6 +142,7 @@ As you can see the data matches data held in Google fincance.
 
 
 ## Automatic Testing:
+JUnit is a unit testing framework for Java programming language. JUnit is used in the development of test-driven development
 *Describe any JUnit tests you created. Describe what percentage of program functionality is covered by JUnit tests.*
 
 *Highlight any functionality not covered by JUnit tests, and say how you overcame that shortfall.*
