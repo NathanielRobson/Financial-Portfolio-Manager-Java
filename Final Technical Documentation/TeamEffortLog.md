@@ -212,7 +212,7 @@ As we had finished our program, I compared it to the requirements that we had se
 
 [Jira - Marketing Document](https://cseejira.essex.ac.uk/browse/CE291T3-71)
 
-[Git Commit Marketing Document](bef256dcf24ea9ba7655b321a83fb00468bef031)
+[Git Commit Marketing Document](Final Technical Documentation/MarketingPlan.md)
 
 ## Koranteng Lartey
 
