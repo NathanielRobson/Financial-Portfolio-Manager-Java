@@ -63,4 +63,5 @@ If our program was open publicly this would also pose an ethical issue as a spec
 ## Health & Safety
 
 As our product is software based there aren’t many health and safety risks. Users should take breaks when using the product and make sure they 
-are in adequate conditions to avoid eye strain, headaches etc.
+are in adequate conditions to avoid eye strain, headaches and more health related complications.  
+Another health and safety concern would be ensuring that the user is aware of the risks involved with buying and selling shares as it involves risking money. This can cause new users stress if they are unfamiliar of the consequences of uninformed trades. This stress and high risk can lead to unintended addiction to risking high amounts of money, similarly to gambling. This can cause mental health issues and major amounts of stress and discomfort. To prevent this our team could implement a function to inform users of the risks involved with our program to prevent users from making uninformed decisions. We could also have a timed message to continue to remind users of the risks involved within a certain interval.
