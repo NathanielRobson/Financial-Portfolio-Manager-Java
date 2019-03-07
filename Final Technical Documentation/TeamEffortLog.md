@@ -191,12 +191,14 @@ I also exported from IntelliJ a class diagram for our program demonstrating rela
 
 
 ### Sprint 10 (University Week 10- Week 12)
-As a group, we felt as if our MVP had lacked many of the features that we stated that we woulkd like implemented. This way I had set out to edit the original menu class that I had initially made for our program. However, another member of the group had volunteered to make the menu page, and I had chosen decided that I would research methods of implementing other features into the team project and getting information about what we could implement back into the team. I had realised that we could implement a login feature into our program which Nathaniel had set out to do.
+Personally, I felt as if our MVP had lacked many of the features that we stated that we woulkd like implemented to demonstrate. This way I had set out to edit the original menu class that I had initially made for our program. However, another member of the group had volunteered to make the menu page, and I had chosen decided that I would research methods of implementing other features into the team project and getting information about what we could implement back into the team. I had realised that we could implement a login feature into our program which Nathaniel had set out to do.This week, I had also suggested we add a main page/menue page to our program.
+These weeks, I had also decided to research more companies that we could have added to our csv file to increase it. <br>
+[Jira - (Main Page function)](https://cseejira.essex.ac.uk/browse/CE291T3-31)
 [Jira - (Login function/page)](https://cseejira.essex.ac.uk/browse/CE291T3-32)  
 
-### Sprint 11 (University Week 12)
-
 ### Sprint 12 (University Week 18)
+Week 18, I had decided that I would work on the graphs of the program. During this week i had decided to have an attempt at hard coding the graph without the influence of Java API's. This had proved difficult but after many trials and errors, I had managed to get a graph to display but due to the graph only cutting out at a certain position, I had decided to not upload it to Gitlab until I was able to fix the error. I had also decided to find more research on how to fix this error via youtube and stackoverflow.
+https://cseejira.essex.ac.uk/browse/CE291T3-55
 
 ### Sprint 13 (University Week 19)
 
