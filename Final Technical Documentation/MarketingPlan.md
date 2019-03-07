@@ -1,22 +1,16 @@
 # Marketing Plan
-
-*Expand upon the marketing plan slide from the CE29x lecture on Marketing.  Hints are given below.*
-
-
 # Customers
 
-The likely interest for the customers would be those that range from the ages 18 and upwards. This age had been selected since the customers must have some prior knowledge even if a little, of how the stock market works. Furthermore, the app does not need a skill gap for the customers as it has a relatively simple interface, meaning that all from the most experienced user to the least experienced user will be able effectively use the app. Due to trading becoming increasingly popular in first world countries, this would increase the demand for financial portfolio products and consequently the demand for easier to use financial portfolio pproducts.
-As it would be a mobile application, we have decided to role out our product to the major markers such as the Uk, USA, certain countries in Europe such as France and Germany. The app could then be rolled over to other markets if the demand is there and also if it is succesful in the initial set of countries.
-
-
+The likely interest for the customers would be those that range from the ages 18 and upwards. This age had been selected since the customers must have some prior knowledge even if a little, of how the stock market works. Furthermore, the app does not need a skill gap for the customers as it has a relatively simple interface, meaning that all from the most experienced user to the least experienced user will be able effectively use the app. Due to trading becoming increasingly popular in first world countries, this would increase the demand for financial portfolio products and consequently the demand for easier to use financial portfolio products.
+As it would be a mobile application, we have decided to deliver our product to the major markers such as the Uk, USA, certain countries in Europe such as France and Germany. The app could then be rolled over to other markets if the demand is there and also if it is succesful in the initial set of countries.
 
 # Economics
 According to Broker Notes, it show that there were 13.9 million online traders in 2018 which was up from the previous year’s 9.6 million which is an increase of 4.3million or just under 50%. This is likely to increase as more people start to become interested in trading. 
 
-Market trends may vary based upon the age group of any said demographic. This suggest that there is not any one said given trend for the entire market as some may chose to trade in only currencies and others may chose to trade stocks or bunds. The former market trend for ager group 18-35 was crypto-currencies due to high return values. However due to the decline of the crypto market, this trend has died with it.  
+Market trends may vary based upon the age group of any said demographic. This suggest that there is not any one said given trend for the entire market as some may chose to trade in only currencies and others may chose to trade stocks or bonds. The former market trend for ager group 18-35 was crypto-currencies due to high return values. However due to the decline of the crypto market, this trend has died with it.  
 
 The demand for user friendly financial portfolio has been on the rise. This new demand can be explained due to the overwhelming amounts of users that are downloading and using financial portfolios/trading applications.  
-From Market research, it was noticed that there were a relatively small barrier to entry into the market. This was as no other product that would be able to incite Predatory Pricing or limit pricing due to the inital software being free to download. However there were barriers to entry within the market. These stem from the advertising cost as well as brand loyalty. As advertising can be expensive this may push competitors out of the market, especially since alot of trading apps are free to download thus meaning that they may not reaching a breakeven stage. Brand Loyalty is another barrier to entry. This is can be shown with competitors such as Yahoo finance and TD Ameritrade having a large fanbase that it would be hard for newer products to gain a footing in the market. This could be stated as to why a lot of financial portfolio products are not released into the market.
+From Market research, it was noticed that there were a relatively small barrier to entry into the market. This was as no other product that would be able to incite Predatory Pricing or limit pricing due to the inital software being free to download. However there were barriers to entry within the market. These stem from the advertising cost as well as brand loyalty. As advertising can be expensive this may push competitors out of the market, especially since many trading apps are free to download thus meaning that they may not reaching a breakeven stage. Brand Loyalty is another barrier to entry. This is can be shown with competitors such as Yahoo finance and TD Ameritrade having a large fan base that it would be hard for newer products to gain a footing in the market. This could be stated as to why a lot of financial portfolio products are not released into the market.
 
 Going into the market, we will have a small market share at first compared to the well-established programs. This estimation would between 0.5%-2%. But as the market grows, the company aims to have a 15%-30% share of the market. 
 
@@ -61,7 +55,7 @@ This image is from the menu screen of the Trading App, Trading212:
 ![Screenshot](/README-Images/Trading212_Img.jpg) 
  
 
-What our competitors apps do differently from ours varies upon which trading app/ financial portfolio. As shown with Yahoo Finance, it does not offer any services that involve trading rather services that would help the customer customise the application. On the other hand, Trading212 has a similar function to ours. The difference is that Trading212 main menu does not allow them to either invest or view investment.  
+What our competitors apps do differently to ours varies depencing on which trading app/financial portfolio Is utilised. As shown with Yahoo Finance, it does not offer any services that involve trading rather services that would help the customer customise the application. On the other hand, Trading212 has a similar function to ours. The difference is that Trading212 main menu does not allow them to either invest or view investment.  
 
 These features would put us at an advantage over our competitors as it cuts out what could be “unnecessary” navigation. Another advantage that our product has is that our product can be used worldwide. This is an advantage that is most notably against RobinHood as it cannot be accessed by the UK Apple App Store. 
 
@@ -169,7 +163,7 @@ Location
 
 # Product, Price, Promotion, Place
 
-Product: For the name of our we have decided to keep it simple and go with EssexFinance. We had decided on that name for our product due to getting inspiration from the major giants of financal products such as Google Finance and Yahoo Finance. Similarly to the Yahoo Finance we decided to have no variety/ changes in the product wether it was used on the Andriod operating system or iOS. This was to make it easier for the user so that if they were to swtich devices that they would not have to relearn the mechanics of the program. The same can also be said about the design of the product. Due to the product being placed on the app store, there would be customer service that would help the user if there was an issue with the application. However due to the program having a monthly subscription, we have a feature that would allow the customer to cancel their subscription and in some serious instance the user would be eligible for a refund. However the app aims to remind the user via the method they had used to download the app(App store or Google Play store)
+Product: For the name of our we have decided to keep it simple and go with EssexFinance. We had decided on that name for our product due to getting inspiration from the major giants of financial products such as Google Finance and Yahoo Finance. Similarly to the Yahoo Finance we decided to have no variety/ changes in the product whether it was used on the Andriod operating system or IOS. This was to make it easier for the user so that if they were to switch devices that they would not have to relearn the mechanics of the program. The same can also be said about the design of the product. Due to the product being placed on the app store, there would be customer service that would help the user if there was an issue with the application. However due to the program having a monthly subscription, we have a feature that would allow the customer to cancel their subscription and in some serious instance the user would be eligible for a refund. However the app aims to remind the user via the method they had used to download the app(App store or Google Play store)
 
 Price: For our product, we aim to make it a monthly subscription that could be paid by PayPal or direct debit. Compared to our direct competitors such as Yahoo Finance and RobinHood, we aim to have the same premium monthly services but at a lower cost. This is as Yahoo finance are aiming to introduce a monthly service which would cost up to $100 or £76.24. Whereas RobinHood already has an established subscription ranges from $40 or £30.50 to $60 or £45.75 monthly. To have an edge over the market, we have established that a monthly subscription fee of $25 to customers in the United States , £25 to customers within the UK and €25 to customers within Europe. In this regards we aim to undercut our competition
 
@@ -185,10 +179,8 @@ Using a mid-sized agency to aid with the Search Engine Optimisation otherwise kn
 
 £1500 + £380 + £500 = £2380. This will be the cost to acquire a server and factoring in the costs for advertising. However, it can be noted that the server set up could be a onetime event. Taking these into consideration, the costs could be lower on a monthly basis by £500. However, if the company were to expand at an exponential rate, then the costs to set up to accommodate the newer users could range from £500 for a mid-range server to £800+ for a high-end server. Furthermore, the cost to using the email marketing advertisement technique would also increase. 
 # Sales Forecast
-* How many downloads / sales / shipped units could you realistically achieve in the first 12 months?  
-* How much cash would that bring in?
 
-Below shows a cash-flow forecast.From the graph it can be interpreted that the company makes no income from initial sales/downloads, however there is a monthly subscribtion that is what generates the income from the application. it is calculated in 1000's so 5 would represent £5000
+Below shows a cash-flow forecast.From the graph it can be interpreted that the company makes no income from initial sales/downloads, however there is a monthly subscription that is what generates the income from the application. it is calculated in 1000's so 5 would represent £5000
 
 | Month                    | Jan | Feb | Mar | Apr | May | Jun | Jul | Aug | Sep | Oct | Nov  | Dec  |
 |--------------------------|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|------|------|
@@ -199,7 +191,12 @@ Below shows a cash-flow forecast.From the graph it can be interpreted that the c
 | Monthly Cash Inflow      | 5  | 15 | 20 | 27.5 | 38 | 50 | 60 | 75 | 74.5 | 89 | 100 | 150 |
 
 Due to the nature of the app being a new one on the market, what can be shown from market research is that it would have a slow growth on its initial release. However through methods such as advertising and word of mouth, the product would continue to grow at a faster rate than previously.
-what the forecast shows is that there was a dip in the sales from subcriptions between July and August. This could be due to a majority of factors unknown to the user.
+what the forecast shows is that there was a dip in the sales from subscriptions between July and August. This could be due to a majority of factors unknown to the user.
+
+## Alternate Forecast
+An alternative method to allow for a successful product would be to continue development for at least another 6 months to allow for the program to be refined. After the 6 months we could then assess our current standing and decide whether or not to push our program out to the public. The program could be first offered to the public for free for an initial timeframe and after that we could then begin to charge for use of our program.  
+Depending on how popular our program is in the free initial release period will determine the price of the product when we release it as a paid product.  
+I propose that instead of a monthly fee, we could charge per share purchased and thus earning profit per share bought. The rate at which I would introduce the cost would be 3% per share purchase. For example a purchase of 100 Facebook shares for $200 per share would total $20,000 would allow our team to gather a profit of $6 per share, accumulating up to $600 dollars for this single purchase by an individual. 
 
 References 
 
