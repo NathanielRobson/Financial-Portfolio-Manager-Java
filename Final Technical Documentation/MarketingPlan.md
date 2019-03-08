@@ -1,5 +1,4 @@
 # Marketing Plan
-Using Primary and Secondary Market research allowed the us to develop a successful marketing plan as it gave a range of sources to base it upon.
 # Customers
 
 The likely interest for the customers would be those that range from the ages 18 and upwards. This age had been selected since the customers must have some prior knowledge even if a little, of how the stock market works. Furthermore, the app does not need a skill gap for the customers as it has a relatively simple interface, meaning that all from the most experienced user to the least experienced user will be able effectively use the app. Due to trading becoming increasingly popular in first world countries, this would increase the demand for financial portfolio products and consequently the demand for easier to use financial portfolio products.
