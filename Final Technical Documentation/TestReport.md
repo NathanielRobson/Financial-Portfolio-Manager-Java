@@ -142,6 +142,45 @@ As you can see the data matches data held in Google fincance.
 
 
 ## Automatic Testing:
+JUnit is a unit testing framework for Java programming language. JUnit is used in the development of test-driven development
+Don below are some of the test using the Junit testing framework:
+### JUnit Test 1
+#### Test Description: Here a method was used so as to check that both user and password where correctly inserted in the login stage By checking that both the password and user name were contained in the members CSV file
+#### Test result: Pass.
+#### Screenshots: 
+![Screenshot](/README-Images/JUnitTest1.JPG)
+
+### JUnit Test 2
+#### Test Description: This Test was conducted to see if a CSV file was created prior to the user downloading the information to display the Graph which would display a company data so as not to get confused with not updated data.  
+#### Test result: Pass.
+#### Screenshots: 
+![Screenshot](/README-Images/JUnitTest2.JPG)
+
+### JUnit Test 3
+#### Test Description: This Test was conducted to see if the CSVs files containing the users data was in the repositry so that data can be retrieved to display a user shares. 
+#### Test result: Pass.
+#### Screenshots:
+![Screenshot](/README-Images/JUnitTest3.JPG)
+
+### JUnit Test 4
+#### Test Description: As seen below this test was used to ensure that users that the correct data formaat was used when inputing date the shares would be either sold or bought.
+#### Test result: Pass.
+#### Screenshots:
+![Screenshot](/README-Images/JUnitTest4.JPG)
+![Screenshot](/README-Images/JUnitTest4b.JPG)
+
+### JUnit Test 5
+#### Test Description: This test was used to test that the amount of money a user possed would not be more than 10,000 
+#### Test result: Fail.
+#### Screenshots:
+![Screenshot](/README-Images/JUnitTest5.JPG)
+
+this test failed to the method not being to identify the amount in the text field
+
+These Junit Tests covered at least 20% of program functionality. The rest of the promam testing of functions was used method suh as "try" and "catches" with also implementations of "if" and "else" statements.
+Down below are some example of functionality not covered by Junit Tests
+
+
 *Describe any JUnit tests you created. Describe what percentage of program functionality is covered by JUnit tests.*
 
 *Highlight any functionality not covered by JUnit tests, and say how you overcame that shortfall.*

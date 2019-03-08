@@ -188,30 +188,31 @@ I also exported from IntelliJ a class diagram for our program demonstrating rela
 
 ## Daniel Callender
 
-
-
 ### Sprint 10 (University Week 10- Week 12)
 Personally, I felt as if our MVP had lacked many of the features that we stated that we woulkd like implemented to demonstrate. This way I had set out to edit the original menu class that I had initially made for our program. However, another member of the group had volunteered to make the menu page, and I had chosen decided that I would research methods of implementing other features into the team project and getting information about what we could implement back into the team. I had realised that we could implement a login feature into our program which Nathaniel had set out to do.This week, I had also suggested we add a main page/menue page to our program.
-These weeks, I had also decided to research more companies that we could have added to our csv file to increase it. <br>
+These weeks, I had also decided to research more companies that we could have added to our csv file to increase it.   
 [Jira - (Main Page function)](https://cseejira.essex.ac.uk/browse/CE291T3-31)
+
+
 [Jira - (Login function/page)](https://cseejira.essex.ac.uk/browse/CE291T3-32)  
 
 ### Sprint 12 (University Week 18)
 Week 18, I had decided that I would work on the graphs of the program. During this week i had decided to have an attempt at hard coding the graph without the influence of Java API's. This had proved difficult but after many trials and errors, I had managed to get a graph to display but due to the graph only cutting out at a certain position, I had decided to not upload it to Gitlab until I was able to fix the error. I had also decided to find more research on how to fix this error via youtube and stackoverflow.
-[Jira- Graphs](https://cseejira.essex.ac.uk/browse/CE291T3-55)
+[Jira- Graphs](https://cseejira.essex.ac.uk/browse/CE291T3-55) This Graph took me 6 hours to complete and a further 3 hours to attempt to fix the errors.
 ### Sprint 13 (University Week 19)
 During the week 19 sprint, I had decided to switch to using a Java API to create the graph I was working on. I had originally made the switch as I was wondering how we as a group would be able to implement the data fromour csv into the graph which would not make it to difficult to understand. When creating the graph using the API, I had created data that I would use to test to see whether or not the program was displaying the correct output. Initially it was not displaying the correct output however, due to perseverance I had found a way to fix this error. Initially, I was planning for our graph to displayed like a typical bar chart but as it was not clear, I had decided it was simpler to display it as a line chart.
 During this time, Nathaniel had a completed a graph that was working with our current program, thus resulting me to retire my version of the chart. <br>
 [Jira- Graphs](https://cseejira.essex.ac.uk/browse/CE291T3-55)<br>
-[Git commit - StockGraph](31ba0a65ec13d25adc7834ae27de8f782445d041)
+[Git commit - StockGraph](31ba0a65ec13d25adc7834ae27de8f782445d041) This graph had taken me 3 hours to complete and a futher 2 hours to implement my own data and debug the program
 
 ### Sprint 14 (University Week 20)
 
-### Sprint 15 (University Week 22)
+### Sprint 15 - Final Sprint (University Week 21 - Week 23 )
+As we had finished our program, I compared it to the requirements that we had set out earlier on and during the product to see if we had matched them. During this time, I had also volunteered to complete the marketing document for the project. This included alot of research that was to know what type of market that our product aimed to go through. To also complete this, I had downloaded some stock trading applications to get a much better understanding of how we were going to enter market and how to distinguish ourselves. Due to the proactive thinking, this had enabled me to have a wider range of topics to talk about and compare us to our competition and what we had to offer that they had not. Also, talking to people that were already using financial portfolios helped play a role in choosing demogrpahics and what methods worked well. These were noted down and added to the marketing document.
 
-### Sprint 16 (University Week 23)
+[Jira - Marketing Document](https://cseejira.essex.ac.uk/browse/CE291T3-71)
 
-
+[Git Commit Marketing Document](Final Technical Documentation/MarketingPlan.md)
 
 ## Koranteng Lartey
 
