@@ -136,11 +136,6 @@ As you can see the data matches data held in Google fincance.
 
 
 
-
-
-
-
-
 ## Automatic Testing:
 JUnit is a unit testing framework for Java programming language. JUnit is used in the development of test-driven development
 Don below are some of the test using the Junit testing framework:
@@ -174,15 +169,29 @@ Don below are some of the test using the Junit testing framework:
 #### Test result: Fail.
 #### Screenshots:
 ![Screenshot](/README-Images/JUnitTest5.JPG)
-
-this test failed to the method not being to identify the amount in the text field
-
-These Junit Tests covered at least 20% of program functionality. The rest of the promam testing of functions was used method suh as "try" and "catches" with also implementations of "if" and "else" statements.
-Down below are some example of functionality not covered by Junit Tests
+![Screenshot](/README-Images/JUnitTest5b.JPG)
 
 
-*Describe any JUnit tests you created. Describe what percentage of program functionality is covered by JUnit tests.*
+These Junit Tests covered at least 15% of program functionality. 
+The rest of the program testing of functions was used methods such "if" and "else" statements to ensure that if errors would come an appropriate massege would be dsiplayed.this were used to overcame some of the functionality not covered used Junit testing.
+Down below are some example of functionality not covered by Junit Tests:
 
-*Highlight any functionality not covered by JUnit tests, and say how you overcame that shortfall.*
+## Functionality test 1
+#### Function Description: This functions was used, using an event handler whcih would run a loop though the lists of members to find input value matches and validates both the login button and Reset Buttons
+#### Screenshots:
+![Screenshot](/README-Images/FunctionalTest1.JPG)
 
-*Describe if you managed to use the continuous integration server to run tests - which tests were run, and what were the results?* 
+## Functionality test 2
+#### Function Description: By using another event handler here we made sure that the the program would get updates by downloading the most recent file online. And ensuring that the Loop checks to see if the string .csv was added to input or not, if not it will do it for you.
+#### Screenshots:
+![Screenshot](/README-Images/FunctionalTest2.JPG)
+
+## Functionality test 3
+#### Function Description: This functions was used, using an event handler whcih would run a loop though the lists of members to find input value matches and validates both the login button and Reset Buttons
+#### Screenshots:
+![Screenshot](/README-Images/FunctionalTest2.JPG)
+
+## Functionality test 4
+#### Function Description: This functions was used, using an event handler whcih would run a loop though the lists of members to find input value matches and validates both the login button and Reset Buttons
+#### Screenshots:
+![Screenshot](/README-Images/FunctionalTest2.JPG)
