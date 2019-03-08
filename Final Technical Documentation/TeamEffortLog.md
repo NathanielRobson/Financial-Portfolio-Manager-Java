@@ -285,22 +285,3 @@ Week 20 and we have completed a majority of the functionality of our program and
 Our final sprint, and our program is mostly complete, and we are just making minor adjustments and comparing it to the software specification and requirements we set out to achieve. We started running tests on our program; at first, we assigned a team member to work on running the tests, but they struggled to tackle this problem using Junit testing and offered the classic before and after style screenshot testing which covered many different inputs and outputs, but after talking about it with the team we helped and managed to aid the progress of this task, which is now complete. We also resourcefully completed the final technical documentation. I personally worked more on the product context report dealing with the ethics and health and safety of the documentation. All these sections required copious amounts of research to obtain a good knowledge of all the sections and complete them to the best of our abilities.
 
 
-
-## Kyle Moody
-
-
-
-### Sprint 10 (University Week 10)
-
-### Sprint 11 (University Week 12)
-
-### Sprint 12 (University Week 18)
-
-### Sprint 13 (University Week 19)
-
-### Sprint 14 (University Week 20)
-
-### Sprint 15 (University Week 22)
-
-### Sprint 16 (University Week 23)
-
