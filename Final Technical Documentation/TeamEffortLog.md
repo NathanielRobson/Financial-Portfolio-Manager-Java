@@ -220,10 +220,11 @@ These weeks, I had also decided to research more companies that we could have ad
 ### Sprint 12 (University Week 18)
 Week 18, I had decided that I would work on the graphs of the program. During this week i had decided to have an attempt at hard coding the graph without the influence of Java API's. This had proved difficult but after many trials and errors, I had managed to get a graph to display but due to the graph only cutting out at a certain position, I had decided to not upload it to Gitlab until I was able to fix the error. I had also decided to find more research on how to fix this error via youtube and stackoverflow.
 [Jira- Graphs](https://cseejira.essex.ac.uk/browse/CE291T3-55) This Graph took me 6 hours to complete and a further 3 hours to attempt to fix the errors.
+
 ### Sprint 13 (University Week 19)
 During the week 19 sprint, I had decided to switch to using a Java API to create the graph I was working on. I had originally made the switch as I was wondering how we as a group would be able to implement the data fromour csv into the graph which would not make it to difficult to understand. When creating the graph using the API, I had created data that I would use to test to see whether or not the program was displaying the correct output. Initially it was not displaying the correct output however, due to perseverance I had found a way to fix this error. Initially, I was planning for our graph to displayed like a typical bar chart but as it was not clear, I had decided it was simpler to display it as a line chart.
-During this time, Nathaniel had a completed a graph that was working with our current program, thus resulting me to retire my version of the chart. <br>
-[Jira- Graphs](https://cseejira.essex.ac.uk/browse/CE291T3-55)<br>
+During this time, Nathaniel had a completed a graph that was working with our current program, thus resulting me to retire my version of the chart. 
+[Jira- Graphs](https://cseejira.essex.ac.uk/browse/CE291T3-55)
 
 [Git commit - StockGraph](31ba0a65ec13d25adc7834ae27de8f782445d041) This graph had taken me 3 hours to complete and a futher 2 hours to implement my own data and debug the program
 
@@ -240,21 +241,25 @@ As we had finished our program, I compared it to the requirements that we had se
 ## Koranteng Lartey
 
 
-
 ### Sprint 10 (University Week 10)
+After coming back from the Christmas break and reviewing the feedback from the the previous MVP we all felt that as a product did not meet our expectation so we all decided to revamp the look of the product and assinged parts of the program to each other to improve on. I took it upon my self to make a new eastehicly pleasing Menu page which would gram the attention of the customer.
+in this week i did some research on examples of through videos and websites on Main menus and  that would fit our product they way we wanted it. Morever inplement some Junit Testing to the code done in the program [Jira - Try to add Junit Test](https://cseejira.essex.ac.uk/browse/CE291T3-46)
 
 ### Sprint 11 (University Week 12)
+In this week I continued with the research programing of the main menu and some of the functions that could be implemented in it mainly focusing on creating dta inserting tabs in which the user would be able to input a specif element of data needed to retrive the infromation the user would want to be diplayed and viewed.[Jira - task](https://cseejira.essex.ac.uk/browse/CE291T3-48) 
 
 ### Sprint 12 (University Week 18)
+After researching some of my findings and showing it to my team members and deciding if they would be able to implement them in the product. I was assigned the task to reaserch Research into IEX API Java which is a set of services offered by The Investors Exchange (IEX) to provide access to data from the Exchange to developers and engineers for free. [Jira - link found here](https://cseejira.essex.ac.uk/browse/CE291T3-53)
 
 ### Sprint 13 (University Week 19)
+As the program is in its stages of completion, I have been researching new ideas on how to improve the design of the program. Moreover tested some of the functions in the program for the testing report that will be made for the final report.[found here](https://cseejira.essex.ac.uk/browse/CE291T3-67)
 
-### Sprint 14 (University Week 20)
+### Sprint 14 (University Week 20 - 23)
+In this week I was assigned with the Testing report so as to maximise my work on the testing report I would be testing every new function that the team would implement and give my findings with errors that would be popping through the code in the program. Moreover after feedback from the supervisor would be searching ways in which Junit testing could be implemented through the code. [Jira Link found here](https://cseejira.essex.ac.uk/browse/CE291T3-73)
+As I started more test in would put my finding in the test report with screenshots displaying each time [Git commit test report](https://cseegit.essex.ac.uk/ce291/team3/teamproject/commit/6ce63ea85aa3459f7a62ac82781059e6d4b13225), Moreover was successfull in implementing Junit testing in the code [Git commit](https://cseegit.essex.ac.uk/ce291/team3/teamproject/commit/d2cce86a908689ebd3f57d2d05a5277c4c9696bd)[code](https://cseegit.essex.ac.uk/ce291/team3/teamproject/commit/490aa59ef1b29e2abe9c4753f75b3598e5ad9312)
+Furthermore worked on covering the functionalities not covered by JUnit [git Commit test report](https://cseegit.essex.ac.uk/ce291/team3/teamproject/commit/c0baebfe2a0a18c2c5e1a684245bb629416cc465)
 
-### Sprint 15 (University Week 22)
-
-### Sprint 16 (University Week 23)
-
+Overall I have worked on more hours researching and testing the code more than implementing it. But I beleieve the hours that I believe I have put into making code should be at least 15-20. So as not to be too much of a burden on the team I focused more on the testing which I believe contributed greatly to perfecting the porduct. 
 
 
 ## Elios Dauti
