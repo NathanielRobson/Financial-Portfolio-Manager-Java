@@ -266,19 +266,23 @@ Overall I have worked on more hours researching and testing the code more than i
 
 
 
-### Sprint 10 (University Week 10)
+### Sprint 10 (University Week 10 - Week 12)
+We discussed many more features to add to our program as our first deliverable was missing a few key features and we wanted to implement these into our program. We already had people working on a login page and additional GUI implementations. I was assigned to research how to implement a suitable and efficient graph model to output all our data and to report back to the team. I spent over 6 hours researching through different sources, like YouTube and other Java API’s to make a list of suitable methods to use and talked it through with the team in our meetings discussing which is the best one to use and how to implement it.
 
-### Sprint 11 (University Week 12)
+[Jira – simulating investments](https://cseejira.essex.ac.uk/browse/CE291T3-12)
 
-### Sprint 12 (University Week 18)
 
-### Sprint 13 (University Week 19)
+### Sprint 11 (University Week 18)
+During this time, we started working on the graph. I started experimenting with different API’s for the graph and due to my lack of experience with these techniques I was struggling to get an appropriate graph so consulted my team who aided the process and implemented these during our sessions putting our code together. We also were updating our GUI’s adding and remove some features as advised by our supervisor. We also started research on how to implement the upload of the files to the program and discussing the best way to get the most update data.
 
-### Sprint 14 (University Week 20)
+### Sprint 12 (University Week 19)
+This sprint we finalised our graphs and decided to use “xchart” to make them as it seemed to be the most efficient and most suitable for our needs, which displayed graphically the data we needed. We tested this with a few CSV files but had to find out a better way of obtaining the CSV files in the first place and to be more versatile and work with many different and up to date data. We had a few problems at the start in how we wanted our graph to be displayed, e.g. bar chart or line graph but eventually we settled on the on using bar chart for the sales and line chart for the investment history. We also started implementation of retrieving data straight from IEX platform.
 
-### Sprint 15 (University Week 22)
+### Sprint 13 (University Week 20)
+Week 20 and we have completed a majority of the functionality of our program and there are only a few things left to do. We had to make some minor adjustments to our graphs and remove some unneeded confirmation boxes. The problem with our graph was not the actual graph displayed but the axis it was on. The scale of our axis was rather skewed unnecessarily so most of the unimportant data was filling up most of the graph while the more intricate and important part of the data was lying on the very top making it difficult to see. We fixed this by adjusting the scale of the graph and not starting the y-axis on zero, which is a common practice when you have a challenge like ours.
 
-### Sprint 16 (University Week 23)
+### Sprint 14 (University Week 21 - Week 23)
+Our final sprint, and our program is mostly complete, and we are just making minor adjustments and comparing it to the software specification and requirements we set out to achieve. We started running tests on our program; at first, we assigned a team member to work on running the tests, but they struggled to tackle this problem using Junit testing and offered the classic before and after style screenshot testing which covered many different inputs and outputs, but after talking about it with the team we helped and managed to aid the progress of this task, which is now complete. We also resourcefully completed the final technical documentation. I personally worked more on the product context report dealing with the ethics and health and safety of the documentation. All these sections required copious amounts of research to obtain a good knowledge of all the sections and complete them to the best of our abilities.
 
 
 
