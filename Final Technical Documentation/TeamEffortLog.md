@@ -6,8 +6,8 @@ Program Classes built  - 14/16
 Program classes refactored to further suit out teams needs - 2/2   
 [DisplayTableService](/src/DisplayTableService.java) previously named DisplayTable.java, [SearchAndViewService](/src/SearchAndViewService.java) previously named SearchAndView.java.  
 
-Technical documentation worked on - 6/9  
-[README.md document](/README.md), [Product Implementation Report](/Final Technical Documentation/ProductImplementationReport.md), [Product Demonstration](/Final Technical Documentation/Productdemonstration.md), [Project ManagementLog](/Final Technical Documentation/ProjectManagementLog.md), [CE29x Team Final Product Report](/Final Technical Documentation/CE29x Team Final Product Report.docx), Team Effort Log (This file).
+Technical documentation worked on - 8/9  
+[README.md document](/README.md), [Product Implementation Report](/Final Technical Documentation/ProductImplementationReport.md), [Product Demonstration](/Final Technical Documentation/Productdemonstration.md), [Project ManagementLog](/Final Technical Documentation/ProjectManagementLog.md), [CE29x Team Final Product Report](/Final Technical Documentation/CE29x Team Final Product Report.docx), [Product Context Report](/Final Technical Documentation/ProductContextReport.md), [Marketing Plan](/Final Technical Documentation/MarketingPlan.md), Team Effort Log (This file).
 
 ### Sprint 10 (University Week 10 - Week 12)  
 After the MVP we had many ideas of what we were going to implement next. I began to focus on the forefront of our program, the Login page which is what the user will see first. It is important that this works well and allows the only users who are authorised to use the program to log in.  
@@ -135,28 +135,25 @@ I also worked on commenting the whole program to a high standard to ensure that 
 
 [Git Commit - icons](07035cd4b89d9e5a14774a490d857c8d5cfa8283) - In this commit I also refined most other classes in the program and also added a visual icon to each frame in the program to illustrate to the user of which type of window they are currently in. For example in the [BankAccountFrame (source code)](/src/BankAccountFrame.java) there is an icon of a bank in the top left corner. Another example of this is in the [GraphBuilderFrame (source code)](/src/GraphBuilderFrame.java), there is an icon of a graph. Simple yet effective UI tweak. 
 
-[Git Commit](151318db9100258bf5df955f14660e19eb08dd72) - In this commit I added the executable file of our program, at this point in time, named Team_3_Financial_Portfolio_Manager.jar and then renamed [ProgramJAR.jar](/ProgramJAR.jar). [Git commit rename](42938faf292e54f12d0b2dbe769242e3e66094c5)  
+[Git Commit](151318db9100258bf5df955f14660e19eb08dd72) - In this commit I added the executable file of our program, at this point in time, named Team_3_Financial_Portfolio_Manager.jar and then renamed [ProgramJAR.jar](/ProgramJAR.jar).  
+[Git commit rename](42938faf292e54f12d0b2dbe769242e3e66094c5)  
 
-After producing the executable file for the program, this concludes the coding of the project, the next commits are documentation based. Overall the time put into the program for the final sprint, two weeks is unknown but If I had to give an approximate answer I would say I have easily put in over 60 hours of work and hopefully this shows. For the following gitlab commits, they involve the work done towards completing the documentation of the program.  
-
-#### Documents
+#### Documents Produced
 [Jira - README.md Task](https://cseejira.essex.ac.uk/browse/CE291T3-74)
 [Git Commit - README.md](f14ee9b0121dee1b1a9fc6aa4f6de4e5855e60a4) - In this commit, I completed the README.md document for our team. This took me around 3-4 hours to complete.  
-[README.md Link](/README.md)  
-
 [Jira - Product Demonstration Task](https://cseejira.essex.ac.uk/browse/CE291T3-97)
 [Git Commit - Productdemonstration.md](735b81092f0c597dc34cc92e76b8b9208c78cc84) - I completed the product demonstration document which took me around 7 hours, hopefully it is of a high standard.  
-[Productdemonstration.md Link](/Final Technical Documentation/Productdemonstration.md)  
 
 [Jira - Technical Details Report Task](https://cseejira.essex.ac.uk/browse/CE291T3-79)  
 [Git Commit - ProjectImplementationReport.md](735b81092f0c597dc34cc92e76b8b9208c78cc84) - I completed the project implementation report which took me around 7 hours to complete.  
-[ProductImplementationReport.md Link](/Final Technical Documentation/ProductImplementationReport.md)  
-
 [Jira - Complete MarkDown Documents Task](https://cseejira.essex.ac.uk/browse/CE291T3-70)  
 [Git Commit - ProjectManagementLog.md](a077627e03af171c7aec5a594401dc7c9e6cd9d2) - I completed the project management log which took me around 5 hours to complete.  
-[ProjectManagementLog.md Link](/Final Technical Documentation/ProjectManagementLog.md)  
 
-#### Diagrams - Type Diagram, Use Case Diagram, Class Diagrams, CRC Cards
+[Git Commit - Marketing Plan.md](bef256dcf24ea9ba7655b321a83fb00468bef031) - I made some final adjustments to the marketing plan and added an alternate forecast section towards the end. This took me around 30 minutes.  
+
+[Git Commit - Product Context Report](bef256dcf24ea9ba7655b321a83fb00468bef031) - I added the Laws and Acts section to the product context report and also added some health and safety concerns. This took me around 1 hr 30 mins to complete.  
+
+#### Diagrams - Type Diagram, Use Case Diagram, Class Diagrams, CRC Cards Produced
 [Git Commit - Type Diagram](8e695d4ded0973794e657faa9661fe32f633ea45) - For this commit I produced a Type Diagram to demonstrate our program from a technical perspective.   
 [Git Commit - CRC Cards](3a53ef00eeec8e3794c80427d6a5df79e9c19f95) - CRC Cards Commit, for more in-depth class demonstration.  
 
@@ -283,5 +280,4 @@ Week 20 and we have completed a majority of the functionality of our program and
 
 ### Sprint 14 (University Week 21 - Week 23)
 Our final sprint, and our program is mostly complete, and we are just making minor adjustments and comparing it to the software specification and requirements we set out to achieve. We started running tests on our program; at first, we assigned a team member to work on running the tests, but they struggled to tackle this problem using Junit testing and offered the classic before and after style screenshot testing which covered many different inputs and outputs, but after talking about it with the team we helped and managed to aid the progress of this task, which is now complete. We also resourcefully completed the final technical documentation. I personally worked more on the product context report dealing with the ethics and health and safety of the documentation. All these sections required copious amounts of research to obtain a good knowledge of all the sections and complete them to the best of our abilities.
-
 
