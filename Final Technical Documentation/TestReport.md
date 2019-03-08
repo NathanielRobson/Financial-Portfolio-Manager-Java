@@ -196,4 +196,4 @@ Down below are some example of functionality not covered by Junit Tests:
 #### Screenshots:
 ![Screenshot](/README-Images/FunctionalTest4.JPG)
 
-Throught the code there are many parts in which JUnit was not used but but functional methods of testing the code have been implemented.
+Throught the code there are many parts in which JUnit was not used but functional methods of testing the code have been implemented.
