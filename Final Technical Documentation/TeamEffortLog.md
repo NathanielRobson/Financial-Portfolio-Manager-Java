@@ -168,22 +168,43 @@ I also exported from IntelliJ a class diagram for our program demonstrating rela
 
 ## Callum Kleber
 
+### Sprint 10 (University Week 10 - 12)
+As this was the first meeting since the Christmas break, our group decided to plan what we still needed to add to our product. We felt that
+our MVP was very basic and lacked many features. We therefore assigned each other different features to work on. I was assigned to add a
+program that will allow the user to view the full contents of one of the csv files stored in our product.
 
+### Sprint 11 (University Week 18)
+I finished completing the program that will display a csv file this week, it took me 3 hours to complete. The Git commit can be seen below:
 
-### Sprint 10 (University Week 10)
+[Git Commit - View Table Program](eb78a2f36139a75652152fa75d2aaee61a136638)
 
-### Sprint 11 (University Week 12)
+I next decided to research how we can implement a feature that will alow the user to update the csv file stored in our program. I researched
+online and discovered the IEX trading api which I decided to try and implement.
 
-### Sprint 12 (University Week 18)
+[Jira - IEX Trading api](https://cseejira.essex.ac.uk/browse/CE291T3-45)
 
-### Sprint 13 (University Week 19)
+### Sprint 12 (University Week 19)
+After researching the IEX Trading api I was unable to find a way to implement it into our product. I informed my teammates of this and Nathaniel 
+told us that he had found a workaround for this issue. He had instead implemented a feature that will access Yahoo Finance as a user and download
+stock data from there instead. As we no longer needed the IEX trading api I stopped researching it.
 
-### Sprint 14 (University Week 20)
+### Sprint 13 (University Week 20)
+As our program was close to completion, I decided to begin checking over the program to make sure that there wasn't any major issues and that it
+meets the requirements we had created.
 
-### Sprint 15 (University Week 22)
+### Sprint 14 (University Week 21 - 22)
+During this sprint programming of our product was completed. Our group decided to contintue testing and debugging the program to ensure that
+everything is running correctlty. We also began working on the documentation for our final report and assigned each other documents to work on.
+I was assigned the context report:
 
-### Sprint 16 (University Week 23)
+[Jira - Context Report](https://cseejira.essex.ac.uk/browse/CE291T3-63)
 
+### Sprint 15 (University Week 23)
+This week I completed the context report, the git commit for this can be seen below:
+
+Git Commit - Context Report](23b76295af9b38b42592348de6171d886df04fb0)
+
+By this point our team had finished testing the program and had completed the documentation (apart from the team effort log).
 
 
 ## Daniel Callender
