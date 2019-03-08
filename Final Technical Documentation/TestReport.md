@@ -187,11 +187,13 @@ Down below are some example of functionality not covered by Junit Tests:
 ![Screenshot](/README-Images/FunctionalTest2.JPG)
 
 ## Functionality test 3
-#### Function Description: This functions was used, using an event handler whcih would run a loop though the lists of members to find input value matches and validates both the login button and Reset Buttons
+#### Function Description: Here we checks that the program, reads the current users bank account data, creates it and sets the bank starting value at 10000, writes to CSV if file does not exist . 
 #### Screenshots:
-![Screenshot](/README-Images/FunctionalTest2.JPG)
+![Screenshot](/README-Images/FunctionalTest3.JPG)
 
 ## Functionality test 4
-#### Function Description: This functions was used, using an event handler whcih would run a loop though the lists of members to find input value matches and validates both the login button and Reset Buttons
+#### Function Description: Here the program checks that it reads How much money the current user has in their account at this moment in time, that the user is able to Deposit money and add it to the money in file.
 #### Screenshots:
-![Screenshot](/README-Images/FunctionalTest2.JPG)
+![Screenshot](/README-Images/FunctionalTest4.JPG)
+
+Throught the code there are many parts in which JUnit was not used but but functional methods of testing the code have been implemented.
