@@ -1,4 +1,4 @@
-# Team 3's Financial Portfolio Manager
+Financial Portfolio Manager
 
 This project involved creating from scratch a Java application which has the ability to track and display investments of a client over time.  
 The client can also purchase and sell shares through the program and at any one time the client can hold multiple shares for multiple different companies.  
